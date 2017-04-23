@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		12912ED1BFD2C786C262285C /* Pods_CuritiBus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CFFA416C6834D10D1021E1A /* Pods_CuritiBus.framework */; };
+		81ED263C16229F901E99724E /* Pods_CuritiBus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 564D6FB06006D36CB53C870A /* Pods_CuritiBus.framework */; };
 		E5DF2C141EAD2EB00026E795 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DF2C061EAD2EB00026E795 /* AppDelegate.swift */; };
 		E5DF2C161EAD2EB00026E795 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5DF2C0A1EAD2EB00026E795 /* Assets.xcassets */; };
 		E5DF2C171EAD2EB00026E795 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5DF2C121EAD2EB00026E795 /* LaunchScreen.storyboard */; };
@@ -26,9 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		077E3832476904AD590EADA5 /* Pods-CuritiBus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuritiBus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CuritiBus/Pods-CuritiBus.debug.xcconfig"; sourceTree = "<group>"; };
-		1E442A6864C306782DB234D8 /* Pods-CuritiBus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuritiBus.release.xcconfig"; path = "Pods/Target Support Files/Pods-CuritiBus/Pods-CuritiBus.release.xcconfig"; sourceTree = "<group>"; };
-		6CFFA416C6834D10D1021E1A /* Pods_CuritiBus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CuritiBus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		564D6FB06006D36CB53C870A /* Pods_CuritiBus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CuritiBus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6EE6A4E87B72F4611F29D76 /* Pods-CuritiBus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuritiBus.release.xcconfig"; path = "Pods/Target Support Files/Pods-CuritiBus/Pods-CuritiBus.release.xcconfig"; sourceTree = "<group>"; };
+		E125EC98E76ED552C657F069 /* Pods-CuritiBus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuritiBus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CuritiBus/Pods-CuritiBus.debug.xcconfig"; sourceTree = "<group>"; };
 		E5DF2BEF1EAD2CA00026E795 /* CuritiBus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CuritiBus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5DF2C061EAD2EB00026E795 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5DF2C071EAD2EB00026E795 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,28 +53,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12912ED1BFD2C786C262285C /* Pods_CuritiBus.framework in Frameworks */,
+				81ED263C16229F901E99724E /* Pods_CuritiBus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2BA114C289804EDCD06D8BC7 /* Pods */ = {
+		7C8F8FD30E3D5B7AE10BF3B2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				077E3832476904AD590EADA5 /* Pods-CuritiBus.debug.xcconfig */,
-				1E442A6864C306782DB234D8 /* Pods-CuritiBus.release.xcconfig */,
+				E125EC98E76ED552C657F069 /* Pods-CuritiBus.debug.xcconfig */,
+				A6EE6A4E87B72F4611F29D76 /* Pods-CuritiBus.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		904C9FB8CC17386B06F491D0 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				6CFFA416C6834D10D1021E1A /* Pods_CuritiBus.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		E5DF2BE61EAD2CA00026E795 = {
@@ -82,8 +74,8 @@
 			children = (
 				E5DF2BF11EAD2CA00026E795 /* CuritiBus */,
 				E5DF2BF01EAD2CA00026E795 /* Products */,
-				2BA114C289804EDCD06D8BC7 /* Pods */,
-				904C9FB8CC17386B06F491D0 /* Frameworks */,
+				7C8F8FD30E3D5B7AE10BF3B2 /* Pods */,
+				EF360289A2684EA0F0A397EB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -222,6 +214,14 @@
 			path = Plugins;
 			sourceTree = "<group>";
 		};
+		EF360289A2684EA0F0A397EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				564D6FB06006D36CB53C870A /* Pods_CuritiBus.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -229,12 +229,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E5DF2C011EAD2CA00026E795 /* Build configuration list for PBXNativeTarget "CuritiBus" */;
 			buildPhases = (
-				35346C2719625C46A4DACF56 /* [CP] Check Pods Manifest.lock */,
+				9B5BE61FD48407DE6A75A8E9 /* [CP] Check Pods Manifest.lock */,
 				E5DF2BEB1EAD2CA00026E795 /* Sources */,
 				E5DF2BEC1EAD2CA00026E795 /* Frameworks */,
 				E5DF2BED1EAD2CA00026E795 /* Resources */,
-				4083E7A9460CF49FCBC37009 /* [CP] Embed Pods Frameworks */,
-				BDDFE2B8D79B689E6E77123F /* [CP] Copy Pods Resources */,
+				1D078169E389E359B05714C2 /* [CP] Embed Pods Frameworks */,
+				A206F63E737D84A71882A8EB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -294,22 +294,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		35346C2719625C46A4DACF56 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		4083E7A9460CF49FCBC37009 /* [CP] Embed Pods Frameworks */ = {
+		1D078169E389E359B05714C2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -324,7 +309,22 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CuritiBus/Pods-CuritiBus-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BDDFE2B8D79B689E6E77123F /* [CP] Copy Pods Resources */ = {
+		9B5BE61FD48407DE6A75A8E9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A206F63E737D84A71882A8EB /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -461,7 +461,7 @@
 		};
 		E5DF2C021EAD2CA00026E795 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 077E3832476904AD590EADA5 /* Pods-CuritiBus.debug.xcconfig */;
+			baseConfigurationReference = E125EC98E76ED552C657F069 /* Pods-CuritiBus.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = D97MJ3844Q;
@@ -475,7 +475,7 @@
 		};
 		E5DF2C031EAD2CA00026E795 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1E442A6864C306782DB234D8 /* Pods-CuritiBus.release.xcconfig */;
+			baseConfigurationReference = A6EE6A4E87B72F4611F29D76 /* Pods-CuritiBus.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = D97MJ3844Q;
