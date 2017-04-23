@@ -35,12 +35,11 @@ extension TargetType {
     }
     
     var sampleData: Data {
-        //TODO: fix
         return Data()
     }
     
     var validate: Bool {
-        return false //true: alamofire descarta corpo de qualquer response fora do 200...299
+        return false
     }
     
     func headers() -> [String: String] {

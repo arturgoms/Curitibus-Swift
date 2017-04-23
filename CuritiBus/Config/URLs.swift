@@ -10,6 +10,7 @@ import Foundation
 
 enum Endpoints {
     case base
+    case getLinhas
 }
 
 extension Endpoints {
@@ -18,8 +19,10 @@ extension Endpoints {
         switch self {
             
         case .base:
-            return "https://urbs.com.br/api/v2"
+            return "http://transporteservico.urbs.curitiba.pr.gov.br"
+            
+        case .getLinhas:
+            return "/getLinhas.php"
         }
     }
-    
 }
