@@ -6,7 +6,6 @@
 //  Copyright © 2017 Diego Trevisan Lara. All rights reserved.
 //
 
-/* Retornar chave de acesso fornecida pela URBS */
 var accessKey: String {
-    return "chave_de_acesso"
+    return "a336d"
 }
