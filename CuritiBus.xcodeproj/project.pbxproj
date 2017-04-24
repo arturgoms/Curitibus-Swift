@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F0964711EAE296D00D658A1 /* UrbsAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0964701EAE296D00D658A1 /* UrbsAuth.swift */; };
 		81ED263C16229F901E99724E /* Pods_CuritiBus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 564D6FB06006D36CB53C870A /* Pods_CuritiBus.framework */; };
 		E546EE9C1EAD41B400CC7BE9 /* LineEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E546EE9B1EAD41B400CC7BE9 /* LineEndpoint.swift */; };
 		E546EE9E1EAD41C000CC7BE9 /* LineInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E546EE9D1EAD41C000CC7BE9 /* LineInteractor.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F0964701EAE296D00D658A1 /* UrbsAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrbsAuth.swift; sourceTree = "<group>"; };
 		564D6FB06006D36CB53C870A /* Pods_CuritiBus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CuritiBus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6EE6A4E87B72F4611F29D76 /* Pods-CuritiBus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuritiBus.release.xcconfig"; path = "Pods/Target Support Files/Pods-CuritiBus/Pods-CuritiBus.release.xcconfig"; sourceTree = "<group>"; };
 		E125EC98E76ED552C657F069 /* Pods-CuritiBus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuritiBus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CuritiBus/Pods-CuritiBus.debug.xcconfig"; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				E5DF2C191EAD2FF30026E795 /* Constants.swift */,
+				3F0964701EAE296D00D658A1 /* UrbsAuth.swift */,
 				E5DF2C1B1EAD2FFC0026E795 /* URLs.swift */,
 				E5DF2C1D1EAD301D0026E795 /* UserDefaults.swift */,
 			);
@@ -378,6 +381,7 @@
 				E5DF2C281EAD30710026E795 /* BaseTargetType.swift in Sources */,
 				E546EE9E1EAD41C000CC7BE9 /* LineInteractor.swift in Sources */,
 				E5DF2C271EAD30710026E795 /* BaseMoyaProvider.swift in Sources */,
+				3F0964711EAE296D00D658A1 /* UrbsAuth.swift in Sources */,
 				E5DF2C2A1EAD30710026E795 /* ErrorResponse.swift in Sources */,
 				E546EE9C1EAD41B400CC7BE9 /* LineEndpoint.swift in Sources */,
 				E5DF2C321EAD33200026E795 /* UIDevice-Hardware.swift in Sources */,
