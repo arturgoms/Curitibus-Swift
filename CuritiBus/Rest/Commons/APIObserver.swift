@@ -35,12 +35,10 @@ class APIObserver<Element>: ObserverType {
         case .error(let error):
             let errorObject = self.errorObject(moyaError: error as? MoyaError)
             
-            if let errorClosure = self.errorClosure {
-                errorClosure(errorObject)
-            } else {
-                handleError(errorResponse: errorObject)
+            if !handleError(errorResponse: errorObject) {
+                errorClosure?(errorObject)
             }
-        
+            
         case .completed:
             break
         }
@@ -59,32 +57,42 @@ class APIObserver<Element>: ObserverType {
         case .requestMapping(let string):
             print(string)
             return ErrorResponse.defaultError()
-        
+            
         case .underlying(let error):
             print(error)
             return ErrorResponse.defaultError()
         }
     }
     
-    private func handleError(errorResponse: ErrorResponse) {
+    private func handleError(errorResponse: ErrorResponse) -> Bool {
         
-        if let errorStatus = errorResponse.errors.first?.status, let errorCode = errorResponse.errors.first?.code, let onRetryClosure = onRetryClosure {
-            switch (errorStatus, errorCode) {
-                
-            default:
-                handleDefaultError(errorResponse: errorResponse)
-            }
-            
-        } else {
-            handleDefaultError(errorResponse: errorResponse)
-        }
-
+//        if errorResponse.httpStatus == 401 {
+//            Storyboard.currentViewController()?.navigate(.login(LoginPresenter(userInteractor: UserInteractor(), deviceInteractor: DeviceInteractor())))
+//            return true
+//        }
+        
+        return false
+        
+        //        if let errorStatus = errorResponse.httpStatus, let onRetryClosure = onRetryClosure {
+        //            switch (errorStatus) {
+        //
+        //            case (401):
+        //                onRetryClosure()
+        //
+        //            default:
+        //                handleDefaultError(errorResponse: errorResponse)
+        //            }
+        //
+        //        } else {
+        //            handleDefaultError(errorResponse: errorResponse)
+        //        }
+        
     }
     
     private func handleDefaultError(errorResponse: ErrorResponse) {
-//        LoadingManager.hideLoadingIndicator()
-        let message = "\(errorResponse.errors.first?.title ?? "")\n\(errorResponse.errors.first?.detail ?? "")"
-//        AlertHelper.presentAlert(title: .error, message: message)
+        //        LoadingManager.hideLoadingIndicator()
+        let message = "\(errorResponse.errors.first?.title ?? "")"
+        AlertHelper.presentAlert(title: .error, message: message)
     }
     
 }

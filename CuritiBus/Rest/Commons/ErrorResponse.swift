@@ -23,6 +23,8 @@ class EmptyResponse: Mappable {
 
 class ErrorResponse: Mappable {
     
+    var httpStatus: Int?
+    var message: String?
     var errors: [ErrorDescription] = []
     
     init(errors:[ErrorDescription]) {
@@ -34,6 +36,7 @@ class ErrorResponse: Mappable {
     }
     
     func mapping(map: Map) {
+        message <- map["message"]
         errors <- map["errors"]
     }
     
@@ -46,8 +49,6 @@ class ErrorResponse: Mappable {
 class ErrorDescription: Mappable {
     
     var title: String?
-    var detail: String?
-    var code: Int?
     var status: Int?
     
     init() {
@@ -60,8 +61,6 @@ class ErrorDescription: Mappable {
     
     func mapping(map: Map) {
         title <- map["title"]
-        detail <- map["detail"]
-        code <- map["code"]
         status <- map["status"]
         
         if status == nil, let statusStr: String = map["status"].value(), let statusInt = Int(statusStr) {
@@ -71,8 +70,7 @@ class ErrorDescription: Mappable {
     
     class func defaultError() -> ErrorDescription {
         let error = ErrorDescription()
-        error.title = "Erro"
-        error.detail = "Ocorreu um erro."
+        error.title = "Ocorreu um erro."
         return error
     }
     

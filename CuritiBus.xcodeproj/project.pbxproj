@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3F0964711EAE296D00D658A1 /* UrbsAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0964701EAE296D00D658A1 /* UrbsAuth.swift */; };
+		3FBCCE8D1EED8A8200D67F5A /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBCCE8C1EED8A8200D67F5A /* AlertHelper.swift */; };
+		3FBCCE8F1EED8ABD00D67F5A /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBCCE8E1EED8ABD00D67F5A /* Storyboard.swift */; };
+		3FBCCE911EED8AFB00D67F5A /* LocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBCCE901EED8AFB00D67F5A /* LocalizedString.swift */; };
+		3FBCCE991EED8C3000D67F5A /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBCCE981EED8C3000D67F5A /* SplashViewController.swift */; };
 		81ED263C16229F901E99724E /* Pods_CuritiBus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 564D6FB06006D36CB53C870A /* Pods_CuritiBus.framework */; };
 		E546EE9C1EAD41B400CC7BE9 /* LineEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E546EE9B1EAD41B400CC7BE9 /* LineEndpoint.swift */; };
 		E546EE9E1EAD41C000CC7BE9 /* LineInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E546EE9D1EAD41C000CC7BE9 /* LineInteractor.swift */; };
@@ -31,6 +35,10 @@
 
 /* Begin PBXFileReference section */
 		3F0964701EAE296D00D658A1 /* UrbsAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrbsAuth.swift; sourceTree = "<group>"; };
+		3FBCCE8C1EED8A8200D67F5A /* AlertHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
+		3FBCCE8E1EED8ABD00D67F5A /* Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
+		3FBCCE901EED8AFB00D67F5A /* LocalizedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedString.swift; sourceTree = "<group>"; };
+		3FBCCE981EED8C3000D67F5A /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		564D6FB06006D36CB53C870A /* Pods_CuritiBus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CuritiBus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6EE6A4E87B72F4611F29D76 /* Pods-CuritiBus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuritiBus.release.xcconfig"; path = "Pods/Target Support Files/Pods-CuritiBus/Pods-CuritiBus.release.xcconfig"; sourceTree = "<group>"; };
 		E125EC98E76ED552C657F069 /* Pods-CuritiBus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuritiBus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CuritiBus/Pods-CuritiBus.debug.xcconfig"; sourceTree = "<group>"; };
@@ -68,6 +76,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3FBCCE941EED8C0500D67F5A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3FBCCE971EED8C2A00D67F5A /* Splash */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3FBCCE971EED8C2A00D67F5A /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				3FBCCE981EED8C3000D67F5A /* SplashViewController.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
 		7C8F8FD30E3D5B7AE10BF3B2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +206,9 @@
 			isa = PBXGroup;
 			children = (
 				E5DF2C311EAD33200026E795 /* UIDevice-Hardware.swift */,
+				3FBCCE8C1EED8A8200D67F5A /* AlertHelper.swift */,
+				3FBCCE8E1EED8ABD00D67F5A /* Storyboard.swift */,
+				3FBCCE901EED8AFB00D67F5A /* LocalizedString.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -199,17 +226,10 @@
 		E5DF2C0F1EAD2EB00026E795 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E5DF2C101EAD2EB00026E795 /* Controllers */,
+				3FBCCE941EED8C0500D67F5A /* Controllers */,
 				E5DF2C111EAD2EB00026E795 /* Storyboards */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		E5DF2C101EAD2EB00026E795 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controllers;
 			sourceTree = "<group>";
 		};
 		E5DF2C111EAD2EB00026E795 /* Storyboards */ = {
@@ -374,6 +394,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FBCCE911EED8AFB00D67F5A /* LocalizedString.swift in Sources */,
 				E5DF2C1E1EAD301D0026E795 /* UserDefaults.swift in Sources */,
 				E5DF2C3B1EAD348B0026E795 /* ErrorWrapperPlugin.swift in Sources */,
 				E5DF2C141EAD2EB00026E795 /* AppDelegate.swift in Sources */,
@@ -386,10 +407,13 @@
 				E546EE9C1EAD41B400CC7BE9 /* LineEndpoint.swift in Sources */,
 				E5DF2C321EAD33200026E795 /* UIDevice-Hardware.swift in Sources */,
 				E5DF2C3C1EAD348B0026E795 /* LoggerPlugin.swift in Sources */,
+				3FBCCE8D1EED8A8200D67F5A /* AlertHelper.swift in Sources */,
 				E5DF2C1C1EAD2FFC0026E795 /* URLs.swift in Sources */,
 				E546EEA31EAD463100CC7BE9 /* Line.swift in Sources */,
 				E5DF2C1A1EAD2FF30026E795 /* Constants.swift in Sources */,
+				3FBCCE8F1EED8ABD00D67F5A /* Storyboard.swift in Sources */,
 				E5DF2C2B1EAD30710026E795 /* Response+Error.swift in Sources */,
+				3FBCCE991EED8C3000D67F5A /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
