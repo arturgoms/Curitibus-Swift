@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="17A264c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wOE-oM-oNs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wOE-oM-oNs">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -342,34 +342,34 @@
                                             <action selector="hideKeyboard" destination="Ezc-4x-DMZ" eventType="touchDown" id="G6t-FY-eNS"/>
                                         </connections>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eP2-pv-uEc">
-                                        <rect key="frame" x="8" y="12" width="44" height="44"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="44" id="abC-BW-ozV"/>
-                                            <constraint firstAttribute="height" constant="44" id="cCA-h9-wA0"/>
-                                        </constraints>
-                                        <state key="normal" image="back-button"/>
-                                        <connections>
-                                            <action selector="back" destination="Ezc-4x-DMZ" eventType="touchUpInside" id="yBa-hS-pK8"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="uZ4-qi-nk4" secondAttribute="bottom" id="0Cr-BG-xrW"/>
-                                    <constraint firstItem="eP2-pv-uEc" firstAttribute="top" secondItem="bCe-A3-iWz" secondAttribute="top" constant="12" id="CZ5-VG-hM8"/>
                                     <constraint firstAttribute="trailing" secondItem="uZ4-qi-nk4" secondAttribute="trailing" id="GVr-E7-kd0"/>
                                     <constraint firstItem="uZ4-qi-nk4" firstAttribute="top" secondItem="bCe-A3-iWz" secondAttribute="top" id="NDP-V2-DnG"/>
                                     <constraint firstItem="uZ4-qi-nk4" firstAttribute="leading" secondItem="bCe-A3-iWz" secondAttribute="leading" id="PZZ-wm-gkw"/>
-                                    <constraint firstItem="eP2-pv-uEc" firstAttribute="leading" secondItem="bCe-A3-iWz" secondAttribute="leading" constant="8" id="c8B-OI-bis"/>
                                 </constraints>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eP2-pv-uEc">
+                                <rect key="frame" x="4" y="12" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="abC-BW-ozV"/>
+                                    <constraint firstAttribute="height" constant="44" id="cCA-h9-wA0"/>
+                                </constraints>
+                                <state key="normal" image="back-button"/>
+                                <connections>
+                                    <action selector="back" destination="Ezc-4x-DMZ" eventType="touchUpInside" id="yBa-hS-pK8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="mG5-mg-dbM" firstAttribute="top" secondItem="bCe-A3-iWz" secondAttribute="bottom" id="CGJ-ME-q1W"/>
                             <constraint firstItem="uZ4-qi-nk4" firstAttribute="height" secondItem="OOS-hG-4Gs" secondAttribute="height" constant="-20" id="DUf-V8-xNW"/>
                             <constraint firstItem="uZ4-qi-nk4" firstAttribute="width" secondItem="OOS-hG-4Gs" secondAttribute="width" id="NRG-12-gIn"/>
+                            <constraint firstItem="eP2-pv-uEc" firstAttribute="leading" secondItem="OOS-hG-4Gs" secondAttribute="leading" constant="4" id="UJl-J3-NeU"/>
                             <constraint firstAttribute="trailing" secondItem="bCe-A3-iWz" secondAttribute="trailing" id="VZa-w3-JDv"/>
+                            <constraint firstItem="eP2-pv-uEc" firstAttribute="top" secondItem="OOS-hG-4Gs" secondAttribute="top" constant="12" id="ZS9-No-KgT"/>
                             <constraint firstItem="bCe-A3-iWz" firstAttribute="leading" secondItem="OOS-hG-4Gs" secondAttribute="leading" id="dEq-bb-oIP"/>
                             <constraint firstItem="bCe-A3-iWz" firstAttribute="top" secondItem="OOS-hG-4Gs" secondAttribute="top" id="mjC-j1-KnR"/>
                         </constraints>
@@ -397,6 +397,16 @@
                     <view key="view" contentMode="scaleToFill" id="iAu-3Y-B2f">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXw-nG-BYE">
+                                <rect key="frame" x="57" y="110" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="logout" destination="qSr-ke-cTc" eventType="touchUpInside" id="Lot-x1-Ns4"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>

@@ -13,14 +13,6 @@ class SplashViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Deslogar
-//        do {
-//            try Auth.auth().signOut()
-//        } catch {
-//            
-//        }
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
