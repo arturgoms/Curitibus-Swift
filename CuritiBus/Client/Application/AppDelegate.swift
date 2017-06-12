@@ -7,13 +7,27 @@
 //
 
 import UIKit
+import Firebase
+import Fabric
+import Crashlytics
+import Simplicity
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {        
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        // Init Fabric
+        Fabric.with([Crashlytics.self])
+        
+        // Init Firebase
+        FirebaseApp.configure()
+        
+        // Init Navigations
+        Router.default.setupAppNavigation(appNavigation: CuritibusNavigation())
+        
         return true
     }
 
@@ -38,7 +52,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    //MARK: - Simplicity
 
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        return Simplicity.application(app, open: url, options: options)
+    }
+    
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        return Simplicity.application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
+    }
 
 }
 

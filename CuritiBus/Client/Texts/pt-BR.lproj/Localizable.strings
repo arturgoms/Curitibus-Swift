@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  CuritiBus
+
+  Created by Diego Trevisan Lara on 11/06/2017.
+  Copyright © 2017 Diego Trevisan Lara. All rights reserved.
+*/
+
+/* Alerts */
+"ALERT_WARNING_TITLE"           = "Aviso";
+"ALERT_ERROR_TITLE"             = "Erro";
+"ALERT_OK_TITLE"                = "OK";
+
+/* EmailViewController */
+"ERROR_FILL_EMAIL"              = "Preencher email";
+"ERROR_FILL_PASSWORD"           = "Preencher senha";
+"BUTTON_SIGNUP"                 = "Cadastrar";
+"BUTTON_SIGNIN"                 = "Entrar";
+"RECOVERY_EMAIL_SENT"           = "Foi enviado um email com as instruções para alteração de senha.";

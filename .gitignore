@@ -5,6 +5,7 @@
 CuritiBus/Config/UrbsAuth.swift
 .DS_Store
 UrbsAuth.swift
+GoogleService-Info.plist
 
 ## Build generated
 build/

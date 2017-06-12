@@ -8,10 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		3F0964711EAE296D00D658A1 /* UrbsAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0964701EAE296D00D658A1 /* UrbsAuth.swift */; };
+		3F3419671EEDF43200412D1E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3419661EEDF43200412D1E /* HomeViewController.swift */; };
+		3F3419691EEDF5E600412D1E /* IRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3419681EEDF5E600412D1E /* IRegisterView.swift */; };
+		3F34196B1EEDF5F100412D1E /* IRegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F34196A1EEDF5F100412D1E /* IRegisterPresenter.swift */; };
+		3F34196D1EEDF5FB00412D1E /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F34196C1EEDF5FB00412D1E /* RegisterPresenter.swift */; };
+		3F3419701EEDF9B300412D1E /* IEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F34196F1EEDF9B300412D1E /* IEmailView.swift */; };
+		3F3419721EEDF9BB00412D1E /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3419711EEDF9BB00412D1E /* EmailViewController.swift */; };
+		3F3419741EEDF9C300412D1E /* IEmailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3419731EEDF9C300412D1E /* IEmailPresenter.swift */; };
+		3F3419761EEDF9D000412D1E /* EmailSignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3419751EEDF9D000412D1E /* EmailSignUpPresenter.swift */; };
+		3F3419781EEDF9E500412D1E /* EmailSignInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3419771EEDF9E500412D1E /* EmailSignInPresenter.swift */; };
+		3F3419801EEE167900412D1E /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F34197F1EEE167900412D1E /* Fonts.swift */; };
+		3F3419841EEE17A600412D1E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3F3419821EEE17A600412D1E /* Localizable.strings */; };
+		3F3419871EEE17BE00412D1E /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F3419861EEE17BE00412D1E /* fontawesome-webfont.ttf */; };
 		3FBCCE8D1EED8A8200D67F5A /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBCCE8C1EED8A8200D67F5A /* AlertHelper.swift */; };
 		3FBCCE8F1EED8ABD00D67F5A /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBCCE8E1EED8ABD00D67F5A /* Storyboard.swift */; };
 		3FBCCE911EED8AFB00D67F5A /* LocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBCCE901EED8AFB00D67F5A /* LocalizedString.swift */; };
 		3FBCCE991EED8C3000D67F5A /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBCCE981EED8C3000D67F5A /* SplashViewController.swift */; };
+		3FBCCE9D1EED905400D67F5A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FBCCE9C1EED905400D67F5A /* GoogleService-Info.plist */; };
+		3FBCCE9F1EED91F600D67F5A /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FBCCE9E1EED91F600D67F5A /* AdSupport.framework */; };
+		3FBCCEA71EEDDDA700D67F5A /* AppNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBCCEA61EEDDDA700D67F5A /* AppNavigation.swift */; };
+		3FBCCEA91EEDDDEB00D67F5A /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBCCEA81EEDDDEB00D67F5A /* Router.swift */; };
+		3FBCCEAC1EEDDE8100D67F5A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBCCEAB1EEDDE8100D67F5A /* RegisterViewController.swift */; };
 		81ED263C16229F901E99724E /* Pods_CuritiBus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 564D6FB06006D36CB53C870A /* Pods_CuritiBus.framework */; };
 		E546EE9C1EAD41B400CC7BE9 /* LineEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E546EE9B1EAD41B400CC7BE9 /* LineEndpoint.swift */; };
 		E546EE9E1EAD41C000CC7BE9 /* LineInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E546EE9D1EAD41C000CC7BE9 /* LineInteractor.swift */; };
@@ -35,10 +52,27 @@
 
 /* Begin PBXFileReference section */
 		3F0964701EAE296D00D658A1 /* UrbsAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrbsAuth.swift; sourceTree = "<group>"; };
+		3F3419661EEDF43200412D1E /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3F3419681EEDF5E600412D1E /* IRegisterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRegisterView.swift; sourceTree = "<group>"; };
+		3F34196A1EEDF5F100412D1E /* IRegisterPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRegisterPresenter.swift; sourceTree = "<group>"; };
+		3F34196C1EEDF5FB00412D1E /* RegisterPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
+		3F34196F1EEDF9B300412D1E /* IEmailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IEmailView.swift; sourceTree = "<group>"; };
+		3F3419711EEDF9BB00412D1E /* EmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
+		3F3419731EEDF9C300412D1E /* IEmailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IEmailPresenter.swift; sourceTree = "<group>"; };
+		3F3419751EEDF9D000412D1E /* EmailSignUpPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailSignUpPresenter.swift; sourceTree = "<group>"; };
+		3F3419771EEDF9E500412D1E /* EmailSignInPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailSignInPresenter.swift; sourceTree = "<group>"; };
+		3F34197F1EEE167900412D1E /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		3F3419831EEE17A600412D1E /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		3F3419861EEE17BE00412D1E /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
 		3FBCCE8C1EED8A8200D67F5A /* AlertHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
 		3FBCCE8E1EED8ABD00D67F5A /* Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		3FBCCE901EED8AFB00D67F5A /* LocalizedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedString.swift; sourceTree = "<group>"; };
 		3FBCCE981EED8C3000D67F5A /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		3FBCCE9C1EED905400D67F5A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3FBCCE9E1EED91F600D67F5A /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		3FBCCEA61EEDDDA700D67F5A /* AppNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppNavigation.swift; sourceTree = "<group>"; };
+		3FBCCEA81EEDDDEB00D67F5A /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		3FBCCEAB1EEDDE8100D67F5A /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		564D6FB06006D36CB53C870A /* Pods_CuritiBus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CuritiBus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6EE6A4E87B72F4611F29D76 /* Pods-CuritiBus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuritiBus.release.xcconfig"; path = "Pods/Target Support Files/Pods-CuritiBus/Pods-CuritiBus.release.xcconfig"; sourceTree = "<group>"; };
 		E125EC98E76ED552C657F069 /* Pods-CuritiBus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuritiBus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CuritiBus/Pods-CuritiBus.debug.xcconfig"; sourceTree = "<group>"; };
@@ -69,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FBCCE9F1EED91F600D67F5A /* AdSupport.framework in Frameworks */,
 				81ED263C16229F901E99724E /* Pods_CuritiBus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -76,10 +111,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F3419651EEDF42B00412D1E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3F3419661EEDF43200412D1E /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		3F34196E1EEDF9AC00412D1E /* Email */ = {
+			isa = PBXGroup;
+			children = (
+				3F34196F1EEDF9B300412D1E /* IEmailView.swift */,
+				3F3419711EEDF9BB00412D1E /* EmailViewController.swift */,
+				3F3419731EEDF9C300412D1E /* IEmailPresenter.swift */,
+				3F3419751EEDF9D000412D1E /* EmailSignUpPresenter.swift */,
+				3F3419771EEDF9E500412D1E /* EmailSignInPresenter.swift */,
+			);
+			path = Email;
+			sourceTree = "<group>";
+		};
+		3F3419811EEE17A600412D1E /* Texts */ = {
+			isa = PBXGroup;
+			children = (
+				3F3419821EEE17A600412D1E /* Localizable.strings */,
+			);
+			path = Texts;
+			sourceTree = "<group>";
+		};
+		3F3419851EEE17BE00412D1E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3F3419861EEE17BE00412D1E /* fontawesome-webfont.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		3FBCCE941EED8C0500D67F5A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				3FBCCE971EED8C2A00D67F5A /* Splash */,
+				3FBCCEAA1EEDDE7600D67F5A /* Register */,
+				3F34196E1EEDF9AC00412D1E /* Email */,
+				3F3419651EEDF42B00412D1E /* Home */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -90,6 +164,25 @@
 				3FBCCE981EED8C3000D67F5A /* SplashViewController.swift */,
 			);
 			path = Splash;
+			sourceTree = "<group>";
+		};
+		3FBCCEA51EEDDD9C00D67F5A /* Navigations */ = {
+			isa = PBXGroup;
+			children = (
+				3FBCCEA61EEDDDA700D67F5A /* AppNavigation.swift */,
+			);
+			path = Navigations;
+			sourceTree = "<group>";
+		};
+		3FBCCEAA1EEDDE7600D67F5A /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				3F3419681EEDF5E600412D1E /* IRegisterView.swift */,
+				3FBCCEAB1EEDDE8100D67F5A /* RegisterViewController.swift */,
+				3F34196A1EEDF5F100412D1E /* IRegisterPresenter.swift */,
+				3F34196C1EEDF5FB00412D1E /* RegisterPresenter.swift */,
+			);
+			path = Register;
 			sourceTree = "<group>";
 		};
 		7C8F8FD30E3D5B7AE10BF3B2 /* Pods */ = {
@@ -169,8 +262,11 @@
 		E5DF2C041EAD2EB00026E795 /* Client */ = {
 			isa = PBXGroup;
 			children = (
+				3F3419851EEE17BE00412D1E /* Fonts */,
+				3F3419811EEE17A600412D1E /* Texts */,
 				E5DF2C051EAD2EB00026E795 /* Application */,
 				E5DF2C071EAD2EB00026E795 /* Info.plist */,
+				3FBCCE9C1EED905400D67F5A /* GoogleService-Info.plist */,
 			);
 			path = Client;
 			sourceTree = "<group>";
@@ -190,6 +286,7 @@
 				3F0964701EAE296D00D658A1 /* UrbsAuth.swift */,
 				E5DF2C1B1EAD2FFC0026E795 /* URLs.swift */,
 				E5DF2C1D1EAD301D0026E795 /* UserDefaults.swift */,
+				3F34197F1EEE167900412D1E /* Fonts.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -209,6 +306,7 @@
 				3FBCCE8C1EED8A8200D67F5A /* AlertHelper.swift */,
 				3FBCCE8E1EED8ABD00D67F5A /* Storyboard.swift */,
 				3FBCCE901EED8AFB00D67F5A /* LocalizedString.swift */,
+				3FBCCEA81EEDDDEB00D67F5A /* Router.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -226,6 +324,7 @@
 		E5DF2C0F1EAD2EB00026E795 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3FBCCEA51EEDDD9C00D67F5A /* Navigations */,
 				3FBCCE941EED8C0500D67F5A /* Controllers */,
 				E5DF2C111EAD2EB00026E795 /* Storyboards */,
 			);
@@ -265,6 +364,7 @@
 		EF360289A2684EA0F0A397EB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3FBCCE9E1EED91F600D67F5A /* AdSupport.framework */,
 				564D6FB06006D36CB53C870A /* Pods_CuritiBus.framework */,
 			);
 			name = Frameworks;
@@ -283,6 +383,7 @@
 				E5DF2BED1EAD2CA00026E795 /* Resources */,
 				1D078169E389E359B05714C2 /* [CP] Embed Pods Frameworks */,
 				A206F63E737D84A71882A8EB /* [CP] Copy Pods Resources */,
+				3FBCCEA21EED929E00D67F5A /* Fabric */,
 			);
 			buildRules = (
 			);
@@ -315,8 +416,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
-				Base,
+				"pt-BR",
 			);
 			mainGroup = E5DF2BE61EAD2CA00026E795;
 			productRefGroup = E5DF2BF01EAD2CA00026E795 /* Products */;
@@ -333,7 +433,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F3419841EEE17A600412D1E /* Localizable.strings in Resources */,
 				E5DF2C171EAD2EB00026E795 /* LaunchScreen.storyboard in Resources */,
+				3FBCCE9D1EED905400D67F5A /* GoogleService-Info.plist in Resources */,
+				3F3419871EEE17BE00412D1E /* fontawesome-webfont.ttf in Resources */,
 				E5DF2C161EAD2EB00026E795 /* Assets.xcassets in Resources */,
 				E5DF2C181EAD2EB00026E795 /* Main.storyboard in Resources */,
 			);
@@ -356,6 +459,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CuritiBus/Pods-CuritiBus-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		3FBCCEA21EED929E00D67F5A /* Fabric */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Fabric;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 2298986a37b0a43495aa619c8e5f3b86dab412b0 d6d60be7358bf1acc6bdd55e2c4512f923060486155160c121469d29333f57d7";
 		};
 		9B5BE61FD48407DE6A75A8E9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -394,18 +511,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FBCCEA91EEDDDEB00D67F5A /* Router.swift in Sources */,
 				3FBCCE911EED8AFB00D67F5A /* LocalizedString.swift in Sources */,
 				E5DF2C1E1EAD301D0026E795 /* UserDefaults.swift in Sources */,
+				3F34196B1EEDF5F100412D1E /* IRegisterPresenter.swift in Sources */,
+				3F34196D1EEDF5FB00412D1E /* RegisterPresenter.swift in Sources */,
 				E5DF2C3B1EAD348B0026E795 /* ErrorWrapperPlugin.swift in Sources */,
+				3FBCCEA71EEDDDA700D67F5A /* AppNavigation.swift in Sources */,
+				3F3419701EEDF9B300412D1E /* IEmailView.swift in Sources */,
 				E5DF2C141EAD2EB00026E795 /* AppDelegate.swift in Sources */,
 				E5DF2C261EAD30710026E795 /* APIObserver.swift in Sources */,
 				E5DF2C281EAD30710026E795 /* BaseTargetType.swift in Sources */,
+				3F3419691EEDF5E600412D1E /* IRegisterView.swift in Sources */,
 				E546EE9E1EAD41C000CC7BE9 /* LineInteractor.swift in Sources */,
 				E5DF2C271EAD30710026E795 /* BaseMoyaProvider.swift in Sources */,
 				3F0964711EAE296D00D658A1 /* UrbsAuth.swift in Sources */,
+				3F3419671EEDF43200412D1E /* HomeViewController.swift in Sources */,
 				E5DF2C2A1EAD30710026E795 /* ErrorResponse.swift in Sources */,
+				3F3419721EEDF9BB00412D1E /* EmailViewController.swift in Sources */,
+				3F3419761EEDF9D000412D1E /* EmailSignUpPresenter.swift in Sources */,
+				3F3419801EEE167900412D1E /* Fonts.swift in Sources */,
 				E546EE9C1EAD41B400CC7BE9 /* LineEndpoint.swift in Sources */,
 				E5DF2C321EAD33200026E795 /* UIDevice-Hardware.swift in Sources */,
+				3FBCCEAC1EEDDE8100D67F5A /* RegisterViewController.swift in Sources */,
 				E5DF2C3C1EAD348B0026E795 /* LoggerPlugin.swift in Sources */,
 				3FBCCE8D1EED8A8200D67F5A /* AlertHelper.swift in Sources */,
 				E5DF2C1C1EAD2FFC0026E795 /* URLs.swift in Sources */,
@@ -413,11 +541,24 @@
 				E5DF2C1A1EAD2FF30026E795 /* Constants.swift in Sources */,
 				3FBCCE8F1EED8ABD00D67F5A /* Storyboard.swift in Sources */,
 				E5DF2C2B1EAD30710026E795 /* Response+Error.swift in Sources */,
+				3F3419781EEDF9E500412D1E /* EmailSignInPresenter.swift in Sources */,
 				3FBCCE991EED8C3000D67F5A /* SplashViewController.swift in Sources */,
+				3F3419741EEDF9C300412D1E /* IEmailPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3F3419821EEE17A600412D1E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F3419831EEE17A600412D1E /* pt-BR */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E5DF2BFF1EAD2CA00026E795 /* Debug */ = {

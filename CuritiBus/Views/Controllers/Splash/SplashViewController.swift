@@ -7,19 +7,31 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SplashViewController: UIViewController {
-    
-    let interactor = LineInteractor()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        interactor.getAllLines(success: { lines in
-            print("aaa")
-        }) { (error) in
-            print(error)
-        }
+        // Deslogar
+//        do {
+//            try Auth.auth().signOut()
+//        } catch {
+//            
+//        }
+        
     }
-
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if Auth.auth().currentUser != nil {
+            self.navigate(.home)
+        } else {
+            self.navigate(.register(RegisterPresenter()))
+        }
+        
+    }
+    
 }

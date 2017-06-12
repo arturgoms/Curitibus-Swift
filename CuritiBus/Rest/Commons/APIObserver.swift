@@ -55,11 +55,11 @@ class APIObserver<Element>: ObserverType {
             return response.errorObject
             
         case .requestMapping(let string):
-            print(string)
+            DLog(string)
             return ErrorResponse.defaultError()
             
         case .underlying(let error):
-            print(error)
+            DLog(error.localizedDescription)
             return ErrorResponse.defaultError()
         }
     }
