@@ -11,7 +11,7 @@ import Moya
 extension TargetType {
     
     var baseURL: URL {
-        return URL(string: Endpoints.base.url)!
+        return URL(string: BaseURL.urbs.rawValue)!
     }
     
     var path: String {

@@ -13,6 +13,7 @@ import FirebaseDatabase
 class HomeViewController: UIViewController {
     
     let lineInteractor = LineInteractor()
+    let vehicleInteractor = VehicleInteractor()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,9 @@ class HomeViewController: UIViewController {
             print(lines)
         })
         
+        vehicleInteractor.getVehicles(lineCode: "500", success: { vehicles in
+            print(vehicles)
+        })
         
     }
     

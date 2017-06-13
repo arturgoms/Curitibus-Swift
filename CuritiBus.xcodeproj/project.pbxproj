@@ -22,6 +22,9 @@
 		3F3419801EEE167900412D1E /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F34197F1EEE167900412D1E /* Fonts.swift */; };
 		3F3419841EEE17A600412D1E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3F3419821EEE17A600412D1E /* Localizable.strings */; };
 		3F3419871EEE17BE00412D1E /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F3419861EEE17BE00412D1E /* fontawesome-webfont.ttf */; };
+		3F40C1781EF0013B00AB876A /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F40C1771EF0013B00AB876A /* Vehicle.swift */; };
+		3F40C17B1EF004A400AB876A /* VehicleEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F40C17A1EF004A400AB876A /* VehicleEndpoint.swift */; };
+		3F40C17F1EF004C400AB876A /* VehicleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F40C17E1EF004C400AB876A /* VehicleInteractor.swift */; };
 		3FBCCE8D1EED8A8200D67F5A /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBCCE8C1EED8A8200D67F5A /* AlertHelper.swift */; };
 		3FBCCE8F1EED8ABD00D67F5A /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBCCE8E1EED8ABD00D67F5A /* Storyboard.swift */; };
 		3FBCCE911EED8AFB00D67F5A /* LocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBCCE901EED8AFB00D67F5A /* LocalizedString.swift */; };
@@ -68,6 +71,9 @@
 		3F34197F1EEE167900412D1E /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		3F3419831EEE17A600412D1E /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		3F3419861EEE17BE00412D1E /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
+		3F40C1771EF0013B00AB876A /* Vehicle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
+		3F40C17A1EF004A400AB876A /* VehicleEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleEndpoint.swift; sourceTree = "<group>"; };
+		3F40C17E1EF004C400AB876A /* VehicleInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleInteractor.swift; sourceTree = "<group>"; };
 		3FBCCE8C1EED8A8200D67F5A /* AlertHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
 		3FBCCE8E1EED8ABD00D67F5A /* Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		3FBCCE901EED8AFB00D67F5A /* LocalizedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedString.swift; sourceTree = "<group>"; };
@@ -151,6 +157,23 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		3F40C1761EF0012F00AB876A /* Vehicle */ = {
+			isa = PBXGroup;
+			children = (
+				3F40C1771EF0013B00AB876A /* Vehicle.swift */,
+			);
+			path = Vehicle;
+			sourceTree = "<group>";
+		};
+		3F40C1791EF0049500AB876A /* Vehicle */ = {
+			isa = PBXGroup;
+			children = (
+				3F40C17A1EF004A400AB876A /* VehicleEndpoint.swift */,
+				3F40C17E1EF004C400AB876A /* VehicleInteractor.swift */,
+			);
+			path = Vehicle;
+			sourceTree = "<group>";
+		};
 		3FBCCE941EED8C0500D67F5A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				E546EEA11EAD460B00CC7BE9 /* Line */,
+				3F40C1761EF0012F00AB876A /* Vehicle */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -322,6 +346,7 @@
 				E5DF2C1F1EAD30710026E795 /* Commons */,
 				E5DF2C381EAD348B0026E795 /* Plugins */,
 				E546EE9A1EAD41AB00CC7BE9 /* Line */,
+				3F40C1791EF0049500AB876A /* Vehicle */,
 			);
 			path = Rest;
 			sourceTree = "<group>";
@@ -517,6 +542,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F40C1781EF0013B00AB876A /* Vehicle.swift in Sources */,
 				3FBCCEA91EEDDDEB00D67F5A /* Router.swift in Sources */,
 				3FBCCE911EED8AFB00D67F5A /* LocalizedString.swift in Sources */,
 				E5DF2C1E1EAD301D0026E795 /* UserDefaults.swift in Sources */,
@@ -526,6 +552,7 @@
 				3F0465BF1EEF777500E93110 /* BaseInteractor.swift in Sources */,
 				3FBCCEA71EEDDDA700D67F5A /* AppNavigation.swift in Sources */,
 				3F3419701EEDF9B300412D1E /* IEmailView.swift in Sources */,
+				3F40C17B1EF004A400AB876A /* VehicleEndpoint.swift in Sources */,
 				E5DF2C141EAD2EB00026E795 /* AppDelegate.swift in Sources */,
 				E5DF2C261EAD30710026E795 /* APIObserver.swift in Sources */,
 				E5DF2C281EAD30710026E795 /* BaseTargetType.swift in Sources */,
@@ -552,6 +579,7 @@
 				3F3419781EEDF9E500412D1E /* EmailSignInPresenter.swift in Sources */,
 				3FBCCE991EED8C3000D67F5A /* SplashViewController.swift in Sources */,
 				3F3419741EEDF9C300412D1E /* IEmailPresenter.swift in Sources */,
+				3F40C17F1EF004C400AB876A /* VehicleInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

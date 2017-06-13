@@ -10,7 +10,6 @@ import RxSwift
 import Moya
 import Moya_ObjectMapper
 import FirebaseDatabase
-import ObjectMapper
 
 class LineInteractor: BaseInteractor {
     
@@ -19,11 +18,11 @@ class LineInteractor: BaseInteractor {
     
     func getAllLines(success:@escaping (_ lines: [Line]) -> Void, error: ((ErrorResponse) -> Void)? = nil) {
         
-        // Remote request
+        let ref = DBManager.ref.child("urbs").child("lines")
         let loadRemote = {
             let apiObserver = APIObserver<[Line]>(success: { lines in
                 
-                self.persist(reference: DBManager.ref.child("urbs").child("lines"), data: ["list": lines.toJSON(), "last_updated": Date().timeIntervalSince1970])
+                self.persist(reference: ref, data: ["list": lines.toJSON(), "last_updated": Date().timeIntervalSince1970])
                 success(lines)
                 
             }, error: error)
@@ -34,8 +33,7 @@ class LineInteractor: BaseInteractor {
                 .disposed(by: self.disposeBag)
         }
         
-        let reference = DBManager.ref.child("urbs").child("lines")
-        loadListFromDb(reference: reference, limit: .minutes(10), success: success, fallBack: loadRemote)
+        loadListFromDb(reference: ref, limit: .minutes(10), success: success, fallBack: loadRemote)
         
     }
     

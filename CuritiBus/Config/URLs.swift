@@ -6,11 +6,13 @@
 //  Copyright © 2017 Diego Trevisan Lara. All rights reserved.
 //
 
-import Foundation
+enum BaseURL: String {
+    case urbs = "http://transporteservico.urbs.curitiba.pr.gov.br"
+}
 
 enum Endpoints {
-    case base
     case getLinhas
+    case getVeiculosLinha
 }
 
 extension Endpoints {
@@ -18,11 +20,11 @@ extension Endpoints {
     var url: String {
         switch self {
             
-        case .base:
-            return "http://transporteservico.urbs.curitiba.pr.gov.br"
-            
         case .getLinhas:
             return "/getLinhas.php"
+            
+        case .getVeiculosLinha:
+            return "/getVeiculos.php"
         }
     }
 }
