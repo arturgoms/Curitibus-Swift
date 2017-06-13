@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F0465BD1EEF6BC600E93110 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0465BC1EEF6BC600E93110 /* DBManager.swift */; };
+		3F0465BF1EEF777500E93110 /* BaseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0465BE1EEF777500E93110 /* BaseInteractor.swift */; };
 		3F0964711EAE296D00D658A1 /* UrbsAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0964701EAE296D00D658A1 /* UrbsAuth.swift */; };
 		3F3419671EEDF43200412D1E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3419661EEDF43200412D1E /* HomeViewController.swift */; };
 		3F3419691EEDF5E600412D1E /* IRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3419681EEDF5E600412D1E /* IRegisterView.swift */; };
@@ -51,6 +53,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F0465BC1EEF6BC600E93110 /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		3F0465BE1EEF777500E93110 /* BaseInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseInteractor.swift; sourceTree = "<group>"; };
 		3F0964701EAE296D00D658A1 /* UrbsAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrbsAuth.swift; sourceTree = "<group>"; };
 		3F3419661EEDF43200412D1E /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3F3419681EEDF5E600412D1E /* IRegisterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRegisterView.swift; sourceTree = "<group>"; };
@@ -214,6 +218,7 @@
 		E546EEA01EAD45F100CC7BE9 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				3F0465BC1EEF6BC600E93110 /* DBManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -348,6 +353,7 @@
 				E5DF2C221EAD30710026E795 /* BaseTargetType.swift */,
 				E5DF2C241EAD30710026E795 /* ErrorResponse.swift */,
 				E5DF2C251EAD30710026E795 /* Response+Error.swift */,
+				3F0465BE1EEF777500E93110 /* BaseInteractor.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -517,11 +523,13 @@
 				3F34196B1EEDF5F100412D1E /* IRegisterPresenter.swift in Sources */,
 				3F34196D1EEDF5FB00412D1E /* RegisterPresenter.swift in Sources */,
 				E5DF2C3B1EAD348B0026E795 /* ErrorWrapperPlugin.swift in Sources */,
+				3F0465BF1EEF777500E93110 /* BaseInteractor.swift in Sources */,
 				3FBCCEA71EEDDDA700D67F5A /* AppNavigation.swift in Sources */,
 				3F3419701EEDF9B300412D1E /* IEmailView.swift in Sources */,
 				E5DF2C141EAD2EB00026E795 /* AppDelegate.swift in Sources */,
 				E5DF2C261EAD30710026E795 /* APIObserver.swift in Sources */,
 				E5DF2C281EAD30710026E795 /* BaseTargetType.swift in Sources */,
+				3F0465BD1EEF6BC600E93110 /* DBManager.swift in Sources */,
 				3F3419691EEDF5E600412D1E /* IRegisterView.swift in Sources */,
 				E546EE9E1EAD41C000CC7BE9 /* LineInteractor.swift in Sources */,
 				E5DF2C271EAD30710026E795 /* BaseMoyaProvider.swift in Sources */,
