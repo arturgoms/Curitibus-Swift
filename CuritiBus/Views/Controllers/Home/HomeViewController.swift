@@ -7,45 +7,57 @@
 //
 
 import UIKit
-import FirebaseAuth
-import FirebaseDatabase
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, IHomeView {
     
-    let lineInteractor = LineInteractor()
-    let vehicleInteractor = VehicleInteractor()
-    let lineScheduleInteractor = LineScheduleInteractor()
-    let vehicleScheduleInteractor = VehicleScheduleInteractor()
+    var presenter: IHomeInteractor? {
+        didSet {
+            presenter?.view = self
+        }
+    }
+    
+    let x = LineInteractor()
+    
+    //MARK: - UIView Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        lineInteractor.getAllLines(success: { (lines) in
-            print(lines)
+        x.getAllLines(success: { (lines) in
+            
+            let line = lines.first
+            self.x.addUserLine(line: line!, success: {
+                
+                print("OK")
+                
+            }, error: { (error) in
+                
+                print(error)
+                
+            })
+            
+        }, error: { (error) in
+            
         })
-        
-        vehicleInteractor.getVehicles(lineCod: "500", success: { vehicles in
-            print(vehicles)
-        })
-        
-        lineScheduleInteractor.getLineSchedule(lineCod: "500", success: { lineSchedules in
-            print(lineSchedules)
-        })
-        
-        vehicleScheduleInteractor.getVehicleSchedule(vehicleCod: "EA077", success: { vehicleSchedules in
-            print(vehicleSchedules)
-        })
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationItem.hidesBackButton = true
+        navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
+    //MARK: - IB Actions
+    
+    
+    
+    //MARK: - IHomeInteractor
+    
+    func userLinesDidLoad() {
         
     }
     
-    @IBAction func logout() {
-        
-        do {
-            try Auth.auth().signOut()
-            navigationController?.popToRootViewController(animated: true)
-        } catch {
-            
-        }
+    func userLinesLoadDidFail(error: Error?) {
         
     }
 

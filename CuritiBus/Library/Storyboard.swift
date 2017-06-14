@@ -10,7 +10,13 @@ import UIKit
 
 class Storyboard {
     
-    class func instantiate<VC: UIViewController>(_ viewController: VC.Type, parameters: AnyObject? = nil) -> VC {
+    class func instantiate(_ identifier: String) -> UIViewController {
+        
+        let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: identifier)
+        return vc
+    }
+    
+    class func instantiate<VC: UIViewController>(_ viewController: VC.Type) -> VC {
         
         let identifier = String(describing: viewController)
         guard let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: identifier) as? VC else {

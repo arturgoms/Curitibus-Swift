@@ -37,4 +37,50 @@ class LineInteractor: BaseInteractor {
         
     }
     
+    func getUserLines(success:@escaping (_ lines: [Line]) -> Void, error: ((NSError) -> Void)? = nil) {
+        
+        guard let userId = SessionManager.userId() else {
+            SessionManager.logout()
+            return
+        }
+        
+        let ref = DBManager.ref.child("users").child(userId).child("lines")
+        ref.observeSingleEvent(of: .value, with: { snapshot in
+            
+            let linesDict = snapshot.value as? [[String: Any]]
+            var lines = [Line]()
+            linesDict?.forEach({ lines.append(Line(JSON: $0)!) })
+            
+            DBManager.goOffline()
+            success(lines)
+            
+        }, withCancel: { errorObj in
+            DBManager.goOffline()
+            error?(errorObj as NSError)
+        })
+        
+    }
+    
+    func addUserLine(line: Line, success:@escaping () -> Void, error: ((NSError) -> Void)? = nil) {
+        
+        guard let userId = SessionManager.userId() else {
+            SessionManager.logout()
+            return
+        }
+        
+        let ref = DBManager.ref.child("users").child(userId).child("lines").childByAutoId()
+        ref.setValue(line.toJSON()) { (errorObj, ref) in
+            
+            DBManager.goOffline()
+            
+            if let errorObj = errorObj {
+                error?(errorObj as NSError)
+            } else {
+                success()
+            }
+            
+        }
+        
+    }
+    
 }

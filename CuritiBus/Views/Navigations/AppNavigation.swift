@@ -32,9 +32,10 @@ struct CuritibusNavigation: AppNavigation {
                 return vc
                 
             case .home:
-                let vc = Storyboard.instantiate(HomeViewController.self)
-//                vc.presenter = presenter
-                return vc
+                let tabBarController = Storyboard.instantiate("MainTabBarController") as! UITabBarController
+                let home = Storyboard.instantiate(HomeViewController.self)
+                tabBarController.viewControllers = [home]
+                return tabBarController
                 
             }
         }
@@ -45,9 +46,9 @@ struct CuritibusNavigation: AppNavigation {
         
         switch (from, to) {
             
-//        case (nil, _):
-//            to.setRoot()
-//            
+        case (_, is UITabBarController):
+            to.setRoot()
+//
 //        // Navegações provenientes do menu lateral validam antes se aquela view já não está aberta
 //        case (is MenuViewController, let to):
 //            if let currentView = Storyboard.currentViewController(), type(of: currentView) != type(of: to) {

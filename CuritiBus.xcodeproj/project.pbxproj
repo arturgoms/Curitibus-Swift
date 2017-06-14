@@ -31,6 +31,10 @@
 		3F9EAC5D1EF0AC7E00B88662 /* VehicleScheduleEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9EAC5C1EF0AC7E00B88662 /* VehicleScheduleEndpoint.swift */; };
 		3F9EAC5F1EF0ADB300B88662 /* LineScheduleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9EAC5E1EF0ADB300B88662 /* LineScheduleInteractor.swift */; };
 		3F9EAC611EF0ADBE00B88662 /* VehicleScheduleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9EAC601EF0ADBE00B88662 /* VehicleScheduleInteractor.swift */; };
+		3F9EAC631EF0BFDC00B88662 /* IHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9EAC621EF0BFDC00B88662 /* IHomeView.swift */; };
+		3F9EAC651EF0BFEA00B88662 /* IHomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9EAC641EF0BFEA00B88662 /* IHomeInteractor.swift */; };
+		3F9EAC671EF0BFF300B88662 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9EAC661EF0BFF300B88662 /* HomeInteractor.swift */; };
+		3F9EAC691EF0C44300B88662 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9EAC681EF0C44300B88662 /* SessionManager.swift */; };
 		3FBCCE8D1EED8A8200D67F5A /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBCCE8C1EED8A8200D67F5A /* AlertHelper.swift */; };
 		3FBCCE8F1EED8ABD00D67F5A /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBCCE8E1EED8ABD00D67F5A /* Storyboard.swift */; };
 		3FBCCE911EED8AFB00D67F5A /* LocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBCCE901EED8AFB00D67F5A /* LocalizedString.swift */; };
@@ -86,6 +90,10 @@
 		3F9EAC5C1EF0AC7E00B88662 /* VehicleScheduleEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleScheduleEndpoint.swift; sourceTree = "<group>"; };
 		3F9EAC5E1EF0ADB300B88662 /* LineScheduleInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineScheduleInteractor.swift; sourceTree = "<group>"; };
 		3F9EAC601EF0ADBE00B88662 /* VehicleScheduleInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleScheduleInteractor.swift; sourceTree = "<group>"; };
+		3F9EAC621EF0BFDC00B88662 /* IHomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IHomeView.swift; sourceTree = "<group>"; };
+		3F9EAC641EF0BFEA00B88662 /* IHomeInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IHomeInteractor.swift; sourceTree = "<group>"; };
+		3F9EAC661EF0BFF300B88662 /* HomeInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		3F9EAC681EF0C44300B88662 /* SessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		3FBCCE8C1EED8A8200D67F5A /* AlertHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
 		3FBCCE8E1EED8ABD00D67F5A /* Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		3FBCCE901EED8AFB00D67F5A /* LocalizedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedString.swift; sourceTree = "<group>"; };
@@ -136,7 +144,10 @@
 		3F3419651EEDF42B00412D1E /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				3F9EAC621EF0BFDC00B88662 /* IHomeView.swift */,
 				3F3419661EEDF43200412D1E /* HomeViewController.swift */,
+				3F9EAC641EF0BFEA00B88662 /* IHomeInteractor.swift */,
+				3F9EAC661EF0BFF300B88662 /* HomeInteractor.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -291,6 +302,7 @@
 			isa = PBXGroup;
 			children = (
 				3F0465BC1EEF6BC600E93110 /* DBManager.swift */,
+				3F9EAC681EF0C44300B88662 /* SessionManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -606,7 +618,9 @@
 				3F9EAC5B1EF0AC7200B88662 /* LineScheduleEndpoint.swift in Sources */,
 				3F3419701EEDF9B300412D1E /* IEmailView.swift in Sources */,
 				3F40C17B1EF004A400AB876A /* VehicleEndpoint.swift in Sources */,
+				3F9EAC691EF0C44300B88662 /* SessionManager.swift in Sources */,
 				E5DF2C141EAD2EB00026E795 /* AppDelegate.swift in Sources */,
+				3F9EAC651EF0BFEA00B88662 /* IHomeInteractor.swift in Sources */,
 				3F9EAC5F1EF0ADB300B88662 /* LineScheduleInteractor.swift in Sources */,
 				E5DF2C261EAD30710026E795 /* APIObserver.swift in Sources */,
 				3F9EAC571EF0AAE400B88662 /* VehicleSchedule.swift in Sources */,
@@ -617,6 +631,7 @@
 				E5DF2C271EAD30710026E795 /* BaseMoyaProvider.swift in Sources */,
 				3F0964711EAE296D00D658A1 /* UrbsAuth.swift in Sources */,
 				3F3419671EEDF43200412D1E /* HomeViewController.swift in Sources */,
+				3F9EAC631EF0BFDC00B88662 /* IHomeView.swift in Sources */,
 				E5DF2C2A1EAD30710026E795 /* ErrorResponse.swift in Sources */,
 				3F3419721EEDF9BB00412D1E /* EmailViewController.swift in Sources */,
 				3F3419761EEDF9D000412D1E /* EmailSignUpPresenter.swift in Sources */,
@@ -629,6 +644,7 @@
 				E5DF2C1C1EAD2FFC0026E795 /* URLs.swift in Sources */,
 				E546EEA31EAD463100CC7BE9 /* Line.swift in Sources */,
 				E5DF2C1A1EAD2FF30026E795 /* Constants.swift in Sources */,
+				3F9EAC671EF0BFF300B88662 /* HomeInteractor.swift in Sources */,
 				3F9EAC551EF0AADB00B88662 /* LineSchedule.swift in Sources */,
 				3FBCCE8F1EED8ABD00D67F5A /* Storyboard.swift in Sources */,
 				E5DF2C2B1EAD30710026E795 /* Response+Error.swift in Sources */,
