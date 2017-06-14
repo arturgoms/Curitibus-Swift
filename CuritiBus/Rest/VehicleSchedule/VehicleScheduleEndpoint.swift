@@ -1,43 +1,43 @@
 //
-//  VehicleEndpoint.swift
+//  VehicleScheduleEndpoint.swift
 //  CuritiBus
 //
-//  Created by Diego Trevisan Lara on 13/06/17.
+//  Created by Diego Trevisan Lara on 13/06/2017.
 //  Copyright © 2017 Diego Trevisan Lara. All rights reserved.
 //
 
 import Moya
 
-enum VehicleEndpoint {
-    case getVehicles(lineCod: String)
+enum VehicleScheduleEndpoint {
+    case getVehicleSchedule(vehicleCod: String)
 }
 
-extension VehicleEndpoint: TargetType {
+extension VehicleScheduleEndpoint: TargetType {
     
     var path: String {
         switch self {
-        case .getVehicles(_):
-            return Endpoints.getVeiculosLinha.url
+        case .getVehicleSchedule(_):
+            return Endpoints.getTabelaVeiculo.url
         }
     }
     
     var method: Method {
         switch self {
-        case .getVehicles(_):
+        case .getVehicleSchedule(_):
             return .get
         }
     }
     
     var parameters: [String : Any]? {
         switch self {
-        case .getVehicles(let lineCod):
-            return ["linha": lineCod, "c": accessKey]
+        case .getVehicleSchedule(let vehicleCod):
+            return ["carro": vehicleCod, "c": accessKey]
         }
     }
     
     var parameterEncoding: ParameterEncoding {
         switch self {
-        case .getVehicles(_):
+        case .getVehicleSchedule(_):
             return URLEncoding.queryString
         }
     }

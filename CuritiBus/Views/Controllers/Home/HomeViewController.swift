@@ -14,6 +14,8 @@ class HomeViewController: UIViewController {
     
     let lineInteractor = LineInteractor()
     let vehicleInteractor = VehicleInteractor()
+    let lineScheduleInteractor = LineScheduleInteractor()
+    let vehicleScheduleInteractor = VehicleScheduleInteractor()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,8 +24,16 @@ class HomeViewController: UIViewController {
             print(lines)
         })
         
-        vehicleInteractor.getVehicles(lineCode: "500", success: { vehicles in
+        vehicleInteractor.getVehicles(lineCod: "500", success: { vehicles in
             print(vehicles)
+        })
+        
+        lineScheduleInteractor.getLineSchedule(lineCod: "500", success: { lineSchedules in
+            print(lineSchedules)
+        })
+        
+        vehicleScheduleInteractor.getVehicleSchedule(vehicleCod: "EA077", success: { vehicleSchedules in
+            print(vehicleSchedules)
         })
         
     }

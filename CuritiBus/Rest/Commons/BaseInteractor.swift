@@ -13,6 +13,8 @@ import FirebaseDatabase
 
 enum TimeLimit {
     case minutes(Int)
+    case hours(Int)
+    case days(Int)
     
     func valid(lastUpdated: TimeInterval) -> Bool {
         let timeDiff = Date().timeIntervalSince1970 - lastUpdated
@@ -24,8 +26,15 @@ extension TimeLimit {
     
     var timeInterval: TimeInterval {
         switch self {
+            
         case .minutes(let x):
             return TimeInterval(x * 60)
+            
+        case .hours(let x):
+            return TimeInterval(x * 60 * 60)
+            
+        case .days(let x):
+            return TimeInterval(x * 60 * 60 * 24)
         }
     }
     

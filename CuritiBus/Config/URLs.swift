@@ -13,6 +13,8 @@ enum BaseURL: String {
 enum Endpoints {
     case getLinhas
     case getVeiculosLinha
+    case getTabelaLinha
+    case getTabelaVeiculo
 }
 
 extension Endpoints {
@@ -25,6 +27,12 @@ extension Endpoints {
             
         case .getVeiculosLinha:
             return "/getVeiculos.php"
+            
+        case .getTabelaLinha:
+            return "/getTabelaLinha.php"
+            
+        case .getTabelaVeiculo:
+            return "/getTabelaVeiculo.php"
         }
     }
 }

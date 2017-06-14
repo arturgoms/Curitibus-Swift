@@ -10,16 +10,15 @@ import RxSwift
 import Moya
 import Moya_ObjectMapper
 import FirebaseDatabase
-import ObjectMapper
 
 class VehicleInteractor: BaseInteractor {
     
     let provider = RxMoyaProvider<VehicleEndpoint>()
     let disposeBag = DisposeBag()
     
-    func getVehicles(lineCode: String, success:@escaping (_ vehicles: [Vehicle]) -> Void, error: ((ErrorResponse?) -> Void)? = nil) {
+    func getVehicles(lineCod: String, success:@escaping (_ vehicles: [Vehicle]) -> Void, error: ((ErrorResponse?) -> Void)? = nil) {
         
-        let ref = DBManager.ref.child("urbs").child("vehicles").child(lineCode)
+        let ref = DBManager.ref.child("urbs").child("vehicles").child(lineCod)
         let loadRemote = {
             let apiObserver = APIObserver<Any>(success: { vehiclesDict in
                 
@@ -38,7 +37,7 @@ class VehicleInteractor: BaseInteractor {
                 
             }, error: error)
             
-            self.provider.request(VehicleEndpoint.getVehicles(lineCode: lineCode))
+            self.provider.request(VehicleEndpoint.getVehicles(lineCod: lineCod))
                 .mapJSON()
                 .subscribe(apiObserver)
                 .disposed(by: self.disposeBag)

@@ -33,7 +33,7 @@ class LineInteractor: BaseInteractor {
                 .disposed(by: self.disposeBag)
         }
         
-        loadListFromDb(reference: ref, limit: .minutes(10), success: success, fallBack: loadRemote)
+        loadListFromDb(reference: ref, limit: .days(1), success: success, fallBack: loadRemote)
         
     }
     

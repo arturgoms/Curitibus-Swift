@@ -15,7 +15,7 @@ class Vehicle: Mappable {
     var refreshStr: String?
     var latStr: String?
     var lonStr: String?
-    var lineCode: String?
+    var lineCod: String?
     var adapt: Bool?
     var vehicleTypeStr: String?
     var tableStr: String?
@@ -39,7 +39,7 @@ class Vehicle: Mappable {
         refreshStr <- map["REFRESH"]
         latStr <- map["LAT"]
         lonStr <- map["LON"]
-        lineCode <- map["CODIGOLINHA"]
+        lineCod <- map["CODIGOLINHA"]
         adapt <- map["ADAPT"]
         vehicleTypeStr <- map["TIPO_VEIC"]
         tableStr <- map["TABELA"]
