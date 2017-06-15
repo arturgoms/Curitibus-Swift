@@ -11,7 +11,8 @@ import UIKit
 enum NavigationRoute: Navigation {
     case register(IRegisterPresenter)
     case email(IEmailPresenter)
-    case home
+    case home(IHomePresenter)
+    case lines
 }
 
 struct CuritibusNavigation: AppNavigation {
@@ -31,11 +32,19 @@ struct CuritibusNavigation: AppNavigation {
                 vc.presenter = presenter
                 return vc
                 
-            case .home:
+            case .home(let homePresenter):
                 let tabBarController = Storyboard.instantiate("MainTabBarController") as! UITabBarController
+                
                 let home = Storyboard.instantiate(HomeViewController.self)
-                tabBarController.viewControllers = [home]
+                home.presenter = homePresenter
+                let nc = UINavigationController(rootViewController: home)
+                
+                tabBarController.viewControllers = [nc]
                 return tabBarController
+                
+            case .lines:
+                let nc = Storyboard.instantiate("LinesNavigationController")
+                return nc
                 
             }
         }
@@ -48,6 +57,9 @@ struct CuritibusNavigation: AppNavigation {
             
         case (_, is UITabBarController):
             to.setRoot()
+            
+        case (_, is UINavigationController):
+            to.modal()
 //
 //        // Navegações provenientes do menu lateral validam antes se aquela view já não está aberta
 //        case (is MenuViewController, let to):

@@ -49,19 +49,27 @@ class BaseInteractor {
         reference.observeSingleEvent(of: .value, with: { snapshot in
             
             guard let result = snapshot.value as? [String: Any],
-                let lastUpdated = result["last_updated"] as? TimeInterval,
-                let list = result["list"] as? [[String: Any]] else {
+                  let lastUpdated = result["last_updated"] as? TimeInterval,
+                  limit.valid(lastUpdated: lastUpdated) else {
                     fallBack()
                     return
             }
             
-            guard limit.valid(lastUpdated: lastUpdated) else {
+            // Instancia lista de resultado
+            var objs = [ObjClass]()
+            
+            // Parse de dicionário
+            if let list = result["list"] as? [String: Any] {
+                list.keys.forEach({ objs.append(ObjClass(JSON: list[$0] as! [String: Any])!) })
+                
+            // Parse de lista de dicionário
+            } else if let list = result["list"] as? [[String: Any]] {
+                list.forEach({ objs.append(ObjClass(JSON: $0)!) })
+                
+            } else {
                 fallBack()
                 return
             }
-            
-            var objs = [ObjClass]()
-            list.forEach({ objs.append(ObjClass(JSON: $0)!) })
             
             DBManager.goOffline()
             success(objs)

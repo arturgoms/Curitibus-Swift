@@ -43,7 +43,7 @@ class RegisterViewController: UIViewController, IRegisterView {
     //MARK: - IRegisterView
     
     func userDidLogin() {
-        self.navigate(.home)
+        self.navigate(.home(HomePresenter(lineInteractor: LineInteractor())))
     }
     
     func userLoginDidFail(error: Error?) {

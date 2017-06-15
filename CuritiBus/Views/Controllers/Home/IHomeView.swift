@@ -8,9 +8,9 @@
 
 protocol IHomeView: class {
     
-    var presenter: IHomeInteractor? { get }
+    var presenter: IHomePresenter? { get }
     
-    func userLinesDidLoad()
+    func userLinesDidLoad(lines: [Line])
     func userLinesLoadDidFail(error: Error?)
     
 }

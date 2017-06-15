@@ -25,6 +25,10 @@
 		3F40C1781EF0013B00AB876A /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F40C1771EF0013B00AB876A /* Vehicle.swift */; };
 		3F40C17B1EF004A400AB876A /* VehicleEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F40C17A1EF004A400AB876A /* VehicleEndpoint.swift */; };
 		3F40C17F1EF004C400AB876A /* VehicleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F40C17E1EF004C400AB876A /* VehicleInteractor.swift */; };
+		3F754CFA1EF200C0003749A2 /* UserLinesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F754CF91EF200C0003749A2 /* UserLinesManager.swift */; };
+		3F754CFD1EF21536003749A2 /* UserLineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F754CFC1EF21536003749A2 /* UserLineCell.swift */; };
+		3F754D001EF217D8003749A2 /* AddLineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F754CFF1EF217D8003749A2 /* AddLineTableViewController.swift */; };
+		3F754D031EF21D4E003749A2 /* AddLineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F754D021EF21D4E003749A2 /* AddLineCell.swift */; };
 		3F9EAC551EF0AADB00B88662 /* LineSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9EAC541EF0AADB00B88662 /* LineSchedule.swift */; };
 		3F9EAC571EF0AAE400B88662 /* VehicleSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9EAC561EF0AAE400B88662 /* VehicleSchedule.swift */; };
 		3F9EAC5B1EF0AC7200B88662 /* LineScheduleEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9EAC5A1EF0AC7200B88662 /* LineScheduleEndpoint.swift */; };
@@ -84,6 +88,10 @@
 		3F40C1771EF0013B00AB876A /* Vehicle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
 		3F40C17A1EF004A400AB876A /* VehicleEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleEndpoint.swift; sourceTree = "<group>"; };
 		3F40C17E1EF004C400AB876A /* VehicleInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleInteractor.swift; sourceTree = "<group>"; };
+		3F754CF91EF200C0003749A2 /* UserLinesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLinesManager.swift; sourceTree = "<group>"; };
+		3F754CFC1EF21536003749A2 /* UserLineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLineCell.swift; sourceTree = "<group>"; };
+		3F754CFF1EF217D8003749A2 /* AddLineTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLineTableViewController.swift; sourceTree = "<group>"; };
+		3F754D021EF21D4E003749A2 /* AddLineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLineCell.swift; sourceTree = "<group>"; };
 		3F9EAC541EF0AADB00B88662 /* LineSchedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineSchedule.swift; sourceTree = "<group>"; };
 		3F9EAC561EF0AAE400B88662 /* VehicleSchedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleSchedule.swift; sourceTree = "<group>"; };
 		3F9EAC5A1EF0AC7200B88662 /* LineScheduleEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineScheduleEndpoint.swift; sourceTree = "<group>"; };
@@ -148,6 +156,7 @@
 				3F3419661EEDF43200412D1E /* HomeViewController.swift */,
 				3F9EAC641EF0BFEA00B88662 /* IHomeInteractor.swift */,
 				3F9EAC661EF0BFF300B88662 /* HomeInteractor.swift */,
+				3F754CFB1EF21526003749A2 /* Cells */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -197,6 +206,31 @@
 			path = Vehicle;
 			sourceTree = "<group>";
 		};
+		3F754CFB1EF21526003749A2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3F754CFC1EF21536003749A2 /* UserLineCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		3F754CFE1EF217C3003749A2 /* AddLine */ = {
+			isa = PBXGroup;
+			children = (
+				3F754CFF1EF217D8003749A2 /* AddLineTableViewController.swift */,
+				3F754D011EF21D3F003749A2 /* Cells */,
+			);
+			path = AddLine;
+			sourceTree = "<group>";
+		};
+		3F754D011EF21D3F003749A2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3F754D021EF21D4E003749A2 /* AddLineCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		3F9EAC521EF0AAD000B88662 /* LineSchedule */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +272,7 @@
 				3FBCCEAA1EEDDE7600D67F5A /* Register */,
 				3F34196E1EEDF9AC00412D1E /* Email */,
 				3F3419651EEDF42B00412D1E /* Home */,
+				3F754CFE1EF217C3003749A2 /* AddLine */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -303,6 +338,7 @@
 			children = (
 				3F0465BC1EEF6BC600E93110 /* DBManager.swift */,
 				3F9EAC681EF0C44300B88662 /* SessionManager.swift */,
+				3F754CF91EF200C0003749A2 /* UserLinesManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -629,7 +665,9 @@
 				3F3419691EEDF5E600412D1E /* IRegisterView.swift in Sources */,
 				E546EE9E1EAD41C000CC7BE9 /* LineInteractor.swift in Sources */,
 				E5DF2C271EAD30710026E795 /* BaseMoyaProvider.swift in Sources */,
+				3F754D031EF21D4E003749A2 /* AddLineCell.swift in Sources */,
 				3F0964711EAE296D00D658A1 /* UrbsAuth.swift in Sources */,
+				3F754D001EF217D8003749A2 /* AddLineTableViewController.swift in Sources */,
 				3F3419671EEDF43200412D1E /* HomeViewController.swift in Sources */,
 				3F9EAC631EF0BFDC00B88662 /* IHomeView.swift in Sources */,
 				E5DF2C2A1EAD30710026E795 /* ErrorResponse.swift in Sources */,
@@ -647,8 +685,10 @@
 				3F9EAC671EF0BFF300B88662 /* HomeInteractor.swift in Sources */,
 				3F9EAC551EF0AADB00B88662 /* LineSchedule.swift in Sources */,
 				3FBCCE8F1EED8ABD00D67F5A /* Storyboard.swift in Sources */,
+				3F754CFA1EF200C0003749A2 /* UserLinesManager.swift in Sources */,
 				E5DF2C2B1EAD30710026E795 /* Response+Error.swift in Sources */,
 				3F3419781EEDF9E500412D1E /* EmailSignInPresenter.swift in Sources */,
+				3F754CFD1EF21536003749A2 /* UserLineCell.swift in Sources */,
 				3FBCCE991EED8C3000D67F5A /* SplashViewController.swift in Sources */,
 				3F3419741EEDF9C300412D1E /* IEmailPresenter.swift in Sources */,
 				3F40C17F1EF004C400AB876A /* VehicleInteractor.swift in Sources */,

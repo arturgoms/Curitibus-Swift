@@ -27,12 +27,15 @@ class VehicleInteractor: BaseInteractor {
                     return
                 }
                 
-                var vehicles = [Vehicle]()
-                vehiclesDict.keys
-                    .map({ return vehiclesDict[$0] as! [String: Any] })
-                    .forEach({ vehicles.append(Vehicle(JSON: $0)!) })
+//                self.persist(reference: ref, data: ["list": vehiclesDict, "last_updated": Date().timeIntervalSince1970])
+//                
+//                var vehicles = [Vehicle]()
+//                vehiclesDict.keys.forEach({ vehicles.append(Vehicle(JSON: vehiclesDict[$0] as! [String: Any])!) })
                 
+                var vehicles = [Vehicle]()
+                vehiclesDict.keys.forEach({ vehicles.append(Vehicle(JSON: vehiclesDict[$0] as! [String: Any])!) })
                 self.persist(reference: ref, data: ["list": vehicles.toJSON(), "last_updated": Date().timeIntervalSince1970])
+                
                 success(vehicles)
                 
             }, error: error)
@@ -44,7 +47,6 @@ class VehicleInteractor: BaseInteractor {
         }
         
         loadListFromDb(reference: ref, limit: .minutes(2), success: success, fallBack: loadRemote)
-        
     }
     
 }

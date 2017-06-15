@@ -34,7 +34,6 @@ class VehicleScheduleInteractor: BaseInteractor {
         }
         
         loadListFromDb(reference: ref, limit: .days(1), success: success, fallBack: loadRemote)
-        
     }
     
 }

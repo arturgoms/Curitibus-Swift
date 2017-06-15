@@ -12,7 +12,7 @@ class LineSchedule: Mappable {
     
     var timeStr: String?
     var stop: String?
-    var dayStr: Int?
+    var dayStr: String?
     var numStr: String?
     var tableStr: String?
     var adapt: String?

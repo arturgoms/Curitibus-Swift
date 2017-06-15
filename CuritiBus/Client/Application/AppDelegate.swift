@@ -24,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Init Firebase
         FirebaseApp.configure()
+        Database.database().isPersistenceEnabled = true
         
         // Init Navigations
         Router.default.setupAppNavigation(appNavigation: CuritibusNavigation())

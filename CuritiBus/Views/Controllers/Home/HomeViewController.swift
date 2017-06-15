@@ -8,37 +8,28 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, IHomeView {
+class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, IHomeView {
     
-    var presenter: IHomeInteractor? {
+    @IBOutlet private weak var tableView: UITableView! {
+        didSet {
+            tableView.tableFooterView = UIView()
+        }
+    }
+    
+    private var userLines  = [Line]()
+    
+    var presenter: IHomePresenter? {
         didSet {
             presenter?.view = self
         }
     }
     
-    let x = LineInteractor()
-    
     //MARK: - UIView Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        x.getAllLines(success: { (lines) in
-            
-            let line = lines.first
-            self.x.addUserLine(line: line!, success: {
-                
-                print("OK")
-                
-            }, error: { (error) in
-                
-                print(error)
-                
-            })
-            
-        }, error: { (error) in
-            
-        })
+        setupNavigationBar()
+        presenter?.loadUserLines()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -47,14 +38,36 @@ class HomeViewController: UIViewController, IHomeView {
         navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
-    //MARK: - IB Actions
+    //MARK: - Init
     
+    func setupNavigationBar() {
+        title = "Aaaa"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addLine))
+    }
     
+    //MARK: - Actions
+    
+    func addLine() {
+        self.navigate(.lines)
+    }
+    
+    //MARK: - UITableView
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return userLines.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "UserLineCell") as! UserLineCell
+        cell.textLabel?.text = userLines[indexPath.row].name
+        return cell
+    }
     
     //MARK: - IHomeInteractor
     
-    func userLinesDidLoad() {
-        
+    func userLinesDidLoad(lines: [Line]) {
+        userLines = lines
+        tableView.reloadData()
     }
     
     func userLinesLoadDidFail(error: Error?) {

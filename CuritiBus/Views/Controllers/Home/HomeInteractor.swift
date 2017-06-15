@@ -6,12 +6,21 @@
 //  Copyright © 2017 Diego Trevisan Lara. All rights reserved.
 //
 
-class HomeInteractor: IHomeInteractor {
+class HomePresenter: IHomePresenter {
     
     weak var view: IHomeView?
+    var lineInteractor: LineInteractor
+    
+    required init(lineInteractor: LineInteractor) {
+        self.lineInteractor = lineInteractor
+    }
     
     func loadUserLines() {
-        
+        lineInteractor.getUserLines(success: { lines in
+            self.view?.userLinesDidLoad(lines: lines)
+        }, error: { error in
+            self.view?.userLinesLoadDidFail(error: error)
+        })
     }
     
 }
