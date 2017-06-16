@@ -16,24 +16,19 @@ class LineInteractor: BaseInteractor {
     let provider = RxMoyaProvider<LineEndpoint>()
     let disposeBag = DisposeBag()
     
-    func getAllLines(success:@escaping (_ lines: [Line]) -> Void, error: ((ErrorResponse) -> Void)? = nil) {
+    func getUrbsLines(success:@escaping (_ lines: [UrbsLine]) -> Void, error: ((ErrorResponse) -> Void)? = nil) {
         
         let ref = DBManager.ref.child("urbs").child("lines")
         let loadRemote = {
-            let apiObserver = APIObserver<[Line]>(success: { lines in
-                
-//                var linesDict = [String: Any]()
-//                lines.forEach({ linesDict[$0.code!] = $0.toJSON() })
-//                self.persist(reference: ref, data: ["list": linesDict, "last_updated": Date().timeIntervalSince1970])
+            let apiObserver = APIObserver<[UrbsLine]>(success: { lines in
                 
                 self.persist(reference: ref, data: ["list": lines.toJSON(), "last_updated": Date().timeIntervalSince1970])
-                
                 success(lines)
                 
             }, error: error)
             
-            self.provider.request(LineEndpoint.getAllLines)
-                .mapArray(Line.self)
+            self.provider.request(LineEndpoint.getUrbsLines)
+                .mapArray(UrbsLine.self)
                 .subscribe(apiObserver)
                 .disposed(by: self.disposeBag)
         }
@@ -41,26 +36,45 @@ class LineInteractor: BaseInteractor {
         loadListFromDb(reference: ref, limit: .days(1), success: success, fallBack: loadRemote)
     }
     
-    func getUserLines(success:@escaping (_ lines: [Line]) -> Void, error: ((NSError) -> Void)? = nil) {
+    func getMetroLines(success:@escaping (_ lines: [MetroLine]) -> Void, error: ((ErrorResponse) -> Void)? = nil) {
+        
+        let ref = DBManager.ref.child("metro").child("lines")
+        let loadRemote = {
+            let apiObserver = APIObserver<[MetroLine]>(success: { lines in
+                
+                self.persist(reference: ref, data: ["list": lines.toJSON(), "last_updated": Date().timeIntervalSince1970])
+                success(lines)
+                
+            }, error: error)
+            
+            self.provider.request(LineEndpoint.getMetroLines)
+                .mapArray(MetroLine.self)
+                .subscribe(apiObserver)
+                .disposed(by: self.disposeBag)
+        }
+        
+        loadListFromDb(reference: ref, limit: .days(1), success: success, fallBack: loadRemote)
+    }
+    
+    func getUserLines(success:@escaping (_ lines: [UrbsLine]) -> Void, error: ((NSError) -> Void)? = nil) {
         
         guard let userId = SessionManager.userId() else {
             SessionManager.logout()
             return
         }
         
-        let ref = DBManager.ref.child("users").child(userId).child("lines")
+        let ref = DBManager.ref.child("users").child(userId).child("lines").queryOrderedByValue()
         ref.observeSingleEvent(of: .value, with: { snapshot in
             
-            var lines = [Line]()
-            if let linesDict = snapshot.value as? [String: Any] {
-                linesDict.keys.forEach({ lineCod in
-                    if let foundLine = UserLinesManager.urbsLines.first(where: { $0.code == lineCod }) {
-                        lines.append(foundLine)
-                    }
-                })
+            var lines = [UrbsLine]()
+            for child in snapshot.children {
+                if let foundLine = UserLinesManager.urbsLines.first(where: { $0.cod == (child as! DataSnapshot).key }) {
+                    lines.append(foundLine)
+                }
             }
             
             DBManager.goOffline()
+            UserLinesManager.userLines = lines
             success(lines)
             
         }, withCancel: { errorObj in
@@ -70,20 +84,28 @@ class LineInteractor: BaseInteractor {
         
     }
     
-    func addUserLine(line: Line, success:(() -> Void)? = nil, error: ((NSError?) -> Void)? = nil) {
+    func addUserLine(line: UrbsLine, success:(() -> Void)? = nil, error: ((NSError?) -> Void)? = nil) {
         
         guard let userId = SessionManager.userId() else {
             SessionManager.logout()
             return
         }
         
-        guard let lineCod = line.code else {
+        guard let lineCod = line.cod else {
             error?(nil)
             return
         }
         
+        guard !UserLinesManager.userLines.contains(where: { $0 === line }) else {
+            success?()
+            return
+        }
+        
+        UserLinesManager.userLines.append(line)
+        let index = Int(UserLinesManager.userLines.index(where: { $0 === line })!)
+        
         let ref = DBManager.ref.child("users").child(userId).child("lines").child(lineCod)
-        ref.setValue(true) { (errorObj, ref) in
+        ref.setValue(index) { (errorObj, ref) in
             
             DBManager.goOffline()
             
@@ -97,27 +119,37 @@ class LineInteractor: BaseInteractor {
         
     }
     
-    func deleteUserLine(line: Line, success:@escaping () -> Void, error: ((NSError?) -> Void)? = nil) {
+    func deleteUserLine(line: UrbsLine, success:(() -> Void)? = nil, error: ((NSError?) -> Void)? = nil) {
         
         guard let userId = SessionManager.userId() else {
             SessionManager.logout()
             return
         }
         
-        guard let lineCod = line.code else {
-            error?(nil)
+        guard let index = UserLinesManager.userLines.index(where: { $0 === line }) else {
+            success?()
             return
         }
         
-        let ref = DBManager.ref.child("users").child(userId).child("lines").child(lineCod)
-        ref.removeValue { (errorObj, ref) in
+        UserLinesManager.userLines.remove(at: Int(index))
+        
+        let ref = DBManager.ref.child("users").child(userId).child("lines")
+        
+        var linesDict = [String: Int]()
+        var idx = 0
+        UserLinesManager.userLines.forEach { line in
+            linesDict[line.cod!] = idx
+            idx += 1
+        }
+        
+        ref.setValue(linesDict) { (errorObj, ref) in
           
             DBManager.goOffline()
             
             if let errorObj = errorObj {
                 error?(errorObj as NSError)
             } else {
-                success()
+                success?()
             }
         }
         

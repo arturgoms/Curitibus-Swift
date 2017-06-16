@@ -14,10 +14,17 @@ class AddLineTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupTableView()
         setupNavigationBar()
     }
     
     //MARK: - Init
+    
+    func setupTableView() {
+        tableView.tableFooterView = UIView()
+        tableView.estimatedRowHeight = 60
+        tableView.rowHeight = UITableViewAutomaticDimension
+    }
     
     func setupNavigationBar() {
         title = "Aaaa"
@@ -33,19 +40,19 @@ class AddLineTableViewController: UITableViewController {
     //MARK: - UITableView Datasource
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return UserLinesManager.urbsLines.count
+        return UserLinesManager.allLines.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AddLineCell", for: indexPath) as! AddLineCell
-        cell.textLabel?.text = UserLinesManager.urbsLines[indexPath.row].name
+        cell.line = UserLinesManager.allLines[indexPath.row]
         return cell
     }
 
     //MARK: - UITableView Delegate
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let line = UserLinesManager.urbsLines[indexPath.row]
+        let line = UserLinesManager.allLines[indexPath.row]
         LineInteractor().addUserLine(line: line)
         dismissView()
     }

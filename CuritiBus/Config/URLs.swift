@@ -8,6 +8,7 @@
 
 enum BaseURL: String {
     case urbs = "http://transporteservico.urbs.curitiba.pr.gov.br"
+    case transdatasmart = "http://00291.transdatasmart.com.br:8291/RestLibrary/LinhaService"
 }
 
 enum Endpoints {
@@ -15,6 +16,8 @@ enum Endpoints {
     case getVeiculosLinha
     case getTabelaLinha
     case getTabelaVeiculo
+    
+    case buscaLinha
 }
 
 extension Endpoints {
@@ -33,6 +36,9 @@ extension Endpoints {
             
         case .getTabelaVeiculo:
             return "/getTabelaVeiculo.php"
+            
+        case .buscaLinha:
+            return "/Busca"
         }
     }
 }

@@ -8,6 +8,14 @@
 
 class UserLinesManager {
     
-    static var urbsLines: [Line] = [Line]()
+    static var urbsLines: [UrbsLine] = [UrbsLine]()
+    static var metroLines: [MetroLine] = [MetroLine]()
+    static var allLines: [Line] = [Line]()
+    
+    static var userLines: [UrbsLine] = [UrbsLine]()
+    
+    class func merge() {
+        allLines = (urbsLines as [Line] + metroLines as [Line]).sorted(by: { $0.name! < $1.name! })
+    }
     
 }

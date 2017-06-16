@@ -11,7 +11,7 @@ import FirebaseAuth
 
 class SplashViewController: UIViewController {
     
-    let lineInteractor = LineInteractor()
+    private let lineInteractor = LineInteractor()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,10 +20,23 @@ class SplashViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        lineInteractor.getAllLines(success: { lines in
+        lineInteractor.getUrbsLines(success: { urbsLines in
             
-            UserLinesManager.urbsLines = lines
-            self.autoLogin()
+            UserLinesManager.urbsLines = urbsLines
+            if UserLinesManager.metroLines.count > 0 {
+                self.autoLogin()
+            }
+            
+        }, error: { error in
+            AlertHelper.presentAlert(title: .error, message: error.message ?? "", sender: self)
+        })
+        
+        lineInteractor.getMetroLines(success: { metroLines in
+            
+            UserLinesManager.metroLines = metroLines
+            if UserLinesManager.urbsLines.count > 0 {
+                self.autoLogin()
+            }
             
         }, error: { error in
             AlertHelper.presentAlert(title: .error, message: error.message ?? "", sender: self)
@@ -32,6 +45,8 @@ class SplashViewController: UIViewController {
     }
     
     func autoLogin() {
+        UserLinesManager.merge()
+        
         if Auth.auth().currentUser != nil {
             self.navigate(.home(HomePresenter(lineInteractor: LineInteractor())))
         } else {

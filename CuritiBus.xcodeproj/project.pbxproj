@@ -48,10 +48,13 @@
 		3FBCCEA71EEDDDA700D67F5A /* AppNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBCCEA61EEDDDA700D67F5A /* AppNavigation.swift */; };
 		3FBCCEA91EEDDDEB00D67F5A /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBCCEA81EEDDDEB00D67F5A /* Router.swift */; };
 		3FBCCEAC1EEDDE8100D67F5A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBCCEAB1EEDDE8100D67F5A /* RegisterViewController.swift */; };
+		3FFC1A261EF3474000C7E158 /* MetroLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFC1A251EF3474000C7E158 /* MetroLine.swift */; };
+		3FFC1A281EF3492E00C7E158 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFC1A271EF3492E00C7E158 /* Line.swift */; };
+		3FFE39C11EF2AF6F00A0A4C0 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFE39C01EF2AF6F00A0A4C0 /* AppColors.swift */; };
 		81ED263C16229F901E99724E /* Pods_CuritiBus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 564D6FB06006D36CB53C870A /* Pods_CuritiBus.framework */; };
 		E546EE9C1EAD41B400CC7BE9 /* LineEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E546EE9B1EAD41B400CC7BE9 /* LineEndpoint.swift */; };
 		E546EE9E1EAD41C000CC7BE9 /* LineInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E546EE9D1EAD41C000CC7BE9 /* LineInteractor.swift */; };
-		E546EEA31EAD463100CC7BE9 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = E546EEA21EAD463100CC7BE9 /* Line.swift */; };
+		E546EEA31EAD463100CC7BE9 /* UrbsLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E546EEA21EAD463100CC7BE9 /* UrbsLine.swift */; };
 		E5DF2C141EAD2EB00026E795 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DF2C061EAD2EB00026E795 /* AppDelegate.swift */; };
 		E5DF2C161EAD2EB00026E795 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5DF2C0A1EAD2EB00026E795 /* Assets.xcassets */; };
 		E5DF2C171EAD2EB00026E795 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5DF2C121EAD2EB00026E795 /* LaunchScreen.storyboard */; };
@@ -111,12 +114,15 @@
 		3FBCCEA61EEDDDA700D67F5A /* AppNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppNavigation.swift; sourceTree = "<group>"; };
 		3FBCCEA81EEDDDEB00D67F5A /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		3FBCCEAB1EEDDE8100D67F5A /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		3FFC1A251EF3474000C7E158 /* MetroLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetroLine.swift; sourceTree = "<group>"; };
+		3FFC1A271EF3492E00C7E158 /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		3FFE39C01EF2AF6F00A0A4C0 /* AppColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		564D6FB06006D36CB53C870A /* Pods_CuritiBus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CuritiBus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6EE6A4E87B72F4611F29D76 /* Pods-CuritiBus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuritiBus.release.xcconfig"; path = "Pods/Target Support Files/Pods-CuritiBus/Pods-CuritiBus.release.xcconfig"; sourceTree = "<group>"; };
 		E125EC98E76ED552C657F069 /* Pods-CuritiBus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuritiBus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CuritiBus/Pods-CuritiBus.debug.xcconfig"; sourceTree = "<group>"; };
 		E546EE9B1EAD41B400CC7BE9 /* LineEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineEndpoint.swift; sourceTree = "<group>"; };
 		E546EE9D1EAD41C000CC7BE9 /* LineInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineInteractor.swift; sourceTree = "<group>"; };
-		E546EEA21EAD463100CC7BE9 /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		E546EEA21EAD463100CC7BE9 /* UrbsLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrbsLine.swift; sourceTree = "<group>"; };
 		E5DF2BEF1EAD2CA00026E795 /* CuritiBus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CuritiBus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5DF2C061EAD2EB00026E795 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5DF2C071EAD2EB00026E795 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -346,7 +352,9 @@
 		E546EEA11EAD460B00CC7BE9 /* Line */ = {
 			isa = PBXGroup;
 			children = (
-				E546EEA21EAD463100CC7BE9 /* Line.swift */,
+				3FFC1A271EF3492E00C7E158 /* Line.swift */,
+				E546EEA21EAD463100CC7BE9 /* UrbsLine.swift */,
+				3FFC1A251EF3474000C7E158 /* MetroLine.swift */,
 			);
 			path = Line;
 			sourceTree = "<group>";
@@ -412,6 +420,7 @@
 				E5DF2C1B1EAD2FFC0026E795 /* URLs.swift */,
 				E5DF2C1D1EAD301D0026E795 /* UserDefaults.swift */,
 				3F34197F1EEE167900412D1E /* Fonts.swift */,
+				3FFE39C01EF2AF6F00A0A4C0 /* AppColors.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -649,6 +658,8 @@
 				3F34196D1EEDF5FB00412D1E /* RegisterPresenter.swift in Sources */,
 				E5DF2C3B1EAD348B0026E795 /* ErrorWrapperPlugin.swift in Sources */,
 				3F0465BF1EEF777500E93110 /* BaseInteractor.swift in Sources */,
+				3FFC1A281EF3492E00C7E158 /* Line.swift in Sources */,
+				3FFC1A261EF3474000C7E158 /* MetroLine.swift in Sources */,
 				3FBCCEA71EEDDDA700D67F5A /* AppNavigation.swift in Sources */,
 				3F9EAC611EF0ADBE00B88662 /* VehicleScheduleInteractor.swift in Sources */,
 				3F9EAC5B1EF0AC7200B88662 /* LineScheduleEndpoint.swift in Sources */,
@@ -672,6 +683,7 @@
 				3F9EAC631EF0BFDC00B88662 /* IHomeView.swift in Sources */,
 				E5DF2C2A1EAD30710026E795 /* ErrorResponse.swift in Sources */,
 				3F3419721EEDF9BB00412D1E /* EmailViewController.swift in Sources */,
+				3FFE39C11EF2AF6F00A0A4C0 /* AppColors.swift in Sources */,
 				3F3419761EEDF9D000412D1E /* EmailSignUpPresenter.swift in Sources */,
 				3F3419801EEE167900412D1E /* Fonts.swift in Sources */,
 				E546EE9C1EAD41B400CC7BE9 /* LineEndpoint.swift in Sources */,
@@ -680,7 +692,7 @@
 				E5DF2C3C1EAD348B0026E795 /* LoggerPlugin.swift in Sources */,
 				3FBCCE8D1EED8A8200D67F5A /* AlertHelper.swift in Sources */,
 				E5DF2C1C1EAD2FFC0026E795 /* URLs.swift in Sources */,
-				E546EEA31EAD463100CC7BE9 /* Line.swift in Sources */,
+				E546EEA31EAD463100CC7BE9 /* UrbsLine.swift in Sources */,
 				E5DF2C1A1EAD2FF30026E795 /* Constants.swift in Sources */,
 				3F9EAC671EF0BFF300B88662 /* HomeInteractor.swift in Sources */,
 				3F9EAC551EF0AADB00B88662 /* LineSchedule.swift in Sources */,

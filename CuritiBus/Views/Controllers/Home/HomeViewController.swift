@@ -13,10 +13,10 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet private weak var tableView: UITableView! {
         didSet {
             tableView.tableFooterView = UIView()
+            tableView.estimatedRowHeight = 60
+            tableView.rowHeight = UITableViewAutomaticDimension
         }
     }
-    
-    private var userLines  = [Line]()
     
     var presenter: IHomePresenter? {
         didSet {
@@ -36,6 +36,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.viewWillAppear(animated)
         navigationItem.hidesBackButton = true
         navigationController?.setNavigationBarHidden(false, animated: false)
+        
+        tableView.reloadData()
     }
     
     //MARK: - Init
@@ -51,22 +53,28 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.navigate(.lines)
     }
     
-    //MARK: - UITableView
+    //MARK: - UITableView Datasource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return userLines.count
+        return UserLinesManager.userLines.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UserLineCell") as! UserLineCell
-        cell.textLabel?.text = userLines[indexPath.row].name
+        cell.line = UserLinesManager.userLines[indexPath.row]
         return cell
+    }
+    
+    //MARK: - UITableView Delegate
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter?.deleteUserLine(line: UserLinesManager.userLines[indexPath.row])
+        tableView.reloadData()
     }
     
     //MARK: - IHomeInteractor
     
-    func userLinesDidLoad(lines: [Line]) {
-        userLines = lines
+    func userLinesDidLoad(lines: [UrbsLine]) {
         tableView.reloadData()
     }
     
