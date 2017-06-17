@@ -10,21 +10,41 @@ import FirebaseDatabase
 
 class DBManager {
     
-    static private var refCount = 0
-    static var ref: DatabaseReference {
-        get {
-            refCount += 1
-            Database.database().goOnline()
-            return Database.database().reference()
-        }
-    }
+//    static private var weakly = [Weak<DatabaseReference>]()
+    static var ref = Database.database().reference()
     
-    class func goOffline() {
-        refCount -= 1
-        if refCount <= 0 {
-            refCount = 0
-            Database.database().goOffline()
-        }
-    }
+//    class func getRef(path: String) -> DatabaseReference {
+//        return Database.database().reference().child(path)
+//    }
+    
+//    class func timer() {
+//        
+//        DispatchQueue(label: "teste").async {
+//            while true {
+//                DBManager.weakly.reap()
+//                if (DBManager.weakly.count > 0) {
+//                    print(DBManager.weakly.count)
+//                }
+//                usleep(500000)
+//            }
+//        }
+//    }
     
 }
+
+//class Weak<T: AnyObject> {
+//    
+//    weak var value : T?
+//    init (value: T) {
+//        self.value = value
+//    }
+//    
+//}
+//
+//extension Array where Element:Weak<DatabaseReference> {
+//    
+//    mutating func reap () {
+//        self = self.filter { nil != $0.value }
+//    }
+//    
+//}

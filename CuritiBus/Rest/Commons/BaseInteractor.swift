@@ -71,7 +71,6 @@ class BaseInteractor {
                 return
             }
             
-            DBManager.goOffline()
             success(objs)
             
         }, withCancel: { error in
@@ -82,7 +81,11 @@ class BaseInteractor {
     
     func persist(reference: DatabaseReference, data: Any?) {
         reference.setValue(data, withCompletionBlock: { (error, ref) in
-            DBManager.goOffline()
+            if let error = error {
+                DLog(error.localizedDescription)
+            } else {
+                DLog("Data persisted.")
+            }
         })
     }
     

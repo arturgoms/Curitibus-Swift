@@ -13,6 +13,6 @@ protocol IHomePresenter {
     
     init(lineInteractor: LineInteractor)
     func loadUserLines()
-    func deleteUserLine(line: UrbsLine)
+    func deleteUserLine(line: Line)
     
 }

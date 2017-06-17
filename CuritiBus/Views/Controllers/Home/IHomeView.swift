@@ -10,7 +10,7 @@ protocol IHomeView: class {
     
     var presenter: IHomePresenter? { get }
     
-    func userLinesDidLoad(lines: [UrbsLine])
+    func userLinesDidLoad(lines: [Line])
     func userLinesLoadDidFail(error: Error?)
     
 }

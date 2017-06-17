@@ -56,35 +56,33 @@ class LineInteractor: BaseInteractor {
         loadListFromDb(reference: ref, limit: .days(1), success: success, fallBack: loadRemote)
     }
     
-    func getUserLines(success:@escaping (_ lines: [UrbsLine]) -> Void, error: ((NSError) -> Void)? = nil) {
+    func getUserLines(success:@escaping (_ lines: [Line]) -> Void, error: ((NSError) -> Void)? = nil) {
         
         guard let userId = SessionManager.userId() else {
             SessionManager.logout()
             return
         }
         
-        let ref = DBManager.ref.child("users").child(userId).child("lines").queryOrderedByValue()
+        let ref = DBManager.ref.child("users").child(userId).child("lines").queryOrdered(byChild: "index")
         ref.observeSingleEvent(of: .value, with: { snapshot in
             
-            var lines = [UrbsLine]()
+            var lines = [Line]()
             for child in snapshot.children {
-                if let foundLine = UserLinesManager.urbsLines.first(where: { $0.cod == (child as! DataSnapshot).key }) {
+                if let foundLine = UserLinesManager.allLines.first(where: { $0.cod == (child as! DataSnapshot).key }) {
                     lines.append(foundLine)
                 }
             }
             
-            DBManager.goOffline()
             UserLinesManager.userLines = lines
             success(lines)
             
         }, withCancel: { errorObj in
-            DBManager.goOffline()
             error?(errorObj as NSError)
         })
         
     }
     
-    func addUserLine(line: UrbsLine, success:(() -> Void)? = nil, error: ((NSError?) -> Void)? = nil) {
+    func addUserLine(line: Line, success:(() -> Void)? = nil, error: ((NSError?) -> Void)? = nil) {
         
         guard let userId = SessionManager.userId() else {
             SessionManager.logout()
@@ -96,18 +94,16 @@ class LineInteractor: BaseInteractor {
             return
         }
         
-        guard !UserLinesManager.userLines.contains(where: { $0 === line }) else {
+        guard !UserLinesManager.userLines.contains(where: { $0.cod == line.cod }) else {
             success?()
             return
         }
         
         UserLinesManager.userLines.append(line)
-        let index = Int(UserLinesManager.userLines.index(where: { $0 === line })!)
+        let index = Int(UserLinesManager.userLines.index(where: { $0.cod == line.cod })!)
         
         let ref = DBManager.ref.child("users").child(userId).child("lines").child(lineCod)
-        ref.setValue(index) { (errorObj, ref) in
-            
-            DBManager.goOffline()
+        ref.setValue(["index": index, "source": line.source.rawValue]) { (errorObj, ref) in
             
             if let errorObj = errorObj {
                 error?(errorObj as NSError)
@@ -119,14 +115,14 @@ class LineInteractor: BaseInteractor {
         
     }
     
-    func deleteUserLine(line: UrbsLine, success:(() -> Void)? = nil, error: ((NSError?) -> Void)? = nil) {
+    func deleteUserLine(line: Line, success:(() -> Void)? = nil, error: ((NSError?) -> Void)? = nil) {
         
         guard let userId = SessionManager.userId() else {
             SessionManager.logout()
             return
         }
         
-        guard let index = UserLinesManager.userLines.index(where: { $0 === line }) else {
+        guard let index = UserLinesManager.userLines.index(where: { $0.cod == line.cod }) else {
             success?()
             return
         }
@@ -135,22 +131,21 @@ class LineInteractor: BaseInteractor {
         
         let ref = DBManager.ref.child("users").child(userId).child("lines")
         
-        var linesDict = [String: Int]()
+        var linesDict = [String: Any]()
         var idx = 0
         UserLinesManager.userLines.forEach { line in
-            linesDict[line.cod!] = idx
+            linesDict[line.cod!] = ["index": idx, "source": line.source.rawValue]
             idx += 1
         }
         
         ref.setValue(linesDict) { (errorObj, ref) in
           
-            DBManager.goOffline()
-            
             if let errorObj = errorObj {
                 error?(errorObj as NSError)
             } else {
                 success?()
             }
+            
         }
         
     }

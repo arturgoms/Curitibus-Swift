@@ -25,12 +25,12 @@
 		3F40C1781EF0013B00AB876A /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F40C1771EF0013B00AB876A /* Vehicle.swift */; };
 		3F40C17B1EF004A400AB876A /* VehicleEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F40C17A1EF004A400AB876A /* VehicleEndpoint.swift */; };
 		3F40C17F1EF004C400AB876A /* VehicleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F40C17E1EF004C400AB876A /* VehicleInteractor.swift */; };
+		3F5E51711EF409CC00EA4638 /* LineSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E516F1EF409CC00EA4638 /* LineSchedule.swift */; };
+		3F5E51721EF409CC00EA4638 /* VehicleSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E51701EF409CC00EA4638 /* VehicleSchedule.swift */; };
 		3F754CFA1EF200C0003749A2 /* UserLinesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F754CF91EF200C0003749A2 /* UserLinesManager.swift */; };
 		3F754CFD1EF21536003749A2 /* UserLineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F754CFC1EF21536003749A2 /* UserLineCell.swift */; };
 		3F754D001EF217D8003749A2 /* AddLineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F754CFF1EF217D8003749A2 /* AddLineTableViewController.swift */; };
 		3F754D031EF21D4E003749A2 /* AddLineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F754D021EF21D4E003749A2 /* AddLineCell.swift */; };
-		3F9EAC551EF0AADB00B88662 /* LineSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9EAC541EF0AADB00B88662 /* LineSchedule.swift */; };
-		3F9EAC571EF0AAE400B88662 /* VehicleSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9EAC561EF0AAE400B88662 /* VehicleSchedule.swift */; };
 		3F9EAC5B1EF0AC7200B88662 /* LineScheduleEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9EAC5A1EF0AC7200B88662 /* LineScheduleEndpoint.swift */; };
 		3F9EAC5D1EF0AC7E00B88662 /* VehicleScheduleEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9EAC5C1EF0AC7E00B88662 /* VehicleScheduleEndpoint.swift */; };
 		3F9EAC5F1EF0ADB300B88662 /* LineScheduleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9EAC5E1EF0ADB300B88662 /* LineScheduleInteractor.swift */; };
@@ -91,12 +91,12 @@
 		3F40C1771EF0013B00AB876A /* Vehicle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
 		3F40C17A1EF004A400AB876A /* VehicleEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleEndpoint.swift; sourceTree = "<group>"; };
 		3F40C17E1EF004C400AB876A /* VehicleInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleInteractor.swift; sourceTree = "<group>"; };
+		3F5E516F1EF409CC00EA4638 /* LineSchedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineSchedule.swift; sourceTree = "<group>"; };
+		3F5E51701EF409CC00EA4638 /* VehicleSchedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleSchedule.swift; sourceTree = "<group>"; };
 		3F754CF91EF200C0003749A2 /* UserLinesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLinesManager.swift; sourceTree = "<group>"; };
 		3F754CFC1EF21536003749A2 /* UserLineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLineCell.swift; sourceTree = "<group>"; };
 		3F754CFF1EF217D8003749A2 /* AddLineTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLineTableViewController.swift; sourceTree = "<group>"; };
 		3F754D021EF21D4E003749A2 /* AddLineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLineCell.swift; sourceTree = "<group>"; };
-		3F9EAC541EF0AADB00B88662 /* LineSchedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineSchedule.swift; sourceTree = "<group>"; };
-		3F9EAC561EF0AAE400B88662 /* VehicleSchedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleSchedule.swift; sourceTree = "<group>"; };
 		3F9EAC5A1EF0AC7200B88662 /* LineScheduleEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineScheduleEndpoint.swift; sourceTree = "<group>"; };
 		3F9EAC5C1EF0AC7E00B88662 /* VehicleScheduleEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleScheduleEndpoint.swift; sourceTree = "<group>"; };
 		3F9EAC5E1EF0ADB300B88662 /* LineScheduleInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineScheduleInteractor.swift; sourceTree = "<group>"; };
@@ -212,6 +212,15 @@
 			path = Vehicle;
 			sourceTree = "<group>";
 		};
+		3F5E516E1EF409CC00EA4638 /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				3F5E516F1EF409CC00EA4638 /* LineSchedule.swift */,
+				3F5E51701EF409CC00EA4638 /* VehicleSchedule.swift */,
+			);
+			path = Schedule;
+			sourceTree = "<group>";
+		};
 		3F754CFB1EF21526003749A2 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,22 +244,6 @@
 				3F754D021EF21D4E003749A2 /* AddLineCell.swift */,
 			);
 			path = Cells;
-			sourceTree = "<group>";
-		};
-		3F9EAC521EF0AAD000B88662 /* LineSchedule */ = {
-			isa = PBXGroup;
-			children = (
-				3F9EAC541EF0AADB00B88662 /* LineSchedule.swift */,
-			);
-			path = LineSchedule;
-			sourceTree = "<group>";
-		};
-		3F9EAC531EF0AAD000B88662 /* VehicleSchedule */ = {
-			isa = PBXGroup;
-			children = (
-				3F9EAC561EF0AAE400B88662 /* VehicleSchedule.swift */,
-			);
-			path = VehicleSchedule;
 			sourceTree = "<group>";
 		};
 		3F9EAC581EF0AC6200B88662 /* LineSchedule */ = {
@@ -333,8 +326,7 @@
 			children = (
 				E546EEA11EAD460B00CC7BE9 /* Line */,
 				3F40C1761EF0012F00AB876A /* Vehicle */,
-				3F9EAC521EF0AAD000B88662 /* LineSchedule */,
-				3F9EAC531EF0AAD000B88662 /* VehicleSchedule */,
+				3F5E516E1EF409CC00EA4638 /* Schedule */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -651,6 +643,7 @@
 			files = (
 				3F9EAC5D1EF0AC7E00B88662 /* VehicleScheduleEndpoint.swift in Sources */,
 				3F40C1781EF0013B00AB876A /* Vehicle.swift in Sources */,
+				3F5E51711EF409CC00EA4638 /* LineSchedule.swift in Sources */,
 				3FBCCEA91EEDDDEB00D67F5A /* Router.swift in Sources */,
 				3FBCCE911EED8AFB00D67F5A /* LocalizedString.swift in Sources */,
 				E5DF2C1E1EAD301D0026E795 /* UserDefaults.swift in Sources */,
@@ -670,7 +663,6 @@
 				3F9EAC651EF0BFEA00B88662 /* IHomeInteractor.swift in Sources */,
 				3F9EAC5F1EF0ADB300B88662 /* LineScheduleInteractor.swift in Sources */,
 				E5DF2C261EAD30710026E795 /* APIObserver.swift in Sources */,
-				3F9EAC571EF0AAE400B88662 /* VehicleSchedule.swift in Sources */,
 				E5DF2C281EAD30710026E795 /* BaseTargetType.swift in Sources */,
 				3F0465BD1EEF6BC600E93110 /* DBManager.swift in Sources */,
 				3F3419691EEDF5E600412D1E /* IRegisterView.swift in Sources */,
@@ -685,6 +677,7 @@
 				3F3419721EEDF9BB00412D1E /* EmailViewController.swift in Sources */,
 				3FFE39C11EF2AF6F00A0A4C0 /* AppColors.swift in Sources */,
 				3F3419761EEDF9D000412D1E /* EmailSignUpPresenter.swift in Sources */,
+				3F5E51721EF409CC00EA4638 /* VehicleSchedule.swift in Sources */,
 				3F3419801EEE167900412D1E /* Fonts.swift in Sources */,
 				E546EE9C1EAD41B400CC7BE9 /* LineEndpoint.swift in Sources */,
 				E5DF2C321EAD33200026E795 /* UIDevice-Hardware.swift in Sources */,
@@ -695,7 +688,6 @@
 				E546EEA31EAD463100CC7BE9 /* UrbsLine.swift in Sources */,
 				E5DF2C1A1EAD2FF30026E795 /* Constants.swift in Sources */,
 				3F9EAC671EF0BFF300B88662 /* HomeInteractor.swift in Sources */,
-				3F9EAC551EF0AADB00B88662 /* LineSchedule.swift in Sources */,
 				3FBCCE8F1EED8ABD00D67F5A /* Storyboard.swift in Sources */,
 				3F754CFA1EF200C0003749A2 /* UserLinesManager.swift in Sources */,
 				E5DF2C2B1EAD30710026E795 /* Response+Error.swift in Sources */,

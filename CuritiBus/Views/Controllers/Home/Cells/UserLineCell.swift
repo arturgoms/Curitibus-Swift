@@ -20,14 +20,23 @@ class UserLineCell: UITableViewCell {
         }
     }
     
-    var line: UrbsLine? {
+    var line: Line? {
         didSet {
-            codeLabel.text = line?.cod
-            nameLabel.text = line?.name
-            categoryLabel.text = line?.categoryName
-            marginView.backgroundColor = line?.type.color
-            busIcon.tintColor = line?.type.color
-            backgroundColor = line?.type.color.withAlphaComponent(0.05)
+            
+            if let line = line as? UrbsLine {
+                codeLabel.text = line.cod
+                nameLabel.text = line.name
+                categoryLabel.text = line.categoryName
+                marginView.backgroundColor = line.type.color
+                busIcon.tintColor = line.type.color
+                backgroundColor = line.type.color.withAlphaComponent(0.05)
+                
+            } else if let line = line as? MetroLine {
+                codeLabel.text = line.cod
+                nameLabel.text = line.name
+                
+            }
+            
         }
     }
     

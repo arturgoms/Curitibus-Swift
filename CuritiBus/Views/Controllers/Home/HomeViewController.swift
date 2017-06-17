@@ -74,7 +74,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     //MARK: - IHomeInteractor
     
-    func userLinesDidLoad(lines: [UrbsLine]) {
+    func userLinesDidLoad(lines: [Line]) {
         tableView.reloadData()
     }
     

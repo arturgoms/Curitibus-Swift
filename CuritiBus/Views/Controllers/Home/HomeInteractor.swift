@@ -23,7 +23,7 @@ class HomePresenter: IHomePresenter {
         })
     }
     
-    func deleteUserLine(line: UrbsLine) {
+    func deleteUserLine(line: Line) {
         lineInteractor.deleteUserLine(line: line)
     }
     
