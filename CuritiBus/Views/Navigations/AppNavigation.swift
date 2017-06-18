@@ -11,8 +11,7 @@ import UIKit
 enum NavigationRoute: Navigation {
     case register(IRegisterPresenter)
     case email(IEmailPresenter)
-    case home(IHomePresenter)
-    case lines
+    case home(IHomePresenter, IMapPresenter)
 }
 
 struct CuritibusNavigation: AppNavigation {
@@ -32,19 +31,18 @@ struct CuritibusNavigation: AppNavigation {
                 vc.presenter = presenter
                 return vc
                 
-            case .home(let homePresenter):
+            case .home(let homePresenter, let mapPresenter):
                 let tabBarController = Storyboard.instantiate("MainTabBarController") as! UITabBarController
                 
-                let home = Storyboard.instantiate(HomeViewController.self)
+                var navigationController = tabBarController.viewControllers?[0] as! UINavigationController
+                let home = navigationController.viewControllers.first as! HomeViewController
                 home.presenter = homePresenter
-                let nc = UINavigationController(rootViewController: home)
                 
-                tabBarController.viewControllers = [nc]
+                navigationController = tabBarController.viewControllers?[1] as! UINavigationController
+                let map = navigationController.viewControllers.first as! MapViewController
+                map.presenter = mapPresenter
+                
                 return tabBarController
-                
-            case .lines:
-                let nc = Storyboard.instantiate("LinesNavigationController")
-                return nc
                 
             }
         }

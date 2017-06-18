@@ -13,7 +13,10 @@ class MetroLine: Mappable, Line {
     var cod: String?
     var id: Int?
     var name: String?
+    
     var source: LineSource = .metro
+    var type: LineType = .metropolitano
+    var categoryName: String? = "Metropolitano"
     
     required init?(map: Map) {
         

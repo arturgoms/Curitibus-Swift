@@ -13,30 +13,44 @@ class UserLineCell: UITableViewCell {
     @IBOutlet private weak var codeLabel: UILabel!
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var categoryLabel: UILabel!
+    @IBOutlet private weak var sourceIcon: UIImageView!
     @IBOutlet private weak var marginView: UIView!
-    @IBOutlet private weak var busIcon: UIImageView! {
-        didSet {
-            busIcon.image = #imageLiteral(resourceName: "bus_fill").withRenderingMode(.alwaysTemplate)
-        }
-    }
     
     var line: Line? {
         didSet {
             
-            if let line = line as? UrbsLine {
-                codeLabel.text = line.cod
-                nameLabel.text = line.name
-                categoryLabel.text = line.categoryName
-                marginView.backgroundColor = line.type.color
-                busIcon.tintColor = line.type.color
-                backgroundColor = line.type.color.withAlphaComponent(0.05)
+            codeLabel.text = line?.cod
+            nameLabel.text = line?.name?.capitalized
+            categoryLabel.text = line?.categoryName
+            
+            switch line {
+            case is UrbsLine:
+                sourceIcon.image = #imageLiteral(resourceName: "curitiba-logo")
                 
-            } else if let line = line as? MetroLine {
-                codeLabel.text = line.cod
-                nameLabel.text = line.name
+            case is MetroLine:
+                sourceIcon.image = #imageLiteral(resourceName: "metro-logo")
                 
+            default:
+                break
             }
             
+            marginView.backgroundColor = line?.type.color
+        }
+    }
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        
+        UIView.animate(withDuration: 0.15) {
+            self.backgroundColor = selected ? UIColor.lightGray.withAlphaComponent(0.2) : UIColor.white
+        }
+    }
+    
+    override func setHighlighted(_ highlighted: Bool, animated: Bool) {
+        super.setHighlighted(highlighted, animated: animated)
+        
+        UIView.animate(withDuration: 0.15) { 
+            self.backgroundColor = highlighted ? UIColor.lightGray.withAlphaComponent(0.2) : UIColor.white
         }
     }
     

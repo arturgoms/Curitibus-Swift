@@ -14,4 +14,3 @@ protocol IHomeView: class {
     func userLinesLoadDidFail(error: Error?)
     
 }
-

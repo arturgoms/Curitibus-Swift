@@ -153,7 +153,7 @@ class EmailViewController: UIViewController, UITextFieldDelegate, IEmailView {
     // MARK: - IEmailView
     
     func userDidAuthenticate() {
-        self.navigate(.home(HomePresenter(lineInteractor: LineInteractor())))
+        self.navigate(.home(HomePresenter(lineInteractor: LineInteractor(), stopInteractor: StopInteractor()), MapPresenter()))
     }
     
     func userAuthenticationDidFail(error: Error?) {

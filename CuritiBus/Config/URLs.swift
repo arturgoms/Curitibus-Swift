@@ -13,20 +13,28 @@ enum BaseURL: String {
 
 enum Endpoints {
     case getLinhas
+    case getPontosLinha
     case getVeiculosLinha
     case getTabelaLinha
     case getTabelaVeiculo
     
     case buscaLinha
+    case trajetosLinha
+    case buscarRetas
+    case pontosPorTrajeto
 }
 
 extension Endpoints {
     
     var url: String {
         switch self {
-            
+        
+        //URBS
         case .getLinhas:
             return "/getLinhas.php"
+            
+        case .getPontosLinha:
+            return "/getPontosLinha.php"
             
         case .getVeiculosLinha:
             return "/getVeiculos.php"
@@ -37,8 +45,19 @@ extension Endpoints {
         case .getTabelaVeiculo:
             return "/getTabelaVeiculo.php"
             
+        //Metro
         case .buscaLinha:
             return "/Busca"
+            
+        case .trajetosLinha:
+            return "/Trajetos"
+            
+        case .buscarRetas:
+            return "/BuscarRetas"
+            
+        case .pontosPorTrajeto:
+            return "/PontosPorTrajeto"
         }
+        
     }
 }
