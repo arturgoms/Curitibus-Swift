@@ -11,12 +11,14 @@ protocol IHomePresenter {
     weak var view: IHomeView? { get set }
     var lineInteractor: LineInteractor { get }
     var stopInteractor: StopInteractor { get }
+    var shapeInteractor: ShapeInteractor { get }
     
-    init(lineInteractor: LineInteractor, stopInteractor: StopInteractor)
+    init(lineInteractor: LineInteractor, stopInteractor: StopInteractor, shapeInteractor: ShapeInteractor)
     func loadUserLines()
     func addUserLine(line: Line)
     func deleteUserLine(line: Line)
     func getLineStops(line: Line)
     func getLinePaths(line: Line)
+    func getLineShapes(line: Line)
     
 }

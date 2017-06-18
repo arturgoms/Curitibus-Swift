@@ -491,9 +491,12 @@
                                     <constraint firstAttribute="trailing" secondItem="lvC-o8-n6Z" secondAttribute="trailing" constant="16" id="rr7-sQ-Tgh"/>
                                 </constraints>
                             </view>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="home-bottom" translatesAutoresizingMaskIntoConstraints="NO" id="Qv8-Kr-mTJ">
+                                <rect key="frame" x="8" y="392" width="304" height="39"/>
+                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WNi-y8-xBR">
                                 <rect key="frame" x="0.0" y="115" width="320" height="365"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ResultHeaderCell" rowHeight="25" id="5RM-dd-utm" customClass="ResultHeaderCell" customModule="CuritiBus" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="25"/>
@@ -547,11 +550,8 @@
                                                     <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     <size key="shadowOffset" width="0.0" height="0.0"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Ligeirão Boqueirão" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="brf-lM-KR2">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" text="Ligeirão Boqueirão" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="brf-lM-KR2">
                                                     <rect key="frame" x="61.5" y="8" width="250.5" height="28"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="28" id="FC3-FW-Jbl"/>
-                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="22"/>
                                                     <nil key="highlightedColor"/>
                                                     <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -569,7 +569,7 @@
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="curitiba-logo" translatesAutoresizingMaskIntoConstraints="NO" id="kgT-D7-snn">
                                                     <rect key="frame" x="297" y="43" width="15" height="15"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="15" id="QLm-rd-jtZ"/>
                                                         <constraint firstAttribute="width" constant="15" id="eCb-d5-Exd"/>
@@ -621,12 +621,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Qv8-Kr-mTJ" secondAttribute="trailing" constant="8" id="CvA-dp-cHk"/>
                             <constraint firstItem="WRz-7I-fwm" firstAttribute="top" secondItem="BRv-2t-S88" secondAttribute="top" id="K2K-C4-TzR"/>
                             <constraint firstItem="WNi-y8-xBR" firstAttribute="leading" secondItem="BRv-2t-S88" secondAttribute="leading" id="KQM-fW-wIv"/>
                             <constraint firstAttribute="trailing" secondItem="WRz-7I-fwm" secondAttribute="trailing" id="LnC-Mk-oJb"/>
+                            <constraint firstItem="tFe-XU-iNO" firstAttribute="top" secondItem="Qv8-Kr-mTJ" secondAttribute="bottom" id="Oe9-2j-QnP"/>
                             <constraint firstAttribute="trailing" secondItem="WNi-y8-xBR" secondAttribute="trailing" id="TYy-kf-eNN"/>
                             <constraint firstItem="WRz-7I-fwm" firstAttribute="leading" secondItem="BRv-2t-S88" secondAttribute="leading" id="axT-jW-cPD"/>
                             <constraint firstItem="WNi-y8-xBR" firstAttribute="top" secondItem="WRz-7I-fwm" secondAttribute="bottom" id="gLM-EG-aiO"/>
+                            <constraint firstItem="Qv8-Kr-mTJ" firstAttribute="leading" secondItem="BRv-2t-S88" secondAttribute="leading" constant="8" id="oGR-eR-daM"/>
                             <constraint firstAttribute="bottom" secondItem="WNi-y8-xBR" secondAttribute="bottom" id="oRP-Ol-rVJ"/>
                         </constraints>
                     </view>
@@ -634,11 +637,48 @@
                     <connections>
                         <outlet property="searchField" destination="lvC-o8-n6Z" id="Uar-5Q-qx0"/>
                         <outlet property="tableView" destination="WNi-y8-xBR" id="Xxv-IY-f3a"/>
+                        <segue destination="qep-QN-C4A" kind="show" identifier="_" id="J8S-4V-4b2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iry-Mi-lc5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4432.5" y="33.75"/>
+        </scene>
+        <!--Line View Controller-->
+        <scene sceneID="D0U-2F-fJ5">
+            <objects>
+                <viewController storyboardIdentifier="LineViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qep-QN-C4A" customClass="LineViewController" customModule="CuritiBus" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="e79-0b-IYm"/>
+                        <viewControllerLayoutGuide type="bottom" id="8Iw-WE-dcG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="67R-9k-vLF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="zgV-i9-6uw">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <connections>
+                                    <outlet property="delegate" destination="qep-QN-C4A" id="gmD-LO-JcB"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zgV-i9-6uw" firstAttribute="top" secondItem="67R-9k-vLF" secondAttribute="top" id="5FI-4h-WWO"/>
+                            <constraint firstAttribute="bottom" secondItem="zgV-i9-6uw" secondAttribute="bottom" id="Ixa-VG-qp4"/>
+                            <constraint firstItem="zgV-i9-6uw" firstAttribute="leading" secondItem="67R-9k-vLF" secondAttribute="leading" id="Pj6-AM-Gyp"/>
+                            <constraint firstAttribute="trailing" secondItem="zgV-i9-6uw" secondAttribute="trailing" id="tVX-aH-KeO"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="mapView" destination="zgV-i9-6uw" id="dha-lW-SuD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9pN-y0-d8o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5285.625" y="35"/>
         </scene>
         <!--Linhas-->
         <scene sceneID="VjM-eb-h9n">
@@ -715,6 +755,7 @@
         <image name="email-icon" width="25" height="25"/>
         <image name="facebook-icon" width="25" height="25"/>
         <image name="google-icon" width="25" height="25"/>
+        <image name="home-bottom" width="270" height="39"/>
         <image name="lines-icon" width="25" height="25"/>
         <image name="lines-selected-icon" width="25" height="25"/>
         <image name="logo-splash" width="110" height="110"/>

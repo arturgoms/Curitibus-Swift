@@ -17,11 +17,12 @@ enum Endpoints {
     case getVeiculosLinha
     case getTabelaLinha
     case getTabelaVeiculo
+    case getShapeLinha
     
     case buscaLinha
     case trajetosLinha
-    case buscarRetas
     case pontosPorTrajeto
+    case buscarRetas
 }
 
 extension Endpoints {
@@ -45,6 +46,9 @@ extension Endpoints {
         case .getTabelaVeiculo:
             return "/getTabelaVeiculo.php"
             
+        case .getShapeLinha:
+            return "getShapeLinha.php"
+            
         //Metro
         case .buscaLinha:
             return "/Busca"
@@ -52,11 +56,11 @@ extension Endpoints {
         case .trajetosLinha:
             return "/Trajetos"
             
-        case .buscarRetas:
-            return "/BuscarRetas"
-            
         case .pontosPorTrajeto:
             return "/PontosPorTrajeto"
+            
+        case .buscarRetas:
+            return "/BuscarRetas"
         }
         
     }

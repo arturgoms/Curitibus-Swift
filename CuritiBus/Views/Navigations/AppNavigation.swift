@@ -12,6 +12,7 @@ enum NavigationRoute: Navigation {
     case register(IRegisterPresenter)
     case email(IEmailPresenter)
     case home(IHomePresenter, IMapPresenter)
+    case line(Line, ILinePresenter)
 }
 
 struct CuritibusNavigation: AppNavigation {
@@ -43,6 +44,12 @@ struct CuritibusNavigation: AppNavigation {
                 map.presenter = mapPresenter
                 
                 return tabBarController
+                
+            case .line(let line, let presenter):
+                let vc = Storyboard.instantiate(LineViewController.self)
+                vc.line = line
+                vc.presenter = presenter
+                return vc
                 
             }
         }

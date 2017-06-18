@@ -48,8 +48,7 @@ class SplashViewController: UIViewController {
         UserLinesManager.merge()
         
         if Auth.auth().currentUser != nil {
-            self.navigate(.home(HomePresenter(lineInteractor: LineInteractor(), stopInteractor: StopInteractor()), MapPresenter()))
-//            self.navigate(.homeMap)
+            self.navigate(.home(HomePresenter(lineInteractor: LineInteractor(), stopInteractor: StopInteractor(), shapeInteractor: ShapeInteractor()), MapPresenter()))
         } else {
             self.navigate(.register(RegisterPresenter()))
         }

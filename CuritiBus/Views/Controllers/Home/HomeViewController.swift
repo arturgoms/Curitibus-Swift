@@ -51,6 +51,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadSections([0], with: .fade)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        tabBarController?.tabBar.isHidden = false
     }
     
     //MARK: - Init
@@ -99,7 +101,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func filter(_ text: String) {
         result = UserLinesManager.allLines.filter({ $0.name!.lowercased().contains(text.lowercased()) })
-        tableView.reloadSections([0], with: .fade)
+        tableView.reloadData()
     }
     
     func updateScrollViewInset(bottom: CGFloat, duration: TimeInterval) {
@@ -180,13 +182,14 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             tableView.reloadSections([0], with: .fade)
         } else {
             
-            if let line = UserLinesManager.userLines[indexPath.row] as? MetroLine {
-                presenter?.getLineStops(line: line)
-            }
-//            presenter?.deleteUserLine(line: UserLinesManager.userLines[indexPath.row])
-//            tableView.reloadSections([0], with: .fade)
+//            presenter?.getLineStops(line: UserLinesManager.userLines[indexPath.row])
+//            presenter?.getLineShapes(line: UserLinesManager.userLines[indexPath.row])
+            self.navigate(.line(UserLinesManager.userLines[indexPath.row], UrbsLinePresenter(shapeInteractor: ShapeInteractor())))
             
         }
+        
+//            presenter?.deleteUserLine(line: UserLinesManager.userLines[indexPath.row])
+//            tableView.reloadSections([0], with: .fade)
         
 //        presenter?.deleteUserLine(line: UserLinesManager.userLines[indexPath.row])
 //        tableView.reloadData()

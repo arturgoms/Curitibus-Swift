@@ -11,10 +11,12 @@ class HomePresenter: IHomePresenter {
     weak var view: IHomeView?
     var lineInteractor: LineInteractor
     var stopInteractor: StopInteractor
+    var shapeInteractor: ShapeInteractor
     
-    required init(lineInteractor: LineInteractor, stopInteractor: StopInteractor) {
+    required init(lineInteractor: LineInteractor, stopInteractor: StopInteractor, shapeInteractor: ShapeInteractor) {
         self.lineInteractor = lineInteractor
         self.stopInteractor = stopInteractor
+        self.shapeInteractor = shapeInteractor
     }
     
     func loadUserLines() {
@@ -74,6 +76,43 @@ class HomePresenter: IHomePresenter {
         stopInteractor.getMetroPaths(line: line, success: { paths in
             print(paths)
         })
+    }
+    
+    func getLineShapes(line: Line) {
+        
+        if let line = line as? UrbsLine {
+            
+            shapeInteractor.getUrbsShapes(line: line, success: { shapes in
+                print(shapes)
+            })
+            
+        } else if let line = line as? MetroLine {
+            
+            stopInteractor.getMetroPaths(line: line, success: { paths in
+                
+                var count = paths.count
+                guard count > 0 else {
+                    //sucesso vazio
+                    return
+                }
+                
+                // Para cada trajeto, buscar pontos
+                for path in paths {
+                    self.shapeInteractor.getMetroShapes(line: line, path: path, success: { shapes in
+                        count -= 1
+                        path.shapes = shapes
+                        if count == 0 { print(paths) }
+                        
+                    }, error: { error in
+                        count -= 1
+                        if count == 0 { print(paths) }
+                    })
+                }
+                
+            })
+            
+        }
+        
     }
     
 }

@@ -16,6 +16,7 @@ class MetroPath: Mappable {
     
     //Internal
     var courses = [MetroStopsCourse]()
+    var shapes = [MetroShapesCourse]()
     
     required init?(map: Map) {
         
