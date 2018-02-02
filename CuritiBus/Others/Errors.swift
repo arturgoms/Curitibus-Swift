@@ -2,15 +2,14 @@
 //  Errors.swift
 //  CuritiBus
 //
-//  Created by Diego Trevisan Lara on 16/01/18.
+//  Created by Diego Trevisan Lara on 01/02/2018.
 //  Copyright © 2018 Diego Trevisan Lara. All rights reserved.
 //
 
 import Foundation
 
 enum GatewayError: Error {
-    case noUserStored
-    case emptyChargesList
+    
 }
 
 enum APIError: Error {

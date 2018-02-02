@@ -9,6 +9,9 @@ target 'CuritiBus' do
   # Fabric
   pod 'Fabric'
   pod 'Crashlytics'
+  
+  # Firebase
+  pod 'Firebase/Core'
 
   target 'CuritiBusTests' do
     inherit! :search_paths

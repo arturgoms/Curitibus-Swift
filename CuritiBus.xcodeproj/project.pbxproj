@@ -10,26 +10,16 @@
 		343C2FA53472FE0837AB18C6 /* Pods_CuritiBusUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE080F134E717659A30F54E /* Pods_CuritiBusUITests.framework */; };
 		3F152B2820115A4D0059A2B5 /* CuritiBusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F152B2720115A4D0059A2B5 /* CuritiBusTests.swift */; };
 		3F152B3320115A4D0059A2B5 /* CuritiBusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F152B3220115A4D0059A2B5 /* CuritiBusUITests.swift */; };
-<<<<<<< HEAD
 		3F1B1272201282290056F6EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F1B126E201282290056F6EC /* LaunchScreen.storyboard */; };
 		3F1B1273201282290056F6EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F1B126F201282290056F6EC /* Main.storyboard */; };
 		3F1B1274201282290056F6EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F1B1271201282290056F6EC /* Assets.xcassets */; };
-=======
->>>>>>> 0675d5098a4d1908f46e576faa5fcbdfcf18184c
 		3F5A34DF20116ACD00FF272F /* Codability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A34B220116ACD00FF272F /* Codability.swift */; };
 		3F5A34E020116ACD00FF272F /* LocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A34B320116ACD00FF272F /* LocalizedString.swift */; };
 		3F5A34E220116ACD00FF272F /* ListLinesEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A34B920116ACD00FF272F /* ListLinesEndpoint.swift */; };
 		3F5A34E420116ACD00FF272F /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A34BB20116ACD00FF272F /* APIEndpoint.swift */; };
 		3F5A34E520116ACD00FF272F /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A34BD20116ACD00FF272F /* APIClient.swift */; };
-		3F5A34E620116ACD00FF272F /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A34BE20116ACD00FF272F /* Errors.swift */; };
 		3F5A34E720116ACD00FF272F /* APILinesGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A34C020116ACD00FF272F /* APILinesGateway.swift */; };
 		3F5A34E820116ACD00FF272F /* APIResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A34C220116ACD00FF272F /* APIResult.swift */; };
-<<<<<<< HEAD
-=======
-		3F5A34E920116ACD00FF272F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F5A34C420116ACD00FF272F /* Assets.xcassets */; };
-		3F5A34EA20116ACD00FF272F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F5A34C620116ACD00FF272F /* LaunchScreen.storyboard */; };
-		3F5A34EB20116ACD00FF272F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F5A34C720116ACD00FF272F /* Main.storyboard */; };
->>>>>>> 0675d5098a4d1908f46e576faa5fcbdfcf18184c
 		3F5A34EC20116ACD00FF272F /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A34CA20116ACD00FF272F /* InitialViewController.swift */; };
 		3F5A34ED20116ACD00FF272F /* InitialViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A34CB20116ACD00FF272F /* InitialViewRouter.swift */; };
 		3F5A34EE20116ACD00FF272F /* InitialPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A34CC20116ACD00FF272F /* InitialPresenter.swift */; };
@@ -39,6 +29,9 @@
 		3F5A34F420116ACD00FF272F /* LinesGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A34D620116ACD00FF272F /* LinesGateway.swift */; };
 		3F5A34F520116ACD00FF272F /* ListLinesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A34D820116ACD00FF272F /* ListLinesUseCase.swift */; };
 		3F5A34F820116ACD00FF272F /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A34DC20116ACD00FF272F /* Result.swift */; };
+		3FCFF14B2023DD220005A476 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCFF14A2023DD220005A476 /* Storyboard.swift */; };
+		3FCFF14D2023DDFD0005A476 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCFF14C2023DDFD0005A476 /* Errors.swift */; };
+		3FCFF14F2023DFCC0005A476 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FCFF14E2023DFCC0005A476 /* GoogleService-Info.plist */; };
 		4850221E745EBF166D8429D7 /* Pods_CuritiBusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD0D9683455D8062FA99D74 /* Pods_CuritiBusTests.framework */; };
 		F73B7A0FFFBEE24BA9F497E9 /* Pods_CuritiBus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DCCD4EE1A9251D95144ABCE /* Pods_CuritiBus.framework */; };
 /* End PBXBuildFile section */
@@ -69,26 +62,16 @@
 		3F152B2E20115A4D0059A2B5 /* CuritiBusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CuritiBusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F152B3220115A4D0059A2B5 /* CuritiBusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuritiBusUITests.swift; sourceTree = "<group>"; };
 		3F152B3420115A4D0059A2B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-<<<<<<< HEAD
 		3F1B126E201282290056F6EC /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F1B126F201282290056F6EC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3F1B1271201282290056F6EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-=======
->>>>>>> 0675d5098a4d1908f46e576faa5fcbdfcf18184c
 		3F5A34B220116ACD00FF272F /* Codability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Codability.swift; sourceTree = "<group>"; };
 		3F5A34B320116ACD00FF272F /* LocalizedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedString.swift; sourceTree = "<group>"; };
 		3F5A34B920116ACD00FF272F /* ListLinesEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListLinesEndpoint.swift; sourceTree = "<group>"; };
 		3F5A34BB20116ACD00FF272F /* APIEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		3F5A34BD20116ACD00FF272F /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
-		3F5A34BE20116ACD00FF272F /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		3F5A34C020116ACD00FF272F /* APILinesGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APILinesGateway.swift; sourceTree = "<group>"; };
 		3F5A34C220116ACD00FF272F /* APIResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIResult.swift; sourceTree = "<group>"; };
-<<<<<<< HEAD
-=======
-		3F5A34C420116ACD00FF272F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3F5A34C620116ACD00FF272F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		3F5A34C720116ACD00FF272F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
->>>>>>> 0675d5098a4d1908f46e576faa5fcbdfcf18184c
 		3F5A34CA20116ACD00FF272F /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		3F5A34CB20116ACD00FF272F /* InitialViewRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewRouter.swift; sourceTree = "<group>"; };
 		3F5A34CC20116ACD00FF272F /* InitialPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialPresenter.swift; sourceTree = "<group>"; };
@@ -99,6 +82,9 @@
 		3F5A34D620116ACD00FF272F /* LinesGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinesGateway.swift; sourceTree = "<group>"; };
 		3F5A34D820116ACD00FF272F /* ListLinesUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListLinesUseCase.swift; sourceTree = "<group>"; };
 		3F5A34DC20116ACD00FF272F /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		3FCFF14A2023DD220005A476 /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
+		3FCFF14C2023DDFD0005A476 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		3FCFF14E2023DFCC0005A476 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5207498BC32B7DB0512A377B /* Pods-CuritiBus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuritiBus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CuritiBus/Pods-CuritiBus.debug.xcconfig"; sourceTree = "<group>"; };
 		5EE080F134E717659A30F54E /* Pods_CuritiBusUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CuritiBusUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DCCD4EE1A9251D95144ABCE /* Pods_CuritiBus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CuritiBus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,15 +151,10 @@
 				3F5A34D320116ACD00FF272F /* Core */,
 				3F5A34B420116ACD00FF272F /* GatewayImplementations */,
 				3F5A34C820116ACD00FF272F /* Scenes */,
-<<<<<<< HEAD
 				3F5A34B120116ACD00FF272F /* Extensions */,
 				3F1B126C201282290056F6EC /* Resources */,
-=======
-				3F5A34C520116ACD00FF272F /* Storyboards */,
-				3F5A34B120116ACD00FF272F /* Extensions */,
-				3F5A34C320116ACD00FF272F /* Images */,
->>>>>>> 0675d5098a4d1908f46e576faa5fcbdfcf18184c
 				3F5A34CE20116ACD00FF272F /* Client */,
+				3FCFF1492023DD120005A476 /* Others */,
 			);
 			path = CuritiBus;
 			sourceTree = "<group>";
@@ -196,7 +177,6 @@
 			path = CuritiBusUITests;
 			sourceTree = "<group>";
 		};
-<<<<<<< HEAD
 		3F1B126C201282290056F6EC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,8 +203,6 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
-=======
->>>>>>> 0675d5098a4d1908f46e576faa5fcbdfcf18184c
 		3F5A34B120116ACD00FF272F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,17 +215,9 @@
 		3F5A34B420116ACD00FF272F /* GatewayImplementations */ = {
 			isa = PBXGroup;
 			children = (
-				3F5A34B520116ACD00FF272F /* UserDefaults */,
 				3F5A34B720116ACD00FF272F /* API */,
 			);
 			path = GatewayImplementations;
-			sourceTree = "<group>";
-		};
-		3F5A34B520116ACD00FF272F /* UserDefaults */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UserDefaults;
 			sourceTree = "<group>";
 		};
 		3F5A34B720116ACD00FF272F /* API */ = {
@@ -274,7 +244,6 @@
 			isa = PBXGroup;
 			children = (
 				3F5A34BD20116ACD00FF272F /* APIClient.swift */,
-				3F5A34BE20116ACD00FF272F /* Errors.swift */,
 			);
 			path = APIClient;
 			sourceTree = "<group>";
@@ -295,26 +264,6 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
-<<<<<<< HEAD
-=======
-		3F5A34C320116ACD00FF272F /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				3F5A34C420116ACD00FF272F /* Assets.xcassets */,
-			);
-			path = Images;
-			sourceTree = "<group>";
-		};
-		3F5A34C520116ACD00FF272F /* Storyboards */ = {
-			isa = PBXGroup;
-			children = (
-				3F5A34C620116ACD00FF272F /* LaunchScreen.storyboard */,
-				3F5A34C720116ACD00FF272F /* Main.storyboard */,
-			);
-			path = Storyboards;
-			sourceTree = "<group>";
-		};
->>>>>>> 0675d5098a4d1908f46e576faa5fcbdfcf18184c
 		3F5A34C820116ACD00FF272F /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
@@ -340,6 +289,7 @@
 				3F5A34CF20116ACD00FF272F /* Localizable.strings */,
 				3F5A34D120116ACD00FF272F /* AppDelegate.swift */,
 				3F5A34D220116ACD00FF272F /* Info.plist */,
+				3FCFF14E2023DFCC0005A476 /* GoogleService-Info.plist */,
 			);
 			path = Client;
 			sourceTree = "<group>";
@@ -376,6 +326,15 @@
 				3F5A34DC20116ACD00FF272F /* Result.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		3FCFF1492023DD120005A476 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				3FCFF14A2023DD220005A476 /* Storyboard.swift */,
+				3FCFF14C2023DDFD0005A476 /* Errors.swift */,
+			);
+			path = Others;
 			sourceTree = "<group>";
 		};
 		6907BFB93B346FC664DAE466 /* Pods */ = {
@@ -519,17 +478,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< HEAD
 				3F1B1273201282290056F6EC /* Main.storyboard in Resources */,
 				3F5A34F020116ACD00FF272F /* Localizable.strings in Resources */,
+				3FCFF14F2023DFCC0005A476 /* GoogleService-Info.plist in Resources */,
 				3F1B1274201282290056F6EC /* Assets.xcassets in Resources */,
 				3F1B1272201282290056F6EC /* LaunchScreen.storyboard in Resources */,
-=======
-				3F5A34EB20116ACD00FF272F /* Main.storyboard in Resources */,
-				3F5A34F020116ACD00FF272F /* Localizable.strings in Resources */,
-				3F5A34E920116ACD00FF272F /* Assets.xcassets in Resources */,
-				3F5A34EA20116ACD00FF272F /* LaunchScreen.storyboard in Resources */,
->>>>>>> 0675d5098a4d1908f46e576faa5fcbdfcf18184c
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,11 +512,15 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-CuritiBus/Pods-CuritiBus-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/CodableAlamofire/CodableAlamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CodableAlamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -723,6 +680,7 @@
 				3F5A34F520116ACD00FF272F /* ListLinesUseCase.swift in Sources */,
 				3F5A34E220116ACD00FF272F /* ListLinesEndpoint.swift in Sources */,
 				3F5A34E820116ACD00FF272F /* APIResult.swift in Sources */,
+				3FCFF14B2023DD220005A476 /* Storyboard.swift in Sources */,
 				3F5A34EC20116ACD00FF272F /* InitialViewController.swift in Sources */,
 				3F5A34F120116ACD00FF272F /* AppDelegate.swift in Sources */,
 				3F5A34EE20116ACD00FF272F /* InitialPresenter.swift in Sources */,
@@ -731,10 +689,10 @@
 				3F5A34E420116ACD00FF272F /* APIEndpoint.swift in Sources */,
 				3F5A34EF20116ACD00FF272F /* InitialConfigurator.swift in Sources */,
 				3F5A34E020116ACD00FF272F /* LocalizedString.swift in Sources */,
-				3F5A34E620116ACD00FF272F /* Errors.swift in Sources */,
 				3F5A34DF20116ACD00FF272F /* Codability.swift in Sources */,
 				3F5A34E720116ACD00FF272F /* APILinesGateway.swift in Sources */,
 				3F5A34F420116ACD00FF272F /* LinesGateway.swift in Sources */,
+				3FCFF14D2023DDFD0005A476 /* Errors.swift in Sources */,
 				3F5A34F820116ACD00FF272F /* Result.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,9 +18,9 @@ protocol InitialPresenter {
 
 class InitialPresenterImplementation: InitialPresenter {
     
-    weak var view: InitialView?
-    let listLinesUseCase: ListLinesUseCase
-    let router: InitialViewRouter
+    private weak var view: InitialView!
+    private let listLinesUseCase: ListLinesUseCase
+    private let router: InitialViewRouter
     
     init(view: InitialView, listLinesUseCase: ListLinesUseCase, router: InitialViewRouter) {
         self.view = view
