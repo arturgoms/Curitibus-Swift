@@ -12,6 +12,13 @@ target 'CuritiBus' do
   
   # Firebase
   pod 'Firebase/Core'
+  
+  # GoogleMaps
+  pod 'GoogleMaps'
+  pod 'GooglePlaces'
+  
+  # UI
+  pod 'TinyConstraints'
 
   target 'CuritiBusTests' do
     inherit! :search_paths
