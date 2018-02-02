@@ -2,10 +2,7 @@
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
-CuritiBus/Config/UrbsAuth.swift
 .DS_Store
-UrbsAuth.swift
-GoogleService-Info.plist
 
 ## Build generated
 build/
