@@ -28,6 +28,13 @@
 		3F5A34F420116ACD00FF272F /* LinesGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A34D620116ACD00FF272F /* LinesGateway.swift */; };
 		3F5A34F520116ACD00FF272F /* ListLinesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A34D820116ACD00FF272F /* ListLinesUseCase.swift */; };
 		3F5A34F820116ACD00FF272F /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A34DC20116ACD00FF272F /* Result.swift */; };
+		3F9876DC2024719800B53E4C /* FlatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9876DB2024719800B53E4C /* FlatButton.swift */; };
+		3F9876DF2024779F00B53E4C /* Ubuntu-R.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F9876DE2024779F00B53E4C /* Ubuntu-R.ttf */; };
+		3F9876E12024781100B53E4C /* Ubuntu-M.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F9876E02024781100B53E4C /* Ubuntu-M.ttf */; };
+		3F9876E720247BF300B53E4C /* LoginConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9876E320247BF300B53E4C /* LoginConfigurator.swift */; };
+		3F9876E820247BF300B53E4C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9876E420247BF300B53E4C /* LoginViewController.swift */; };
+		3F9876E920247BF300B53E4C /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9876E520247BF300B53E4C /* LoginPresenter.swift */; };
+		3F9876EA20247BF300B53E4C /* LoginViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9876E620247BF300B53E4C /* LoginViewRouter.swift */; };
 		3FCFF14B2023DD220005A476 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCFF14A2023DD220005A476 /* Storyboard.swift */; };
 		3FCFF14D2023DDFD0005A476 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCFF14C2023DDFD0005A476 /* Errors.swift */; };
 		3FCFF14F2023DFCC0005A476 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FCFF14E2023DFCC0005A476 /* GoogleService-Info.plist */; };
@@ -82,6 +89,13 @@
 		3F5A34D620116ACD00FF272F /* LinesGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinesGateway.swift; sourceTree = "<group>"; };
 		3F5A34D820116ACD00FF272F /* ListLinesUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListLinesUseCase.swift; sourceTree = "<group>"; };
 		3F5A34DC20116ACD00FF272F /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		3F9876DB2024719800B53E4C /* FlatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatButton.swift; sourceTree = "<group>"; };
+		3F9876DE2024779F00B53E4C /* Ubuntu-R.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-R.ttf"; sourceTree = "<group>"; };
+		3F9876E02024781100B53E4C /* Ubuntu-M.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-M.ttf"; sourceTree = "<group>"; };
+		3F9876E320247BF300B53E4C /* LoginConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginConfigurator.swift; sourceTree = "<group>"; };
+		3F9876E420247BF300B53E4C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3F9876E520247BF300B53E4C /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		3F9876E620247BF300B53E4C /* LoginViewRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewRouter.swift; sourceTree = "<group>"; };
 		3FCFF14A2023DD220005A476 /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		3FCFF14C2023DDFD0005A476 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		3FCFF14E2023DFCC0005A476 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -184,6 +198,7 @@
 				3F1B126D201282290056F6EC /* Storyboards */,
 				3F1B1270201282290056F6EC /* Images */,
 				3FCFF1532023ED6F0005A476 /* Videos */,
+				3F9876DD2024779F00B53E4C /* Fonts */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -271,6 +286,7 @@
 			children = (
 				3F5A34C920116ACD00FF272F /* Initial */,
 				3FCFF1562023ED9C0005A476 /* Video */,
+				3F9876E220247BF300B53E4C /* Login */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -331,9 +347,38 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
+		3F9876DA2024715800B53E4C /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				3F9876DB2024719800B53E4C /* FlatButton.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		3F9876DD2024779F00B53E4C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3F9876E02024781100B53E4C /* Ubuntu-M.ttf */,
+				3F9876DE2024779F00B53E4C /* Ubuntu-R.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		3F9876E220247BF300B53E4C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				3F9876E420247BF300B53E4C /* LoginViewController.swift */,
+				3F9876E520247BF300B53E4C /* LoginPresenter.swift */,
+				3F9876E620247BF300B53E4C /* LoginViewRouter.swift */,
+				3F9876E320247BF300B53E4C /* LoginConfigurator.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		3FCFF1492023DD120005A476 /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				3F9876DA2024715800B53E4C /* UI */,
 				3FCFF14A2023DD220005A476 /* Storyboard.swift */,
 				3FCFF14C2023DDFD0005A476 /* Errors.swift */,
 			);
@@ -499,8 +544,10 @@
 			files = (
 				3F1B1273201282290056F6EC /* Main.storyboard in Resources */,
 				3F5A34F020116ACD00FF272F /* Localizable.strings in Resources */,
+				3F9876DF2024779F00B53E4C /* Ubuntu-R.ttf in Resources */,
 				3FCFF14F2023DFCC0005A476 /* GoogleService-Info.plist in Resources */,
 				3FCFF15A2023F6980005A476 /* bgvideo.mp4 in Resources */,
+				3F9876E12024781100B53E4C /* Ubuntu-M.ttf in Resources */,
 				3F1B1274201282290056F6EC /* Assets.xcassets in Resources */,
 				3F1B1272201282290056F6EC /* LaunchScreen.storyboard in Resources */,
 			);
@@ -704,15 +751,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F9876E820247BF300B53E4C /* LoginViewController.swift in Sources */,
 				3F5A34F520116ACD00FF272F /* ListLinesUseCase.swift in Sources */,
+				3F9876EA20247BF300B53E4C /* LoginViewRouter.swift in Sources */,
 				3F5A34E220116ACD00FF272F /* ListLinesEndpoint.swift in Sources */,
 				3FCFF1582023ED9C0005A476 /* VideoViewController.swift in Sources */,
+				3F9876E920247BF300B53E4C /* LoginPresenter.swift in Sources */,
 				3F5A34E820116ACD00FF272F /* APIResult.swift in Sources */,
 				3FCFF14B2023DD220005A476 /* Storyboard.swift in Sources */,
 				3F5A34EC20116ACD00FF272F /* InitialViewController.swift in Sources */,
 				3F5A34F120116ACD00FF272F /* AppDelegate.swift in Sources */,
 				3F5A34EE20116ACD00FF272F /* InitialPresenter.swift in Sources */,
 				3F5A34E520116ACD00FF272F /* APIClient.swift in Sources */,
+				3F9876DC2024719800B53E4C /* FlatButton.swift in Sources */,
 				3F5A34ED20116ACD00FF272F /* InitialViewRouter.swift in Sources */,
 				3F5A34E420116ACD00FF272F /* APIEndpoint.swift in Sources */,
 				3F5A34EF20116ACD00FF272F /* InitialConfigurator.swift in Sources */,
@@ -721,6 +772,7 @@
 				3F5A34E720116ACD00FF272F /* APILinesGateway.swift in Sources */,
 				3F5A34F420116ACD00FF272F /* LinesGateway.swift in Sources */,
 				3FCFF14D2023DDFD0005A476 /* Errors.swift in Sources */,
+				3F9876E720247BF300B53E4C /* LoginConfigurator.swift in Sources */,
 				3F5A34F820116ACD00FF272F /* Result.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -771,6 +823,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -828,6 +881,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

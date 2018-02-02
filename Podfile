@@ -1,7 +1,7 @@
 platform :ios, '10.0'
+use_frameworks!
 
 target 'CuritiBus' do
-  use_frameworks!
 
   # API Client
   pod 'CodableAlamofire'

@@ -7,10 +7,11 @@
 //
 
 import UIKit
-import TinyConstraints
 import AVKit
 
 class VideoViewController: UIViewController {
+    
+    private var playerLooper: AVPlayerLooper!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,11 +19,14 @@ class VideoViewController: UIViewController {
         let path = Bundle.main.path(forResource: "bgvideo", ofType: "mp4")
         let pathURL = URL(fileURLWithPath: path!)
         
-        let player = AVPlayer(url: pathURL)
-        let layer = AVPlayerLayer(player: player)
-        layer.frame = view.bounds
-        layer.videoGravity = .resizeAspectFill
-        view.layer.addSublayer(layer)
+        let playerItem = AVPlayerItem(url: pathURL)
+        let player = AVQueuePlayer(items: [playerItem])
+        let playerLayer = AVPlayerLayer(player: player)
+        self.playerLooper = AVPlayerLooper(player: player, templateItem: playerItem)
+        
+        playerLayer.videoGravity = .resizeAspectFill
+        playerLayer.frame = view.frame
+        view.layer.addSublayer(playerLayer)
         
         player.play()
         player.volume = 0
