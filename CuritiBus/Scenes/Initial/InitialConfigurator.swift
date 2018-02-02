@@ -6,17 +6,15 @@
 //  Copyright © 2018 Diego Trevisan Lara. All rights reserved.
 //
 
-protocol InitialConfigurator {
+protocol IInitialConfigurator {
     func configure(_ viewController: InitialViewController)
 }
 
-class InitialConfiguratorImplementation: InitialConfigurator {
+class InitialConfigurator: IInitialConfigurator {
     
     func configure(_ viewController: InitialViewController) {
-//        let router = InitialViewRouterImplementation()
-//        let userCase = GetStoredUserUseCaseImplementation(userGateway: UserDefaultsUserGateway())
-//        
-//        viewController.presenter = InitialPresenterImplementation(view: viewController, getStoredUserUseCase: userCase, router: router)
+        let router = InitialViewRouter(viewController: viewController)
+        viewController.presenter = InitialPresenter(view: viewController, router: router)
     }
     
 }

@@ -14,7 +14,7 @@ protocol ILoginViewRouter {
 
 class LoginViewRouter: ILoginViewRouter {
 
-    private weak var viewController: LoginViewController?
+    private weak var viewController: LoginViewController!
 
     init(viewController: LoginViewController) {
         self.viewController = viewController

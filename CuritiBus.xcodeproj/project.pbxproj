@@ -35,6 +35,7 @@
 		3F9876E820247BF300B53E4C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9876E420247BF300B53E4C /* LoginViewController.swift */; };
 		3F9876E920247BF300B53E4C /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9876E520247BF300B53E4C /* LoginPresenter.swift */; };
 		3F9876EA20247BF300B53E4C /* LoginViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9876E620247BF300B53E4C /* LoginViewRouter.swift */; };
+		3F9876EC202486D300B53E4C /* CuritiBusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9876EB202486D300B53E4C /* CuritiBusTests.swift */; };
 		3FCFF14B2023DD220005A476 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCFF14A2023DD220005A476 /* Storyboard.swift */; };
 		3FCFF14D2023DDFD0005A476 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCFF14C2023DDFD0005A476 /* Errors.swift */; };
 		3FCFF14F2023DFCC0005A476 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FCFF14E2023DFCC0005A476 /* GoogleService-Info.plist */; };
@@ -96,6 +97,7 @@
 		3F9876E420247BF300B53E4C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3F9876E520247BF300B53E4C /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		3F9876E620247BF300B53E4C /* LoginViewRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewRouter.swift; sourceTree = "<group>"; };
+		3F9876EB202486D300B53E4C /* CuritiBusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuritiBusTests.swift; sourceTree = "<group>"; };
 		3FCFF14A2023DD220005A476 /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		3FCFF14C2023DDFD0005A476 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		3FCFF14E2023DFCC0005A476 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 		3F152B2620115A4D0059A2B5 /* CuritiBusTests */ = {
 			isa = PBXGroup;
 			children = (
+				3F9876EB202486D300B53E4C /* CuritiBusTests.swift */,
 				3F152B2920115A4D0059A2B5 /* Info.plist */,
 			);
 			path = CuritiBusTests;
@@ -295,8 +298,8 @@
 			isa = PBXGroup;
 			children = (
 				3F5A34CA20116ACD00FF272F /* InitialViewController.swift */,
-				3F5A34CB20116ACD00FF272F /* InitialViewRouter.swift */,
 				3F5A34CC20116ACD00FF272F /* InitialPresenter.swift */,
+				3F5A34CB20116ACD00FF272F /* InitialViewRouter.swift */,
 				3F5A34CD20116ACD00FF272F /* InitialConfigurator.swift */,
 			);
 			path = Initial;
@@ -506,6 +509,7 @@
 					};
 					3F152B2220115A4D0059A2B5 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 3F152B0E20115A4D0059A2B5;
 					};
@@ -781,6 +785,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F9876EC202486D300B53E4C /* CuritiBusTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -966,12 +971,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D97MJ3844Q;
 				INFOPLIST_FILE = CuritiBusTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.4loop.BusaoCuritiba.CuritiBusTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CuritiBus.app/CuritiBus";
@@ -984,6 +991,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D97MJ3844Q;
 				INFOPLIST_FILE = CuritiBusTests/Info.plist;

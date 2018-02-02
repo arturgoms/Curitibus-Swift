@@ -6,18 +6,27 @@
 //  Copyright © 2018 Diego Trevisan Lara. All rights reserved.
 //
 
-protocol InitialViewRouter {
+protocol IInitialViewRouter {
     func presentLoginView()
-    func presentDashboardView()
+    func presentHomeView()
 }
 
-class InitialViewRouterImplementation: InitialViewRouter {
+class InitialViewRouter: IInitialViewRouter {
     
-    func presentLoginView() {
-        
+    private weak var viewController: InitialViewController!
+    
+    init(viewController: InitialViewController) {
+        self.viewController = viewController
     }
     
-    func presentDashboardView() {
+    func presentLoginView() {
+        let loginView = Storyboard.main.instantiate(LoginViewController.self)
+        loginView.configurator = LoginConfigurator()
+        
+        viewController.navigationController?.setViewControllers([loginView], animated: false)
+    }
+    
+    func presentHomeView() {
         
     }
     

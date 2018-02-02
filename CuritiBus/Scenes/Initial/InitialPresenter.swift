@@ -8,28 +8,26 @@
 
 import UIKit
 
-protocol InitialView: class {
+protocol IInitialView: class {
     
 }
 
-protocol InitialPresenter {
+protocol IInitialPresenter {
     func pushFirstView()
 }
 
-class InitialPresenterImplementation: InitialPresenter {
+class InitialPresenter: IInitialPresenter {
     
-    private weak var view: InitialView!
-    private let listLinesUseCase: ListLinesUseCase
+    private weak var view: IInitialView!
     private let router: InitialViewRouter
     
-    init(view: InitialView, listLinesUseCase: ListLinesUseCase, router: InitialViewRouter) {
+    init(view: IInitialView, router: InitialViewRouter) {
         self.view = view
-        self.listLinesUseCase = listLinesUseCase
         self.router = router
     }
 
     func pushFirstView() {
-        
+        router.presentLoginView()
     }
 
 }

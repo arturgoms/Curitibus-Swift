@@ -8,13 +8,16 @@
 
 import UIKit
 
-class InitialViewController: UIViewController, InitialView {
+class InitialViewController: UIViewController, IInitialView {
     
-    let configurator = InitialConfiguratorImplementation()
-    var presenter: InitialPresenter!
+    let configurator = InitialConfigurator()
+    var presenter: IInitialPresenter!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        configurator.configure(self)
+        
+        presenter.pushFirstView()
     }
 
 }

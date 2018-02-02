@@ -13,8 +13,7 @@ class LoginViewController: UIViewController, ILoginView {
     
     @IBOutlet private weak var gradientView: UIView!
 
-    // TODO: injetar
-    var configurator: ILoginConfigurator! = LoginConfigurator()
+    var configurator: ILoginConfigurator!
     var presenter: ILoginPresenter!
 
     // MARK: - View
