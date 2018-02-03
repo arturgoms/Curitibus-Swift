@@ -17,20 +17,11 @@ class FirebaseAuthGateway: AuthGateway {
         Google().login { idToken, accessToken, error in
             
             guard let idToken = idToken, let accessToken = accessToken else {
-                if let error = error {
-                    completion(.failure(error))
-                }
-                return
+                return self.handleError(error: error, completion: completion)
             }
             
             let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: accessToken)
-            Auth.auth().signIn(with: credential, completion: { user, error in
-                if user != nil {
-                    completion(.success(()))
-                } else if let error = error {
-                    completion(.failure(error))
-                }
-            })
+            self.signIn(credential: credential, completion: completion)
             
         }
         
@@ -41,20 +32,11 @@ class FirebaseAuthGateway: AuthGateway {
         Facebook().login { _, accessToken, error in
             
             guard let accessToken = accessToken else {
-                if let error = error {
-                    completion(.failure(error))
-                }
-                return
+                return self.handleError(error: error, completion: completion)
             }
             
             let credential = FacebookAuthProvider.credential(withAccessToken: accessToken)
-            Auth.auth().signIn(with: credential, completion: { user, error in
-                if user != nil {
-                    completion(.success(()))
-                } else if let error = error {
-                    completion(.failure(error))
-                }
-            })
+            self.signIn(credential: credential, completion: completion)
             
         }
         
@@ -65,23 +47,29 @@ class FirebaseAuthGateway: AuthGateway {
         TWTRTwitter.sharedInstance().logIn { session, error in
             
             guard let session = session else {
-                if let error = error {
-                    completion(.failure(error))
-                }
-                return
+                return self.handleError(error: error, completion: completion)
             }
             
             let credential = TwitterAuthProvider.credential(withToken: session.authToken, secret: session.authTokenSecret)
-            Auth.auth().signIn(with: credential, completion: { user, error in
-                if user != nil {
-                    completion(.success(()))
-                } else if let error = error {
-                    completion(.failure(error))
-                }
-            })
+            self.signIn(credential: credential, completion: completion)
 
         }
         
+    }
+    
+    private func handleError(error: Error?, completion: @escaping (Result<Void>) -> Void) {
+        guard let error = error else { return }
+        completion(.failure(error))
+    }
+    
+    private func signIn(credential: AuthCredential, completion: @escaping (Result<Void>) -> Void) {
+        Auth.auth().signIn(with: credential, completion: { user, error in
+            if user != nil {
+                completion(.success(()))
+            } else if let error = error {
+                completion(.failure(error))
+            }
+        })
     }
     
 }

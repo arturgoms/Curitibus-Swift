@@ -22,10 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         
         // Init GoogleMaps
-        GMSServices.provideAPIKey("AIzaSyCXulnIkAK9x4p2hs-Hcsdp8OBqrWTlKIk")
+        GMSServices.provideAPIKey(Secrets.kGoogleMapsAPIKey)
         
         // Init Twitter
-        TWTRTwitter.sharedInstance().start(withConsumerKey: "mdxjzDVyFFQFyP4fVIcSuNw9q", consumerSecret: "PoXa7E252nerRYrJiuCeissYS30gKmwSZ4VsJA0Sn9IeVaS5Mx")
+        TWTRTwitter.sharedInstance().start(withConsumerKey: Secrets.kTwitterConsumerKey, consumerSecret: Secrets.kTwitterConsumerSecret)
         
         return true
     }

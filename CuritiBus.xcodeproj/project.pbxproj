@@ -38,6 +38,8 @@
 		3F9876E920247BF300B53E4C /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9876E520247BF300B53E4C /* LoginPresenter.swift */; };
 		3F9876EA20247BF300B53E4C /* LoginViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9876E620247BF300B53E4C /* LoginViewRouter.swift */; };
 		3F9876EC202486D300B53E4C /* CuritiBusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9876EB202486D300B53E4C /* CuritiBusTests.swift */; };
+		3FB273602025D4D70036D788 /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FB2735F2025D4D70036D788 /* Secrets.plist */; };
+		3FB7B3D42025CFE600B9B2AC /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB7B3D32025CFE600B9B2AC /* Secrets.swift */; };
 		3FCFF14B2023DD220005A476 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCFF14A2023DD220005A476 /* Storyboard.swift */; };
 		3FCFF14D2023DDFD0005A476 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCFF14C2023DDFD0005A476 /* Errors.swift */; };
 		3FCFF14F2023DFCC0005A476 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FCFF14E2023DFCC0005A476 /* GoogleService-Info.plist */; };
@@ -102,7 +104,9 @@
 		3F9876E520247BF300B53E4C /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		3F9876E620247BF300B53E4C /* LoginViewRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewRouter.swift; sourceTree = "<group>"; };
 		3F9876EB202486D300B53E4C /* CuritiBusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuritiBusTests.swift; sourceTree = "<group>"; };
+		3FB2735F2025D4D70036D788 /* Secrets.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
 		3FB7B3CE20253CC700B9B2AC /* CuritiBus-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CuritiBus-Bridging-Header.h"; sourceTree = "<group>"; };
+		3FB7B3D32025CFE600B9B2AC /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		3FCFF14A2023DD220005A476 /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		3FCFF14C2023DDFD0005A476 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		3FCFF14E2023DFCC0005A476 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -327,6 +331,7 @@
 				3F5A34CF20116ACD00FF272F /* Localizable.strings */,
 				3F5A34D220116ACD00FF272F /* Info.plist */,
 				3FCFF14E2023DFCC0005A476 /* GoogleService-Info.plist */,
+				3FB2735F2025D4D70036D788 /* Secrets.plist */,
 			);
 			path = Client;
 			sourceTree = "<group>";
@@ -400,6 +405,7 @@
 				3F9876DA2024715800B53E4C /* UI */,
 				3FCFF14A2023DD220005A476 /* Storyboard.swift */,
 				3FCFF14C2023DDFD0005A476 /* Errors.swift */,
+				3FB7B3D32025CFE600B9B2AC /* Secrets.swift */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -567,6 +573,7 @@
 				3F5A34F020116ACD00FF272F /* Localizable.strings in Resources */,
 				3F9876DF2024779F00B53E4C /* Ubuntu-R.ttf in Resources */,
 				3FCFF14F2023DFCC0005A476 /* GoogleService-Info.plist in Resources */,
+				3FB273602025D4D70036D788 /* Secrets.plist in Resources */,
 				3FCFF15A2023F6980005A476 /* bgvideo.mp4 in Resources */,
 				3F9876E12024781100B53E4C /* Ubuntu-M.ttf in Resources */,
 				3F1B1274201282290056F6EC /* Assets.xcassets in Resources */,
@@ -797,6 +804,7 @@
 				3F5A34E820116ACD00FF272F /* APIResult.swift in Sources */,
 				3FCFF14B2023DD220005A476 /* Storyboard.swift in Sources */,
 				3F5A34EC20116ACD00FF272F /* InitialViewController.swift in Sources */,
+				3FB7B3D42025CFE600B9B2AC /* Secrets.swift in Sources */,
 				3F5A34F120116ACD00FF272F /* AppDelegate.swift in Sources */,
 				3F5A34EE20116ACD00FF272F /* InitialPresenter.swift in Sources */,
 				3F5A34E520116ACD00FF272F /* APIClient.swift in Sources */,
