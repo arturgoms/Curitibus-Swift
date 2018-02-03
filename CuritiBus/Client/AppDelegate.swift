@@ -24,11 +24,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Init GoogleMaps
         GMSServices.provideAPIKey("AIzaSyCXulnIkAK9x4p2hs-Hcsdp8OBqrWTlKIk")
         
+        // Init Twitter
+        TWTRTwitter.sharedInstance().start(withConsumerKey: "mdxjzDVyFFQFyP4fVIcSuNw9q", consumerSecret: "PoXa7E252nerRYrJiuCeissYS30gKmwSZ4VsJA0Sn9IeVaS5Mx")
+        
         return true
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey: Any] = [:]) -> Bool {
-        return Simplicity.application(app, open: url, options: options)
+        if url.absoluteString.prefix(10) == "twitterkit" {
+            return TWTRTwitter.sharedInstance().application(app, open: url, options: options)
+        } else {
+            return Simplicity.application(app, open: url, options: options)
+        }
     }
 
 }
