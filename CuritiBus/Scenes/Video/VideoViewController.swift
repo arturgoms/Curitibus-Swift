@@ -25,7 +25,7 @@ class VideoViewController: UIViewController {
         self.playerLooper = AVPlayerLooper(player: player, templateItem: playerItem)
         
         playerLayer.videoGravity = .resizeAspectFill
-        playerLayer.frame = view.frame
+        playerLayer.frame = view.bounds
         view.layer.addSublayer(playerLayer)
         
         player.play()

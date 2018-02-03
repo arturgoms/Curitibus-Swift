@@ -14,7 +14,7 @@ class LoginConfigurator: ILoginConfigurator {
 
     func configure(_ viewController: LoginViewController) {
         let router = LoginViewRouter(viewController: viewController)
-        viewController.presenter = LoginPresenter(view: viewController, router: router)
+        viewController.presenter = LoginPresenter(view: viewController, useCase: SignInUseCase(authGateway: FirebaseAuthGateway()), router: router)
     }
 
 }

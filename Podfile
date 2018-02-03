@@ -12,10 +12,15 @@ target 'CuritiBus' do
   
   # Firebase
   pod 'Firebase/Core'
+  pod 'Firebase/Performance'
+  pod 'Firebase/Auth'
   
   # GoogleMaps
   pod 'GoogleMaps'
   pod 'GooglePlaces'
+  
+  # Auth
+  pod 'Simplicity', :git => 'https://github.com/diegotl/Simplicity.git', :branch => 'firebase'
   
   # UI
   pod 'TinyConstraints'

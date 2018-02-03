@@ -9,21 +9,34 @@
 import UIKit
 
 protocol ILoginView: class {
-
+    func showAlert(_ message: String)
 }
 
 protocol ILoginPresenter {
-
+    func signIn(_ provider: AuthProvider)
 }
 
 class LoginPresenter: ILoginPresenter {
 
-    weak var view: ILoginView!
-    let router: ILoginViewRouter
+    private weak var view: ILoginView!
+    private let useCase: ISignInUseCase
+    private let router: ILoginViewRouter
 
-    init(view: ILoginView, router: ILoginViewRouter) {
+    init(view: ILoginView, useCase: ISignInUseCase, router: ILoginViewRouter) {
         self.view = view
+        self.useCase = useCase
         self.router = router
+    }
+    
+    func signIn(_ provider: AuthProvider) {
+        useCase.signIn(provider) { result in
+            switch result {
+            case .success:
+                break
+            case .failure(let error):
+                self.view.showAlert(error.localizedDescription)
+            }
+        }
     }
 
 }

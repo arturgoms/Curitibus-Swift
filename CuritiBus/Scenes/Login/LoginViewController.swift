@@ -21,7 +21,10 @@ class LoginViewController: UIViewController, ILoginView {
     override func viewDidLoad() {
         super.viewDidLoad()
         configurator.configure(self)
-        
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         setupUI()
     }
     
@@ -30,6 +33,20 @@ class LoginViewController: UIViewController, ILoginView {
         gradient.frame = gradientView.bounds
         gradient.colors = [UIColor.clear.cgColor, UIColor.black.withAlphaComponent(0.9).cgColor]
         gradientView.layer.addSublayer(gradient)
+    }
+    
+    // MARK: - Actions
+    
+    @IBAction func signInFacebook() {
+        presenter.signIn(.facebook)
+    }
+    
+    @IBAction func signInGoogle() {
+        presenter.signIn(.google)
+    }
+    
+    @IBAction func signInTwitter() {
+        presenter.signIn(.twitter)
     }
 
 }
