@@ -17,5 +17,9 @@ class HomeViewController: UIViewController, IHomeView {
         super.viewDidLoad()
         configurator.configure(self)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        segue.destination.view.translatesAutoresizingMaskIntoConstraints = false
+    }
 
 }

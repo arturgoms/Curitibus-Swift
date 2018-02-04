@@ -11,8 +11,8 @@ enum LineSource: Int, Codable {
     case metrocard = 2
 }
 
-struct Line: Codable {
-    var id: Int?
-    var name: String?
-    var source: LineSource?
+struct Line: Codability {
+    var id: Int
+    var name: String
+    var source: LineSource
 }

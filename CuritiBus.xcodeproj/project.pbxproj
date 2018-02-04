@@ -15,6 +15,16 @@
 		3F4022F420252F0300B2465D /* FirebaseAuthGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4022F320252F0300B2465D /* FirebaseAuthGateway.swift */; };
 		3F4022F62025326200B2465D /* SignInUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4022F52025326200B2465D /* SignInUseCase.swift */; };
 		3F4022F8202535CC00B2465D /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4022F7202535CC00B2465D /* UIViewController.swift */; };
+		3F46224720273F1D00254653 /* HomeLinesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F46224320273F1D00254653 /* HomeLinesPresenter.swift */; };
+		3F46224820273F1D00254653 /* HomeLinesViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F46224420273F1D00254653 /* HomeLinesViewRouter.swift */; };
+		3F46224920273F1D00254653 /* HomeLinesConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F46224520273F1D00254653 /* HomeLinesConfigurator.swift */; };
+		3F46224A20273F1D00254653 /* HomeLinesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F46224620273F1D00254653 /* HomeLinesTableViewController.swift */; };
+		3F46224F2027A4C900254653 /* HomeLineSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F46224E2027A4C900254653 /* HomeLineSearchCell.swift */; };
+		3F4622512027A4DC00254653 /* HomeLineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4622502027A4DC00254653 /* HomeLineCell.swift */; };
+		3F4622542027AF7B00254653 /* HomeMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4622532027AF7B00254653 /* HomeMapViewController.swift */; };
+		3F4622562027BC3100254653 /* UserLinesGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4622552027BC3100254653 /* UserLinesGateway.swift */; };
+		3F4622582027BC5900254653 /* FirebaseUserLinesGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4622572027BC5900254653 /* FirebaseUserLinesGateway.swift */; };
+		3F46225A2027BFDA00254653 /* ListUserLinesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4622592027BFDA00254653 /* ListUserLinesUseCase.swift */; };
 		3F5A34DF20116ACD00FF272F /* Codability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A34B220116ACD00FF272F /* Codability.swift */; };
 		3F5A34E020116ACD00FF272F /* LocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A34B320116ACD00FF272F /* LocalizedString.swift */; };
 		3F5A34E220116ACD00FF272F /* ListLinesEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A34B920116ACD00FF272F /* ListLinesEndpoint.swift */; };
@@ -43,7 +53,6 @@
 		3FB2736D2025DDC20036D788 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB273692025DDC20036D788 /* HomeViewController.swift */; };
 		3FB2736E2025DDC20036D788 /* HomeViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB2736A2025DDC20036D788 /* HomeViewRouter.swift */; };
 		3FB2736F2025DDC20036D788 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB2736B2025DDC20036D788 /* HomePresenter.swift */; };
-		3FB273722025E1480036D788 /* HomeMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB273712025E1480036D788 /* HomeMapViewController.swift */; };
 		3FB273742026700C0036D788 /* bgvideo.mov in Resources */ = {isa = PBXBuildFile; fileRef = 3FB273732026700C0036D788 /* bgvideo.mov */; };
 		3FB27376202672110036D788 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB27375202672110036D788 /* Line.swift */; };
 		3FB27378202672680036D788 /* HttpMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB27377202672680036D788 /* HttpMocks.swift */; };
@@ -90,6 +99,16 @@
 		3F4022F320252F0300B2465D /* FirebaseAuthGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseAuthGateway.swift; sourceTree = "<group>"; };
 		3F4022F52025326200B2465D /* SignInUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInUseCase.swift; sourceTree = "<group>"; };
 		3F4022F7202535CC00B2465D /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		3F46224320273F1D00254653 /* HomeLinesPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeLinesPresenter.swift; sourceTree = "<group>"; };
+		3F46224420273F1D00254653 /* HomeLinesViewRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeLinesViewRouter.swift; sourceTree = "<group>"; };
+		3F46224520273F1D00254653 /* HomeLinesConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeLinesConfigurator.swift; sourceTree = "<group>"; };
+		3F46224620273F1D00254653 /* HomeLinesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeLinesTableViewController.swift; sourceTree = "<group>"; };
+		3F46224E2027A4C900254653 /* HomeLineSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLineSearchCell.swift; sourceTree = "<group>"; };
+		3F4622502027A4DC00254653 /* HomeLineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLineCell.swift; sourceTree = "<group>"; };
+		3F4622532027AF7B00254653 /* HomeMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeMapViewController.swift; sourceTree = "<group>"; };
+		3F4622552027BC3100254653 /* UserLinesGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLinesGateway.swift; sourceTree = "<group>"; };
+		3F4622572027BC5900254653 /* FirebaseUserLinesGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserLinesGateway.swift; sourceTree = "<group>"; };
+		3F4622592027BFDA00254653 /* ListUserLinesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUserLinesUseCase.swift; sourceTree = "<group>"; };
 		3F5A34B220116ACD00FF272F /* Codability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Codability.swift; sourceTree = "<group>"; };
 		3F5A34B320116ACD00FF272F /* LocalizedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedString.swift; sourceTree = "<group>"; };
 		3F5A34B920116ACD00FF272F /* ListLinesEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListLinesEndpoint.swift; sourceTree = "<group>"; };
@@ -119,7 +138,6 @@
 		3FB273692025DDC20036D788 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3FB2736A2025DDC20036D788 /* HomeViewRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewRouter.swift; sourceTree = "<group>"; };
 		3FB2736B2025DDC20036D788 /* HomePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
-		3FB273712025E1480036D788 /* HomeMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMapViewController.swift; sourceTree = "<group>"; };
 		3FB273732026700C0036D788 /* bgvideo.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = bgvideo.mov; sourceTree = "<group>"; };
 		3FB27375202672110036D788 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		3FB27377202672680036D788 /* HttpMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMocks.swift; sourceTree = "<group>"; };
@@ -257,8 +275,38 @@
 			isa = PBXGroup;
 			children = (
 				3F4022F320252F0300B2465D /* FirebaseAuthGateway.swift */,
+				3F4622572027BC5900254653 /* FirebaseUserLinesGateway.swift */,
 			);
 			path = Firebase;
+			sourceTree = "<group>";
+		};
+		3F46224220273F1D00254653 /* HomeLines */ = {
+			isa = PBXGroup;
+			children = (
+				3F46224620273F1D00254653 /* HomeLinesTableViewController.swift */,
+				3F46224320273F1D00254653 /* HomeLinesPresenter.swift */,
+				3F46224420273F1D00254653 /* HomeLinesViewRouter.swift */,
+				3F46224520273F1D00254653 /* HomeLinesConfigurator.swift */,
+				3F46224D2027A3D800254653 /* Cells */,
+			);
+			path = HomeLines;
+			sourceTree = "<group>";
+		};
+		3F46224D2027A3D800254653 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3F46224E2027A4C900254653 /* HomeLineSearchCell.swift */,
+				3F4622502027A4DC00254653 /* HomeLineCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		3F4622522027AF7B00254653 /* HomeMap */ = {
+			isa = PBXGroup;
+			children = (
+				3F4622532027AF7B00254653 /* HomeMapViewController.swift */,
+			);
+			path = HomeMap;
 			sourceTree = "<group>";
 		};
 		3F5A34B120116ACD00FF272F /* Extensions */ = {
@@ -323,6 +371,8 @@
 				3F5A34C920116ACD00FF272F /* Initial */,
 				3F9876E220247BF300B53E4C /* Login */,
 				3FB273672025DDC20036D788 /* Home */,
+				3F4622522027AF7B00254653 /* HomeMap */,
+				3F46224220273F1D00254653 /* HomeLines */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -365,6 +415,7 @@
 			children = (
 				3F5A34D620116ACD00FF272F /* AuthGateway.swift */,
 				3FB2737B202677F80036D788 /* LineGateway.swift */,
+				3F4622552027BC3100254653 /* UserLinesGateway.swift */,
 			);
 			path = Gateways;
 			sourceTree = "<group>";
@@ -375,6 +426,7 @@
 				3F4022F52025326200B2465D /* SignInUseCase.swift */,
 				3FB273612025D9AC0036D788 /* GetCurrentUser.swift */,
 				3F5A34D820116ACD00FF272F /* ListLinesUseCase.swift */,
+				3F4622592027BFDA00254653 /* ListUserLinesUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -431,17 +483,8 @@
 				3FB2736B2025DDC20036D788 /* HomePresenter.swift */,
 				3FB2736A2025DDC20036D788 /* HomeViewRouter.swift */,
 				3FB273682025DDC20036D788 /* HomeConfigurator.swift */,
-				3FB273702025E13B0036D788 /* ContainerViews */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		3FB273702025E13B0036D788 /* ContainerViews */ = {
-			isa = PBXGroup;
-			children = (
-				3FB273712025E1480036D788 /* HomeMapViewController.swift */,
-			);
-			path = ContainerViews;
 			sourceTree = "<group>";
 		};
 		3FCFF1492023DD120005A476 /* Others */ = {
@@ -661,6 +704,7 @@
 				"${BUILT_PRODUCTS_DIR}/TinyConstraints/TinyConstraints.framework",
 				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
 				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -675,6 +719,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TinyConstraints.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -841,6 +886,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F46225A2027BFDA00254653 /* ListUserLinesUseCase.swift in Sources */,
 				3F9876E820247BF300B53E4C /* LoginViewController.swift in Sources */,
 				3FB27378202672680036D788 /* HttpMocks.swift in Sources */,
 				3F4022F420252F0300B2465D /* FirebaseAuthGateway.swift in Sources */,
@@ -860,22 +906,30 @@
 				3F5A34EE20116ACD00FF272F /* InitialPresenter.swift in Sources */,
 				3FB2737C202677F80036D788 /* LineGateway.swift in Sources */,
 				3F5A34E520116ACD00FF272F /* APIClient.swift in Sources */,
+				3F46224A20273F1D00254653 /* HomeLinesTableViewController.swift in Sources */,
 				3F9876DC2024719800B53E4C /* FlatButton.swift in Sources */,
+				3F46224920273F1D00254653 /* HomeLinesConfigurator.swift in Sources */,
 				3FB273622025D9AC0036D788 /* GetCurrentUser.swift in Sources */,
+				3F46224720273F1D00254653 /* HomeLinesPresenter.swift in Sources */,
 				3F5A34ED20116ACD00FF272F /* InitialViewRouter.swift in Sources */,
+				3F4622562027BC3100254653 /* UserLinesGateway.swift in Sources */,
 				3F5A34E420116ACD00FF272F /* APIEndpoint.swift in Sources */,
+				3F46224820273F1D00254653 /* HomeLinesViewRouter.swift in Sources */,
 				3FB2736D2025DDC20036D788 /* HomeViewController.swift in Sources */,
+				3F4622512027A4DC00254653 /* HomeLineCell.swift in Sources */,
 				3FB2736E2025DDC20036D788 /* HomeViewRouter.swift in Sources */,
 				3F5A34EF20116ACD00FF272F /* InitialConfigurator.swift in Sources */,
 				3F5A34E020116ACD00FF272F /* LocalizedString.swift in Sources */,
+				3F46224F2027A4C900254653 /* HomeLineSearchCell.swift in Sources */,
 				3F5A34DF20116ACD00FF272F /* Codability.swift in Sources */,
 				3F5A34F420116ACD00FF272F /* AuthGateway.swift in Sources */,
 				3FCFF14D2023DDFD0005A476 /* Errors.swift in Sources */,
+				3F4622542027AF7B00254653 /* HomeMapViewController.swift in Sources */,
 				3F9876E720247BF300B53E4C /* LoginConfigurator.swift in Sources */,
-				3FB273722025E1480036D788 /* HomeMapViewController.swift in Sources */,
 				3FB2736C2025DDC20036D788 /* HomeConfigurator.swift in Sources */,
 				3F5A34F820116ACD00FF272F /* Result.swift in Sources */,
 				3F4022F62025326200B2465D /* SignInUseCase.swift in Sources */,
+				3F4622582027BC5900254653 /* FirebaseUserLinesGateway.swift in Sources */,
 				3FB2737E20268D580036D788 /* APILineGateway.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

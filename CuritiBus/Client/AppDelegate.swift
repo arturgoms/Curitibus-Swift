@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Init Firebase
         FirebaseApp.configure()
+        Database.database().isPersistenceEnabled = true
         
         // Init GoogleMaps
         GMSServices.provideAPIKey(Secrets.kGoogleMapsAPIKey)
@@ -27,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Init Twitter
         TWTRTwitter.sharedInstance().start(withConsumerKey: Secrets.kTwitterConsumerKey, consumerSecret: Secrets.kTwitterConsumerSecret)
         
+        // Mocks http response while backend project isn't done
         HttpMocks.setup()
         
         return true

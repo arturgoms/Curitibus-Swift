@@ -26,29 +26,31 @@
 				<string>com.googleusercontent.apps.1011029344427-u3c159dgp3is1emeaef0bjj4gj416klc</string>
 			</array>
 		</dict>
-        <dict>
-            <key>CFBundleURLSchemes</key>
-            <array>
-                <string>fb1348202605214935</string>
-                <string>twitterkit-mdxjzDVyFFQFyP4fVIcSuNw9q</string>
-            </array>
-        </dict>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb1348202605214935</string>
+				<string>twitterkit-mdxjzDVyFFQFyP4fVIcSuNw9q</string>
+			</array>
+		</dict>
 	</array>
-    <key>FacebookAppID</key>
-    <string>1348202605214935</string>
-    <key>FacebookDisplayName</key>
-    <string>CuritiBus</string>
-    <key>LSApplicationQueriesSchemes</key>
-    <array>
-        <string>fbapi</string>
-        <string>fb-messenger-share-api</string>
-        <string>fbauth2</string>
-        <string>fbshareextension</string>
-        <string>twitter</string>
-        <string>twitterauth</string>
-        <string>googlechromes</string>
-        <string>comgooglemaps</string>
-    </array>
+	<key>FacebookAppID</key>
+	<string>1348202605214935</string>
+	<key>FacebookDisplayName</key>
+	<string>CuritiBus</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbapi</string>
+		<string>fb-messenger-share-api</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
+		<string>twitter</string>
+		<string>twitterauth</string>
+		<string>googlechromes</string>
+		<string>comgooglemaps</string>
+	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Encontrar linhas próximas a você.</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>

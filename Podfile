@@ -14,6 +14,8 @@ target 'CuritiBus' do
   pod 'Firebase/Core'
   pod 'Firebase/Performance'
   pod 'Firebase/Auth'
+  pod 'Firebase/Database'
+  pod 'Firebase/Messaging'
   
   # GoogleMaps
   pod 'GoogleMaps'
