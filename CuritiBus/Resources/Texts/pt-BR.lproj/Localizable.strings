@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  CuritiBus
+
+  Created by Diego Trevisan Lara on 16/01/18.
+  Copyright © 2018 Diego Trevisan Lara. All rights reserved.
+*/
+
+/* Tests */
+"TEST_LOCALIZED_MESSAGE"                    = "Mensagem";
+"TEST_LOCALIZED_ARGS_MESSAGE"               = "Mensagem %@";
+
+/* Errors */
+"ERROR_UNKNOWN_MESSAGE"                     = "Erro desconhecido.";

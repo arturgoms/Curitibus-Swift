@@ -12,6 +12,14 @@ import FirebaseAuth
 
 class FirebaseAuthGateway: AuthGateway {
     
+    func getCurrentUser(completion: @escaping (Result<User>) -> Void) {
+        if let user = Auth.auth().currentUser {
+            completion(.success(user))
+        } else {
+            completion(.failure(GatewayError.noLoggedUser))
+        }
+    }
+    
     func googleSignIn(completion: @escaping (Result<Void>) -> Void) {
         
         Google().login { idToken, accessToken, error in

@@ -9,7 +9,7 @@
 import Foundation
 
 enum GatewayError: Error {
-    
+    case noLoggedUser
 }
 
 enum APIError: Error {

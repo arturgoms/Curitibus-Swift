@@ -25,6 +25,9 @@ target 'CuritiBus' do
   
   # UI
   pod 'TinyConstraints'
+  
+  # For mocking http requests (temporary)
+  pod 'OHHTTPStubs/Swift'
 
   target 'CuritiBusTests' do
     inherit! :search_paths

@@ -17,7 +17,7 @@ class VideoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let path = Bundle.main.path(forResource: "bgvideo", ofType: "mp4")
+        let path = Bundle.main.path(forResource: "bgvideo", ofType: "mov")
         let pathURL = URL(fileURLWithPath: path!)
         
         let playerItem = AVPlayerItem(url: pathURL)
@@ -32,8 +32,6 @@ class VideoViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         player.play()
-        player.volume = 0
-        player.rate = 0.75
     }
     
     override func viewWillDisappear(_ animated: Bool) {

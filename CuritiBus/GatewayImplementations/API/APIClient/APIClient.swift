@@ -11,30 +11,28 @@ import CodableAlamofire
 
 // MARK: - APIClient
 
-protocol APIClient {
+protocol IAPIClient {
     func execute<T: Decodable>(endpoint: APIEndpoint, completionHandler: @escaping (Result<T>) -> Void)
 }
 
-class APIClientImplementation: APIClient {
+class APIClient: IAPIClient {
     
     func execute<T: Decodable>(endpoint: APIEndpoint, completionHandler: @escaping (Result<T>) -> Void) {
         
-        endpoint.request().responseDecodableObject { (response: DataResponse<APIResult<T>>) in
-
+        endpoint.request().responseDecodableObject { (response: DataResponse<T>) in
+            
             do {
-                let apiResponse = try response.result.unwrap()
-
-                if apiResponse.success, let data = apiResponse.data {
-                    completionHandler(.success(data))
-
-                } else if let errorMessage = apiResponse.errorMessage {
-                    let error = APIError.remote(message: errorMessage)
-                    self.handleError(error: error, completionHandler: completionHandler)
-
-                } else {
-                    let unknownError = APIError.unknown(request: response.request, response: response.response)
-                    self.handleError(error: unknownError, completionHandler: completionHandler)
-                }
+                let data = try response.result.unwrap()
+                completionHandler(.success(data))
+                
+//                } else if let errorMessage = apiResponse.errorMessage {
+//                    let error = APIError.remote(message: errorMessage)
+//                    self.handleError(error: error, completionHandler: completionHandler)
+//
+//                } else {
+//                    let unknownError = APIError.unknown(request: response.request, response: response.response)
+//                    self.handleError(error: unknownError, completionHandler: completionHandler)
+//                }
 
             } catch let error {
                 self.handleError(error: error, completionHandler: completionHandler)

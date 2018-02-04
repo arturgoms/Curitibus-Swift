@@ -14,7 +14,8 @@ class InitialConfigurator: IInitialConfigurator {
     
     func configure(_ viewController: InitialViewController) {
         let router = InitialViewRouter(viewController: viewController)
-        viewController.presenter = InitialPresenter(view: viewController, router: router)
+        let useCase = GetCurrentUserUseCase(authGateway: FirebaseAuthGateway())
+        viewController.presenter = InitialPresenter(view: viewController, useCase: useCase, router: router)
     }
     
 }

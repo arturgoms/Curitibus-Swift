@@ -27,7 +27,10 @@ class InitialViewRouter: IInitialViewRouter {
     }
     
     func presentHomeView() {
+        let homeView = Storyboard.main.instantiate(HomeViewController.self)
+        homeView.configurator = HomeConfigurator()
         
+        viewController.navigationController?.setViewControllers([homeView], animated: false)
     }
     
 }

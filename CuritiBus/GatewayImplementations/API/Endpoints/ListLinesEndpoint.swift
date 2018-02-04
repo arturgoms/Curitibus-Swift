@@ -8,13 +8,9 @@
 
 class ListLinesEndpoint: APIEndpoint {
     
-    var url: String = ""
+    var url: APIEndpointPath = .lines
     var method: APIMethod = .get
     var encoding: APIEncoding = .queryString
     var parameter: APIParameterObject?
-    
-    init(parameter: APIParameterObject) {
-        self.parameter = parameter
-    }
     
 }

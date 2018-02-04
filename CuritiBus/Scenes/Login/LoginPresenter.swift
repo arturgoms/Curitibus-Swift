@@ -32,7 +32,7 @@ class LoginPresenter: ILoginPresenter {
         useCase.signIn(provider) { result in
             switch result {
             case .success:
-                break
+                self.router.presentHomeView()
             case .failure(let error):
                 self.view.showAlert(error.localizedDescription)
             }

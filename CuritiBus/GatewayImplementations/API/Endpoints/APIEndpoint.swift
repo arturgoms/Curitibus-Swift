@@ -30,7 +30,7 @@ enum APIEncoding {
 // MARK: - APIEndpoint
 
 protocol APIEndpoint {
-    var url: String { get }
+    var url: APIEndpointPath { get }
     var method: APIMethod { get }
     var parameter: APIParameterObject? { get }
     var encoding: APIEncoding { get }
@@ -45,7 +45,7 @@ extension APIEndpoint {
             parameters = parameter.encodeToJson()
         }
         
-        return Alamofire.request(url, method: method, parameters: parameters, encoding: encoding.parameterEncoding, headers: [:])
+        return Alamofire.request(url.fullUrl, method: method, parameters: parameters, encoding: encoding.parameterEncoding, headers: [:])
     }
     
 }

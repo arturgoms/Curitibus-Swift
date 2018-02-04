@@ -138,6 +138,35 @@
             </objects>
             <point key="canvasLocation" x="1636.875" y="29.577464788732396"/>
         </scene>
+        <!--Home View Controller-->
+        <scene sceneID="3lA-fg-y9J">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Emn-u6-jwE" customClass="HomeViewController" customModule="CuritiBus" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Oe-jM-ghp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="if7-xB-fsg">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <connections>
+                                    <segue destination="hky-ZJ-xUX" kind="embed" id="oSR-SB-ICM"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="if7-xB-fsg" firstAttribute="leading" secondItem="ef7-gO-xeu" secondAttribute="leading" id="9h6-Ei-eTi"/>
+                            <constraint firstItem="if7-xB-fsg" firstAttribute="bottom" secondItem="2Oe-jM-ghp" secondAttribute="bottom" id="TwV-oj-2C8"/>
+                            <constraint firstItem="if7-xB-fsg" firstAttribute="top" secondItem="2Oe-jM-ghp" secondAttribute="top" id="dZh-Mf-o64"/>
+                            <constraint firstItem="if7-xB-fsg" firstAttribute="trailing" secondItem="ef7-gO-xeu" secondAttribute="trailing" id="orC-o2-5ea"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ef7-gO-xeu"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3tF-jt-2Gs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1636.875" y="814.43661971830988"/>
+        </scene>
         <!--Video View Controller-->
         <scene sceneID="LAq-rn-uo9">
             <objects>
@@ -169,6 +198,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ueK-e1-U2K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-191" y="30"/>
+        </scene>
+        <!--Home Map View Controller-->
+        <scene sceneID="Xsu-ff-Lfh">
+            <objects>
+                <viewController storyboardIdentifier="HomeMapViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hky-ZJ-xUX" customClass="HomeMapViewController" customModule="CuritiBus" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EuN-Q8-Km7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Cx-RC-EVz" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0Cx-RC-EVz" firstAttribute="top" secondItem="EuN-Q8-Km7" secondAttribute="top" id="Pbx-lg-85e"/>
+                            <constraint firstAttribute="trailing" secondItem="0Cx-RC-EVz" secondAttribute="trailing" id="PnT-cl-xyx"/>
+                            <constraint firstAttribute="bottom" secondItem="0Cx-RC-EVz" secondAttribute="bottom" id="fsO-vT-Hx5"/>
+                            <constraint firstItem="0Cx-RC-EVz" firstAttribute="leading" secondItem="EuN-Q8-Km7" secondAttribute="leading" id="pnI-mJ-t5V"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="map" destination="0Cx-RC-EVz" id="ShR-I6-jbx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jfv-ym-0aI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2417" y="814"/>
         </scene>
     </scenes>
     <resources>

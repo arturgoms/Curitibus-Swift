@@ -27,6 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Init Twitter
         TWTRTwitter.sharedInstance().start(withConsumerKey: Secrets.kTwitterConsumerKey, consumerSecret: Secrets.kTwitterConsumerSecret)
         
+        HttpMocks.setup()
+        
         return true
     }
     

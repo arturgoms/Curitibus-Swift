@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ILoginViewRouter {
-
+    func presentHomeView()
 }
 
 class LoginViewRouter: ILoginViewRouter {
@@ -18,6 +18,13 @@ class LoginViewRouter: ILoginViewRouter {
 
     init(viewController: LoginViewController) {
         self.viewController = viewController
+    }
+    
+    func presentHomeView() {
+        let homeView = Storyboard.main.instantiate(HomeViewController.self)
+        homeView.configurator = HomeConfigurator()
+        
+        viewController.navigationController?.setViewControllers([homeView], animated: true)
     }
 
 }
