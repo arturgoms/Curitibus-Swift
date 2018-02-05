@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GMSServices.provideAPIKey(Secrets.kGoogleMapsAPIKey)
         
         // Init Twitter
-        TWTRTwitter.sharedInstance().start(withConsumerKey: Secrets.kTwitterConsumerKey, consumerSecret: Secrets.kTwitterConsumerSecret)
+        // TWTRTwitter.sharedInstance().start(withConsumerKey: Secrets.kTwitterConsumerKey, consumerSecret: Secrets.kTwitterConsumerSecret)
         
         // Mocks http response while backend project isn't done
         HttpMocks.setup()
@@ -35,11 +35,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey: Any] = [:]) -> Bool {
-        if url.absoluteString.prefix(10) == "twitterkit" {
-            return TWTRTwitter.sharedInstance().application(app, open: url, options: options)
-        } else {
+//        if url.absoluteString.prefix(10) == "twitterkit" {
+//            return TWTRTwitter.sharedInstance().application(app, open: url, options: options)
+//        } else {
             return Simplicity.application(app, open: url, options: options)
-        }
+//        }
     }
 
 }

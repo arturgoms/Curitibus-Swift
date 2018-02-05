@@ -6,6 +6,8 @@
 //  Copyright © 2018 Diego Trevisan Lara. All rights reserved.
 //
 
+import Foundation
+
 private var source: [String: String] = {
     let path = Bundle.main.path(forResource: "Secrets", ofType: "plist")!
     let secrets = NSDictionary(contentsOfFile: path) as? [String: String]

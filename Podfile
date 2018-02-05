@@ -23,7 +23,7 @@ target 'CuritiBus' do
   
   # Auth
   pod 'Simplicity', :git => 'https://github.com/diegotl/Simplicity.git', :branch => 'firebase'
-  pod 'TwitterKit'
+  #pod 'TwitterKit'
   
   # UI
   pod 'TinyConstraints'

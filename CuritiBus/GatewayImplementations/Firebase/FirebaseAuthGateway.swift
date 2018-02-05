@@ -52,16 +52,16 @@ class FirebaseAuthGateway: AuthGateway {
     
     func twitterSignIn(completion: @escaping (Result<Void>) -> Void) {
         
-        TWTRTwitter.sharedInstance().logIn { session, error in
-            
-            guard let session = session else {
-                return self.handleError(error: error, completion: completion)
-            }
-            
-            let credential = TwitterAuthProvider.credential(withToken: session.authToken, secret: session.authTokenSecret)
-            self.signIn(credential: credential, completion: completion)
-
-        }
+//        TWTRTwitter.sharedInstance().logIn { session, error in
+//
+//            guard let session = session else {
+//                return self.handleError(error: error, completion: completion)
+//            }
+//
+//            let credential = TwitterAuthProvider.credential(withToken: session.authToken, secret: session.authTokenSecret)
+//            self.signIn(credential: credential, completion: completion)
+//
+//        }
         
     }
     
