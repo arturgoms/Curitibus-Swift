@@ -14,5 +14,6 @@ enum LineSource: Int, Codable {
 struct Line: Codability {
     var id: Int
     var name: String
+    var color: String
     var source: LineSource
 }

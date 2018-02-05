@@ -21,6 +21,8 @@ class HomeLinesTableViewController: UITableViewController, IHomeLinesView, LineS
         configurator.configure(self)
         
         setupUI()
+        
+        presenter.listLines()
         presenter.listUserLines()
     }
     
@@ -53,7 +55,7 @@ class HomeLinesTableViewController: UITableViewController, IHomeLinesView, LineS
         case 0:
             return 1
         default:
-            return presenter.numberOfLines()
+            return presenter.numberOfUserLines()
         }
     }
     

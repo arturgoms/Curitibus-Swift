@@ -6,21 +6,20 @@
 //  Copyright © 2018 Diego Trevisan Lara. All rights reserved.
 //
 
-protocol ListLinesUseCase {
-//    func get(completion: (_ user: Result<User>) -> Void)
+protocol IListLinesUseCase {
+    func listLines(completion: @escaping (_ user: Result<[Line]>) -> Void)
 }
 
-class ListLinesUseCaseImplementation: ListLinesUseCase {
+class ListLinesUseCase: IListLinesUseCase {
     
-//    private let userGateway: UserGateway
-//    
-//    init(userGateway: UserGateway) {
-//        self.userGateway = userGateway
-//    }
-//    
-//    func get(completion: (Result<User>) -> Void) {
-//        let result = userGateway.get()
-//        completion(result)
-//    }
+    private let lineGateway: LineGateway
     
+    init(lineGateway: LineGateway) {
+        self.lineGateway = lineGateway
+    }
+    
+    func listLines(completion: @escaping (Result<[Line]>) -> Void) {
+        lineGateway.getLines(completion: completion)
+    }
+
 }

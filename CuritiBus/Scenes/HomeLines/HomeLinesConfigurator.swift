@@ -14,9 +14,10 @@ class HomeLinesConfigurator: IHomeLinesConfigurator {
     
     func configure(_ viewController: HomeLinesTableViewController) {
         let router = HomeLinesViewRouter(viewController: viewController)
-        let useCase = ListUserLinesUseCase(authGateway: FirebaseAuthGateway(), userLinesGateway: FirebaseUserLinesGateway())
+        let linesUseCase = ListLinesUseCase(lineGateway: APILineGateway(apiClient: APIClient()))
+        let userLinesUseCase = ListUserLinesUseCase(authGateway: FirebaseAuthGateway(), userLinesGateway: FirebaseUserLinesGateway())
         
-        viewController.presenter = HomeLinesPresenter(view: viewController, useCase: useCase, router: router)
+        viewController.presenter = HomeLinesPresenter(view: viewController, linesUseCase: linesUseCase, userLinesUseCase: userLinesUseCase, router: router)
     }
     
 }

@@ -14,30 +14,48 @@ protocol IHomeLinesView: class {
 }
 
 protocol IHomeLinesPresenter {
+    func listLines()
     func listUserLines()
-    func numberOfLines() -> Int
+    func numberOfUserLines() -> Int
 }
 
 class HomeLinesPresenter: IHomeLinesPresenter {
     
     private weak var view: IHomeLinesView!
-    private let useCase: IListUserLinesUseCase
+    private let linesUseCase: IListLinesUseCase
+    private let userLinesUseCase: IListUserLinesUseCase
     private let router: HomeLinesViewRouter
     
     private var lines = [Line]()
+    private var userLines = [Line]()
     
-    init(view: IHomeLinesView, useCase: IListUserLinesUseCase, router: HomeLinesViewRouter) {
+    init(view: IHomeLinesView, linesUseCase: IListLinesUseCase, userLinesUseCase: IListUserLinesUseCase, router: HomeLinesViewRouter) {
         self.view = view
-        self.useCase = useCase
+        self.linesUseCase = linesUseCase
+        self.userLinesUseCase = userLinesUseCase
         self.router = router
+    }
+    
+    func listLines() {
+        
+        linesUseCase.listLines { result in
+            switch result {
+            case .success(let lines):
+                self.lines = lines
+                
+            case .failure(let error):
+                self.view.showAlert(error.localizedDescription)
+            }
+        }
+        
     }
     
     func listUserLines() {
         
-        useCase.listUserLines { result in
+        userLinesUseCase.listUserLines { result in
             switch result {
             case .success(let lines):
-                self.lines = lines
+                self.userLines = lines
                 self.view.refreshLines(lines)
                 
             case .failure(let error):
@@ -47,8 +65,8 @@ class HomeLinesPresenter: IHomeLinesPresenter {
         
     }
     
-    func numberOfLines() -> Int {
-        return lines.count
+    func numberOfUserLines() -> Int {
+        return userLines.count
     }
 
 }
