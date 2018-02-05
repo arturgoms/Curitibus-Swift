@@ -14,6 +14,8 @@ class HomeLinesTableViewController: UITableViewController, IHomeLinesView, LineS
     var configurator: IHomeLinesConfigurator! = HomeLinesConfigurator()
     var presenter: IHomeLinesPresenter!
     
+    private var headerView: UIView!
+    
     // MARK: - View
 
     override func viewDidLoad() {
@@ -27,6 +29,7 @@ class HomeLinesTableViewController: UITableViewController, IHomeLinesView, LineS
     }
     
     func setupUI() {
+        headerView = tableView.tableHeaderView
         tableView.contentInset = UIEdgeInsets(top: -20, left: 0, bottom: 0, right: 0)
         tableView.tableHeaderView?.frame.size.height = UIScreen.main.bounds.height
         tableView.decelerationRate = UIScrollViewDecelerationRateFast
@@ -42,20 +45,26 @@ class HomeLinesTableViewController: UITableViewController, IHomeLinesView, LineS
         if let homeMap = childViewControllers.first as? HomeMapViewController {
             homeMap.scrollViewDidScroll(scrollView: scrollView)
         }
+        
+        if scrollView.contentOffset.y < 56 {
+            tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .bottom, animated: false)
+        }
     }
     
     // MARK: - UITableViewDataSource
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
             return 1
-        default:
+        case 1:
             return presenter.numberOfUserLines()
+        default:
+            return presenter.numberOfSearchLines()
         }
     }
     
@@ -66,6 +75,9 @@ class HomeLinesTableViewController: UITableViewController, IHomeLinesView, LineS
             cell.delegate = self
             return cell
             
+        case 1:
+            return tableView.dequeueReusableCell(withIdentifier: "HomeLineCell", for: indexPath)
+            
         default:
             return tableView.dequeueReusableCell(withIdentifier: "HomeLineCell", for: indexPath)
         }
@@ -74,12 +86,14 @@ class HomeLinesTableViewController: UITableViewController, IHomeLinesView, LineS
     // MARK: - LineSearchDelegate
     
     func expandSearch() {
-//        tableView.contentInset.bottom = 300
-//        tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
+        tableView.tableHeaderView = nil
+        presenter.search("")
     }
     
     func collapseSearch() {
-//        tableView.contentInset.bottom = 0
+        tableView.tableHeaderView = headerView
+        tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .bottom, animated: false)
+        presenter.search(nil)
     }
     
     // MARK: - IHomeLinesView
@@ -89,6 +103,10 @@ class HomeLinesTableViewController: UITableViewController, IHomeLinesView, LineS
         
         let offset = 56 + lines.count * 44
         self.tableView.setContentOffset(CGPoint(x: 0, y: offset), animated: true)
+    }
+    
+    func refreshFilter(_ lines: [Line]) {
+        
     }
 
 }

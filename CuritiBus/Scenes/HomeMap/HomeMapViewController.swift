@@ -17,9 +17,14 @@ class HomeMapViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupUI()
+    }
+    
+    func setupUI() {
         map.camera = GMSCameraPosition.camera(withLatitude: -25.441105, longitude: -49.276855, zoom: 11.0)
         map.isMyLocationEnabled = true
+        //map.mapStyle = GMSMapStyle(contentsOfFileURL: url)
+        //https://mapstyle.withgoogle.com
     }
     
     // MARK: - Actions

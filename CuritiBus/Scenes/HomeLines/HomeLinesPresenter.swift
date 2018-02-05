@@ -10,6 +10,7 @@ import UIKit
 
 protocol IHomeLinesView: class {
     func refreshLines(_ lines: [Line])
+    func refreshFilter(_ lines: [Line])
     func showAlert(_ message: String)
 }
 
@@ -17,6 +18,8 @@ protocol IHomeLinesPresenter {
     func listLines()
     func listUserLines()
     func numberOfUserLines() -> Int
+    func numberOfSearchLines() -> Int
+    func search(_ query: String?)
 }
 
 class HomeLinesPresenter: IHomeLinesPresenter {
@@ -28,6 +31,7 @@ class HomeLinesPresenter: IHomeLinesPresenter {
     
     private var lines = [Line]()
     private var userLines = [Line]()
+    private var searchQuery: String?
     
     init(view: IHomeLinesView, linesUseCase: IListLinesUseCase, userLinesUseCase: IListUserLinesUseCase, router: HomeLinesViewRouter) {
         self.view = view
@@ -66,7 +70,16 @@ class HomeLinesPresenter: IHomeLinesPresenter {
     }
     
     func numberOfUserLines() -> Int {
-        return userLines.count
+        return searchQuery == nil ? userLines.count : 0
+    }
+    
+    func numberOfSearchLines() -> Int {
+        return searchQuery == nil ? 0 : lines.count
+    }
+    
+    func search(_ query: String?) {
+        self.searchQuery = query
+        view.refreshFilter(lines)
     }
 
 }
