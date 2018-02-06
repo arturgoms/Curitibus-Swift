@@ -63,16 +63,26 @@ class HomeViewController: UIViewController, IHomeView, UITableViewDataSource, UI
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
         case 0:
-            let cell: HomeLineSearchCell! = tableView.dequeueReusableCell(withIdentifier: "HomeLineSearchCell", for: indexPath) as? HomeLineSearchCell
+            let cell: HomeLineSearchCell = tableView.dequeueReusableCell(indexPath)
             cell.delegate = self
             return cell
             
         case 1:
-            return tableView.dequeueReusableCell(withIdentifier: "HomeLineCell", for: indexPath)
+            let cell: HomeUserLineCell = tableView.dequeueReusableCell(indexPath)
+            presenter.configure(cell, indexPath)
+            return cell
             
         default:
-            return tableView.dequeueReusableCell(withIdentifier: "HomeLineCell", for: indexPath)
+            let cell: HomeResultLineCell = tableView.dequeueReusableCell(indexPath)
+            presenter.configure(cell, indexPath)
+            return cell
         }
+    }
+    
+    // MARK: - UITableViewDelegate
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter.didSelect(indexPath)
     }
     
     // MARK: - LineSearchDelegate
@@ -85,6 +95,10 @@ class HomeViewController: UIViewController, IHomeView, UITableViewDataSource, UI
     func collapseSearch() {
         tableView.contentInset.top = UIScreen.main.bounds.height * 0.8
         presenter.search(nil)
+    }
+    
+    func search(_ query: String?) {
+        presenter.search(query)
     }
     
     // MARK: - IHomeLinesView

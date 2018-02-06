@@ -33,7 +33,7 @@
 		3F5A34F520116ACD00FF272F /* ListLinesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A34D820116ACD00FF272F /* ListLinesUseCase.swift */; };
 		3F5A34F820116ACD00FF272F /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A34DC20116ACD00FF272F /* Result.swift */; };
 		3F5E704F202935A400637D26 /* HomeLineSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E704D202935A400637D26 /* HomeLineSearchCell.swift */; };
-		3F5E7050202935A400637D26 /* HomeLineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E704E202935A400637D26 /* HomeLineCell.swift */; };
+		3F5E7050202935A400637D26 /* HomeUserLineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E704E202935A400637D26 /* HomeUserLineCell.swift */; };
 		3F5E7052202936BC00637D26 /* HollowTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E7051202936BC00637D26 /* HollowTableView.swift */; };
 		3F9876DC2024719800B53E4C /* FlatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9876DB2024719800B53E4C /* FlatButton.swift */; };
 		3F9876DF2024779F00B53E4C /* Ubuntu-R.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F9876DE2024779F00B53E4C /* Ubuntu-R.ttf */; };
@@ -61,6 +61,13 @@
 		3FCFF14D2023DDFD0005A476 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCFF14C2023DDFD0005A476 /* Errors.swift */; };
 		3FCFF14F2023DFCC0005A476 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FCFF14E2023DFCC0005A476 /* GoogleService-Info.plist */; };
 		3FCFF1582023ED9C0005A476 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCFF1572023ED9C0005A476 /* VideoViewController.swift */; };
+		3FF153F22029BEF7006B5011 /* HomeResultLineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF153F12029BEF7006B5011 /* HomeResultLineCell.swift */; };
+		3FF153F42029BF9C006B5011 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF153F32029BF9C006B5011 /* UITableView.swift */; };
+		3FF153FA2029C30C006B5011 /* LineConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF153F62029C30C006B5011 /* LineConfigurator.swift */; };
+		3FF153FB2029C30C006B5011 /* LineViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF153F72029C30C006B5011 /* LineViewRouter.swift */; };
+		3FF153FC2029C30C006B5011 /* LineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF153F82029C30C006B5011 /* LineViewController.swift */; };
+		3FF153FD2029C30C006B5011 /* LinePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF153F92029C30C006B5011 /* LinePresenter.swift */; };
+		3FF153FF2029C927006B5011 /* StoreUserLineUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF153FE2029C927006B5011 /* StoreUserLineUseCase.swift */; };
 		4850221E745EBF166D8429D7 /* Pods_CuritiBusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD0D9683455D8062FA99D74 /* Pods_CuritiBusTests.framework */; };
 		F73B7A0FFFBEE24BA9F497E9 /* Pods_CuritiBus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DCCD4EE1A9251D95144ABCE /* Pods_CuritiBus.framework */; };
 /* End PBXBuildFile section */
@@ -115,7 +122,7 @@
 		3F5A34D820116ACD00FF272F /* ListLinesUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListLinesUseCase.swift; sourceTree = "<group>"; };
 		3F5A34DC20116ACD00FF272F /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		3F5E704D202935A400637D26 /* HomeLineSearchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeLineSearchCell.swift; sourceTree = "<group>"; };
-		3F5E704E202935A400637D26 /* HomeLineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeLineCell.swift; sourceTree = "<group>"; };
+		3F5E704E202935A400637D26 /* HomeUserLineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeUserLineCell.swift; sourceTree = "<group>"; };
 		3F5E7051202936BC00637D26 /* HollowTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HollowTableView.swift; sourceTree = "<group>"; };
 		3F9876DB2024719800B53E4C /* FlatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatButton.swift; sourceTree = "<group>"; };
 		3F9876DE2024779F00B53E4C /* Ubuntu-R.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-R.ttf"; sourceTree = "<group>"; };
@@ -144,6 +151,13 @@
 		3FCFF14C2023DDFD0005A476 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		3FCFF14E2023DFCC0005A476 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3FCFF1572023ED9C0005A476 /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		3FF153F12029BEF7006B5011 /* HomeResultLineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeResultLineCell.swift; sourceTree = "<group>"; };
+		3FF153F32029BF9C006B5011 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		3FF153F62029C30C006B5011 /* LineConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineConfigurator.swift; sourceTree = "<group>"; };
+		3FF153F72029C30C006B5011 /* LineViewRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineViewRouter.swift; sourceTree = "<group>"; };
+		3FF153F82029C30C006B5011 /* LineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineViewController.swift; sourceTree = "<group>"; };
+		3FF153F92029C30C006B5011 /* LinePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinePresenter.swift; sourceTree = "<group>"; };
+		3FF153FE2029C927006B5011 /* StoreUserLineUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreUserLineUseCase.swift; sourceTree = "<group>"; };
 		5207498BC32B7DB0512A377B /* Pods-CuritiBus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuritiBus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CuritiBus/Pods-CuritiBus.debug.xcconfig"; sourceTree = "<group>"; };
 		5EE080F134E717659A30F54E /* Pods_CuritiBusUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CuritiBusUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DCCD4EE1A9251D95144ABCE /* Pods_CuritiBus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CuritiBus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -288,6 +302,7 @@
 				3F5A34B220116ACD00FF272F /* Codability.swift */,
 				3F5A34B320116ACD00FF272F /* LocalizedString.swift */,
 				3F4022F7202535CC00B2465D /* UIViewController.swift */,
+				3FF153F32029BF9C006B5011 /* UITableView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -345,6 +360,7 @@
 				3F9876E220247BF300B53E4C /* Login */,
 				3FB273672025DDC20036D788 /* Home */,
 				3F4622522027AF7B00254653 /* HomeMap */,
+				3FF153F52029C30C006B5011 /* Line */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -399,6 +415,7 @@
 				3FB273612025D9AC0036D788 /* GetCurrentUser.swift */,
 				3F5A34D820116ACD00FF272F /* ListLinesUseCase.swift */,
 				3F4622592027BFDA00254653 /* ListUserLinesUseCase.swift */,
+				3FF153FE2029C927006B5011 /* StoreUserLineUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -416,7 +433,8 @@
 			isa = PBXGroup;
 			children = (
 				3F5E704D202935A400637D26 /* HomeLineSearchCell.swift */,
-				3F5E704E202935A400637D26 /* HomeLineCell.swift */,
+				3F5E704E202935A400637D26 /* HomeUserLineCell.swift */,
+				3FF153F12029BEF7006B5011 /* HomeResultLineCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -496,6 +514,17 @@
 				3FCFF1572023ED9C0005A476 /* VideoViewController.swift */,
 			);
 			path = Video;
+			sourceTree = "<group>";
+		};
+		3FF153F52029C30C006B5011 /* Line */ = {
+			isa = PBXGroup;
+			children = (
+				3FF153F82029C30C006B5011 /* LineViewController.swift */,
+				3FF153F92029C30C006B5011 /* LinePresenter.swift */,
+				3FF153F72029C30C006B5011 /* LineViewRouter.swift */,
+				3FF153F62029C30C006B5011 /* LineConfigurator.swift */,
+			);
+			path = Line;
 			sourceTree = "<group>";
 		};
 		6907BFB93B346FC664DAE466 /* Pods */ = {
@@ -863,17 +892,19 @@
 			files = (
 				3F46225A2027BFDA00254653 /* ListUserLinesUseCase.swift in Sources */,
 				3F9876E820247BF300B53E4C /* LoginViewController.swift in Sources */,
+				3FF153FA2029C30C006B5011 /* LineConfigurator.swift in Sources */,
 				3FB27378202672680036D788 /* HttpMocks.swift in Sources */,
 				3F4022F420252F0300B2465D /* FirebaseAuthGateway.swift in Sources */,
 				3F5A34F520116ACD00FF272F /* ListLinesUseCase.swift in Sources */,
 				3FB2736F2025DDC20036D788 /* HomePresenter.swift in Sources */,
 				3F9876EA20247BF300B53E4C /* LoginViewRouter.swift in Sources */,
-				3F5E7050202935A400637D26 /* HomeLineCell.swift in Sources */,
+				3F5E7050202935A400637D26 /* HomeUserLineCell.swift in Sources */,
 				3F4022F8202535CC00B2465D /* UIViewController.swift in Sources */,
 				3F5A34E220116ACD00FF272F /* ListLinesEndpoint.swift in Sources */,
 				3FCFF1582023ED9C0005A476 /* VideoViewController.swift in Sources */,
 				3F9876E920247BF300B53E4C /* LoginPresenter.swift in Sources */,
 				3FB2737A2026766D0036D788 /* URLs.swift in Sources */,
+				3FF153FD2029C30C006B5011 /* LinePresenter.swift in Sources */,
 				3FB27376202672110036D788 /* Line.swift in Sources */,
 				3FCFF14B2023DD220005A476 /* Storyboard.swift in Sources */,
 				3F5A34EC20116ACD00FF272F /* InitialViewController.swift in Sources */,
@@ -883,6 +914,7 @@
 				3F5A34EE20116ACD00FF272F /* InitialPresenter.swift in Sources */,
 				3FB2737C202677F80036D788 /* LineGateway.swift in Sources */,
 				3F5A34E520116ACD00FF272F /* APIClient.swift in Sources */,
+				3FF153FF2029C927006B5011 /* StoreUserLineUseCase.swift in Sources */,
 				3F9876DC2024719800B53E4C /* FlatButton.swift in Sources */,
 				3FB273622025D9AC0036D788 /* GetCurrentUser.swift in Sources */,
 				3F5A34ED20116ACD00FF272F /* InitialViewRouter.swift in Sources */,
@@ -890,16 +922,20 @@
 				3F5A34E420116ACD00FF272F /* APIEndpoint.swift in Sources */,
 				3FB2736D2025DDC20036D788 /* HomeViewController.swift in Sources */,
 				3FB2736E2025DDC20036D788 /* HomeViewRouter.swift in Sources */,
+				3FF153F42029BF9C006B5011 /* UITableView.swift in Sources */,
 				3F5E704F202935A400637D26 /* HomeLineSearchCell.swift in Sources */,
 				3F5A34EF20116ACD00FF272F /* InitialConfigurator.swift in Sources */,
 				3F5A34E020116ACD00FF272F /* LocalizedString.swift in Sources */,
 				3F5A34DF20116ACD00FF272F /* Codability.swift in Sources */,
 				3F5A34F420116ACD00FF272F /* AuthGateway.swift in Sources */,
+				3FF153FC2029C30C006B5011 /* LineViewController.swift in Sources */,
 				3FCFF14D2023DDFD0005A476 /* Errors.swift in Sources */,
+				3FF153FB2029C30C006B5011 /* LineViewRouter.swift in Sources */,
 				3F4622542027AF7B00254653 /* HomeMapViewController.swift in Sources */,
 				3F9876E720247BF300B53E4C /* LoginConfigurator.swift in Sources */,
 				3FB2736C2025DDC20036D788 /* HomeConfigurator.swift in Sources */,
 				3F5A34F820116ACD00FF272F /* Result.swift in Sources */,
+				3FF153F22029BEF7006B5011 /* HomeResultLineCell.swift in Sources */,
 				3F4022F62025326200B2465D /* SignInUseCase.swift in Sources */,
 				3F4622582027BC5900254653 /* FirebaseUserLinesGateway.swift in Sources */,
 				3FB2737E20268D580036D788 /* APILineGateway.swift in Sources */,

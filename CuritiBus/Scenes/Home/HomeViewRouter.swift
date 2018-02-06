@@ -7,6 +7,7 @@
 //
 
 protocol IHomeViewRouter {
+    func openLine(_ line: Line)
 }
 
 class HomeViewRouter: IHomeViewRouter {
@@ -15,6 +16,13 @@ class HomeViewRouter: IHomeViewRouter {
     
     init(viewController: HomeViewController) {
         self.viewController = viewController
+    }
+    
+    func openLine(_ line: Line) {
+        let lineViewController = Storyboard.main.instantiate(LineViewController.self)
+        lineViewController.configurator = LineConfigurator(line: line)
+        
+        viewController.show(lineViewController, sender: viewController)
     }
     
 }

@@ -20,6 +20,9 @@ protocol IHomePresenter {
     func numberOfUserLines() -> Int
     func numberOfSearchLines() -> Int
     func search(_ query: String?)
+    func configure(_ cell: HomeUserLineCell, _ indexPath: IndexPath)
+    func configure(_ cell: HomeResultLineCell, _ indexPath: IndexPath)
+    func didSelect(_ indexPath: IndexPath)
 }
 
 class HomePresenter: IHomePresenter {
@@ -36,7 +39,9 @@ class HomePresenter: IHomePresenter {
         self.router = router
     }
     
-    private var lines = [Line]()
+    private var allLines = [Line]()
+    private var filterLines = [Line]()
+    
     private var userLines = [Line]()
     private var searchQuery: String?
     
@@ -45,7 +50,7 @@ class HomePresenter: IHomePresenter {
         linesUseCase.listLines { result in
             switch result {
             case .success(let lines):
-                self.lines = lines
+                self.allLines = lines
 
             case .failure(let error):
                 self.view.showAlert(error.localizedDescription)
@@ -74,12 +79,34 @@ class HomePresenter: IHomePresenter {
     }
     
     func numberOfSearchLines() -> Int {
-        return searchQuery == nil ? 0 : lines.count
+        return searchQuery == nil ? 0 : filterLines.count
     }
     
     func search(_ query: String?) {
         self.searchQuery = query
-        view.refreshFilter(lines)
+        if query == nil || query?.isEmpty == true {
+            filterLines = allLines
+        } else {
+            filterLines = allLines.filter({ $0.name.lowercased().contains(query!) })
+        }
+        
+        view.refreshFilter(filterLines)
+    }
+    
+    func configure(_ cell: HomeUserLineCell, _ indexPath: IndexPath) {
+        cell.line = userLines[indexPath.row]
+    }
+    
+    func configure(_ cell: HomeResultLineCell, _ indexPath: IndexPath) {
+        cell.line = filterLines[indexPath.row]
+    }
+    
+    func didSelect(_ indexPath: IndexPath) {
+        if searchQuery == nil {
+            router.openLine(userLines[indexPath.row])
+        } else {
+            router.openLine(filterLines[indexPath.row])
+        }
     }
 
 }

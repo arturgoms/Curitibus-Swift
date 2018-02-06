@@ -206,6 +206,7 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
+                                                        <action selector="textFieldDidChange:" destination="V0x-xE-PLm" eventType="editingChanged" id="K0W-r4-DqQ"/>
                                                         <outlet property="delegate" destination="V0x-xE-PLm" id="MS2-me-Moc"/>
                                                     </connections>
                                                 </textField>
@@ -225,7 +226,7 @@
                                             <outlet property="searchBar" destination="F6I-pb-5OC" id="NKe-hY-J0e"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeLineCell" id="JHU-jz-Kkl" customClass="HomeLineCell" customModule="CuritiBus" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeUserLineCell" id="JHU-jz-Kkl" customClass="HomeUserLineCell" customModule="CuritiBus" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="84" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JHU-jz-Kkl" id="US4-4T-P3Z">
@@ -250,6 +251,38 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="oh4-aT-v7Z" id="Q0M-LS-fYG"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeResultLineCell" id="zFy-tG-LXG" customClass="HomeResultLineCell" customModule="CuritiBus" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="128" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zFy-tG-LXG" id="xWS-vQ-JXB">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fES-sP-h8y">
+                                                    <rect key="frame" x="16" y="0.0" width="288" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="p2M-Eh-4fL"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="fES-sP-h8y" firstAttribute="leading" secondItem="xWS-vQ-JXB" secondAttribute="leading" constant="16" id="E98-Nq-VdL"/>
+                                                <constraint firstItem="fES-sP-h8y" firstAttribute="top" secondItem="xWS-vQ-JXB" secondAttribute="top" id="MhF-wj-99a"/>
+                                                <constraint firstAttribute="bottom" secondItem="fES-sP-h8y" secondAttribute="bottom" id="cMG-3H-syg"/>
+                                                <constraint firstAttribute="trailing" secondItem="fES-sP-h8y" secondAttribute="trailing" constant="16" id="iqx-yN-tjp"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="fES-sP-h8y" id="HWA-Yf-uaK"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -349,6 +382,31 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jfv-ym-0aI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2417" y="813"/>
+        </scene>
+        <!--Line View Controller-->
+        <scene sceneID="dnc-dH-kzR">
+            <objects>
+                <viewController storyboardIdentifier="LineViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="r2I-Q1-R8P" customClass="LineViewController" customModule="CuritiBus" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nyo-Ic-sUI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WyL-RF-zV9">
+                                <rect key="frame" x="53" y="54" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="toggleFavorited" destination="r2I-Q1-R8P" eventType="touchUpInside" id="Xf2-Lr-d22"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="G23-fu-5dI"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y0I-4V-hcr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3405" y="814"/>
         </scene>
     </scenes>
     <resources>

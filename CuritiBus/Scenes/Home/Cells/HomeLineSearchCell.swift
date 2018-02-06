@@ -11,6 +11,7 @@ import UIKit
 protocol LineSearchDelegate: class {
     func expandSearch()
     func collapseSearch()
+    func search(_ query: String?)
 }
 
 class HomeLineSearchCell: UITableViewCell, UITextFieldDelegate {
@@ -24,22 +25,24 @@ class HomeLineSearchCell: UITableViewCell, UITextFieldDelegate {
     
     // MARK: - UITextFieldDelegate
     
-//    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-//        delegate?.expandSearch()
-//        return true
-//    }
-    
-    func textFieldDidBeginEditing(_ textField: UITextField) {
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         delegate?.expandSearch()
+        return true
     }
     
     func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
         delegate?.collapseSearch()
+        textField.text = nil
+        delegate?.search(nil)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    
+    @IBAction func textFieldDidChange(_ textField: UITextField) {
+        delegate?.search(textField.text)
     }
 
 }
