@@ -15,12 +15,6 @@
 		3F4022F420252F0300B2465D /* FirebaseAuthGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4022F320252F0300B2465D /* FirebaseAuthGateway.swift */; };
 		3F4022F62025326200B2465D /* SignInUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4022F52025326200B2465D /* SignInUseCase.swift */; };
 		3F4022F8202535CC00B2465D /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4022F7202535CC00B2465D /* UIViewController.swift */; };
-		3F46224720273F1D00254653 /* HomeLinesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F46224320273F1D00254653 /* HomeLinesPresenter.swift */; };
-		3F46224820273F1D00254653 /* HomeLinesViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F46224420273F1D00254653 /* HomeLinesViewRouter.swift */; };
-		3F46224920273F1D00254653 /* HomeLinesConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F46224520273F1D00254653 /* HomeLinesConfigurator.swift */; };
-		3F46224A20273F1D00254653 /* HomeLinesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F46224620273F1D00254653 /* HomeLinesTableViewController.swift */; };
-		3F46224F2027A4C900254653 /* HomeLineSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F46224E2027A4C900254653 /* HomeLineSearchCell.swift */; };
-		3F4622512027A4DC00254653 /* HomeLineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4622502027A4DC00254653 /* HomeLineCell.swift */; };
 		3F4622542027AF7B00254653 /* HomeMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4622532027AF7B00254653 /* HomeMapViewController.swift */; };
 		3F4622562027BC3100254653 /* UserLinesGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4622552027BC3100254653 /* UserLinesGateway.swift */; };
 		3F4622582027BC5900254653 /* FirebaseUserLinesGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4622572027BC5900254653 /* FirebaseUserLinesGateway.swift */; };
@@ -38,6 +32,9 @@
 		3F5A34F420116ACD00FF272F /* AuthGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A34D620116ACD00FF272F /* AuthGateway.swift */; };
 		3F5A34F520116ACD00FF272F /* ListLinesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A34D820116ACD00FF272F /* ListLinesUseCase.swift */; };
 		3F5A34F820116ACD00FF272F /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A34DC20116ACD00FF272F /* Result.swift */; };
+		3F5E704F202935A400637D26 /* HomeLineSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E704D202935A400637D26 /* HomeLineSearchCell.swift */; };
+		3F5E7050202935A400637D26 /* HomeLineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E704E202935A400637D26 /* HomeLineCell.swift */; };
+		3F5E7052202936BC00637D26 /* HollowTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E7051202936BC00637D26 /* HollowTableView.swift */; };
 		3F9876DC2024719800B53E4C /* FlatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9876DB2024719800B53E4C /* FlatButton.swift */; };
 		3F9876DF2024779F00B53E4C /* Ubuntu-R.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F9876DE2024779F00B53E4C /* Ubuntu-R.ttf */; };
 		3F9876E12024781100B53E4C /* Ubuntu-M.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F9876E02024781100B53E4C /* Ubuntu-M.ttf */; };
@@ -99,12 +96,6 @@
 		3F4022F320252F0300B2465D /* FirebaseAuthGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseAuthGateway.swift; sourceTree = "<group>"; };
 		3F4022F52025326200B2465D /* SignInUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInUseCase.swift; sourceTree = "<group>"; };
 		3F4022F7202535CC00B2465D /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
-		3F46224320273F1D00254653 /* HomeLinesPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeLinesPresenter.swift; sourceTree = "<group>"; };
-		3F46224420273F1D00254653 /* HomeLinesViewRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeLinesViewRouter.swift; sourceTree = "<group>"; };
-		3F46224520273F1D00254653 /* HomeLinesConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeLinesConfigurator.swift; sourceTree = "<group>"; };
-		3F46224620273F1D00254653 /* HomeLinesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeLinesTableViewController.swift; sourceTree = "<group>"; };
-		3F46224E2027A4C900254653 /* HomeLineSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLineSearchCell.swift; sourceTree = "<group>"; };
-		3F4622502027A4DC00254653 /* HomeLineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLineCell.swift; sourceTree = "<group>"; };
 		3F4622532027AF7B00254653 /* HomeMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeMapViewController.swift; sourceTree = "<group>"; };
 		3F4622552027BC3100254653 /* UserLinesGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLinesGateway.swift; sourceTree = "<group>"; };
 		3F4622572027BC5900254653 /* FirebaseUserLinesGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserLinesGateway.swift; sourceTree = "<group>"; };
@@ -123,6 +114,9 @@
 		3F5A34D620116ACD00FF272F /* AuthGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthGateway.swift; sourceTree = "<group>"; };
 		3F5A34D820116ACD00FF272F /* ListLinesUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListLinesUseCase.swift; sourceTree = "<group>"; };
 		3F5A34DC20116ACD00FF272F /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		3F5E704D202935A400637D26 /* HomeLineSearchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeLineSearchCell.swift; sourceTree = "<group>"; };
+		3F5E704E202935A400637D26 /* HomeLineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeLineCell.swift; sourceTree = "<group>"; };
+		3F5E7051202936BC00637D26 /* HollowTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HollowTableView.swift; sourceTree = "<group>"; };
 		3F9876DB2024719800B53E4C /* FlatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatButton.swift; sourceTree = "<group>"; };
 		3F9876DE2024779F00B53E4C /* Ubuntu-R.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-R.ttf"; sourceTree = "<group>"; };
 		3F9876E02024781100B53E4C /* Ubuntu-M.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-M.ttf"; sourceTree = "<group>"; };
@@ -280,27 +274,6 @@
 			path = Firebase;
 			sourceTree = "<group>";
 		};
-		3F46224220273F1D00254653 /* HomeLines */ = {
-			isa = PBXGroup;
-			children = (
-				3F46224620273F1D00254653 /* HomeLinesTableViewController.swift */,
-				3F46224320273F1D00254653 /* HomeLinesPresenter.swift */,
-				3F46224420273F1D00254653 /* HomeLinesViewRouter.swift */,
-				3F46224520273F1D00254653 /* HomeLinesConfigurator.swift */,
-				3F46224D2027A3D800254653 /* Cells */,
-			);
-			path = HomeLines;
-			sourceTree = "<group>";
-		};
-		3F46224D2027A3D800254653 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				3F46224E2027A4C900254653 /* HomeLineSearchCell.swift */,
-				3F4622502027A4DC00254653 /* HomeLineCell.swift */,
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
 		3F4622522027AF7B00254653 /* HomeMap */ = {
 			isa = PBXGroup;
 			children = (
@@ -372,7 +345,6 @@
 				3F9876E220247BF300B53E4C /* Login */,
 				3FB273672025DDC20036D788 /* Home */,
 				3F4622522027AF7B00254653 /* HomeMap */,
-				3F46224220273F1D00254653 /* HomeLines */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -440,10 +412,20 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
+		3F5E704C202935A400637D26 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3F5E704D202935A400637D26 /* HomeLineSearchCell.swift */,
+				3F5E704E202935A400637D26 /* HomeLineCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		3F9876DA2024715800B53E4C /* UI */ = {
 			isa = PBXGroup;
 			children = (
 				3F9876DB2024719800B53E4C /* FlatButton.swift */,
+				3F5E7051202936BC00637D26 /* HollowTableView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -483,6 +465,7 @@
 				3FB2736B2025DDC20036D788 /* HomePresenter.swift */,
 				3FB2736A2025DDC20036D788 /* HomeViewRouter.swift */,
 				3FB273682025DDC20036D788 /* HomeConfigurator.swift */,
+				3F5E704C202935A400637D26 /* Cells */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -885,6 +868,7 @@
 				3F5A34F520116ACD00FF272F /* ListLinesUseCase.swift in Sources */,
 				3FB2736F2025DDC20036D788 /* HomePresenter.swift in Sources */,
 				3F9876EA20247BF300B53E4C /* LoginViewRouter.swift in Sources */,
+				3F5E7050202935A400637D26 /* HomeLineCell.swift in Sources */,
 				3F4022F8202535CC00B2465D /* UIViewController.swift in Sources */,
 				3F5A34E220116ACD00FF272F /* ListLinesEndpoint.swift in Sources */,
 				3FCFF1582023ED9C0005A476 /* VideoViewController.swift in Sources */,
@@ -895,24 +879,20 @@
 				3F5A34EC20116ACD00FF272F /* InitialViewController.swift in Sources */,
 				3FB7B3D42025CFE600B9B2AC /* Secrets.swift in Sources */,
 				3F5A34F120116ACD00FF272F /* AppDelegate.swift in Sources */,
+				3F5E7052202936BC00637D26 /* HollowTableView.swift in Sources */,
 				3F5A34EE20116ACD00FF272F /* InitialPresenter.swift in Sources */,
 				3FB2737C202677F80036D788 /* LineGateway.swift in Sources */,
 				3F5A34E520116ACD00FF272F /* APIClient.swift in Sources */,
-				3F46224A20273F1D00254653 /* HomeLinesTableViewController.swift in Sources */,
 				3F9876DC2024719800B53E4C /* FlatButton.swift in Sources */,
-				3F46224920273F1D00254653 /* HomeLinesConfigurator.swift in Sources */,
 				3FB273622025D9AC0036D788 /* GetCurrentUser.swift in Sources */,
-				3F46224720273F1D00254653 /* HomeLinesPresenter.swift in Sources */,
 				3F5A34ED20116ACD00FF272F /* InitialViewRouter.swift in Sources */,
 				3F4622562027BC3100254653 /* UserLinesGateway.swift in Sources */,
 				3F5A34E420116ACD00FF272F /* APIEndpoint.swift in Sources */,
-				3F46224820273F1D00254653 /* HomeLinesViewRouter.swift in Sources */,
 				3FB2736D2025DDC20036D788 /* HomeViewController.swift in Sources */,
-				3F4622512027A4DC00254653 /* HomeLineCell.swift in Sources */,
 				3FB2736E2025DDC20036D788 /* HomeViewRouter.swift in Sources */,
+				3F5E704F202935A400637D26 /* HomeLineSearchCell.swift in Sources */,
 				3F5A34EF20116ACD00FF272F /* InitialConfigurator.swift in Sources */,
 				3F5A34E020116ACD00FF272F /* LocalizedString.swift in Sources */,
-				3F46224F2027A4C900254653 /* HomeLineSearchCell.swift in Sources */,
 				3F5A34DF20116ACD00FF272F /* Codability.swift in Sources */,
 				3F5A34F420116ACD00FF272F /* AuthGateway.swift in Sources */,
 				3FCFF14D2023DDFD0005A476 /* Errors.swift in Sources */,

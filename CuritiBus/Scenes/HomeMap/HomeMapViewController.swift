@@ -11,7 +11,7 @@ import GoogleMaps
 
 class HomeMapViewController: UIViewController {
     
-    @IBOutlet weak var map: GMSMapView!
+    @IBOutlet private weak var map: GMSMapView!
     @IBOutlet private weak var topLayoutConstraint: NSLayoutConstraint!
     @IBOutlet private weak var bottomLayoutConstraint: NSLayoutConstraint!
 
