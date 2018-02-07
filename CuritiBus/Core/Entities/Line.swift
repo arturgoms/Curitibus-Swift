@@ -6,6 +6,8 @@
 //  Copyright © 2018 Diego Trevisan Lara. All rights reserved.
 //
 
+import UIKit
+
 enum LineSource: Int, Codable {
     case urbs = 1
     case metrocard = 2
@@ -14,6 +16,17 @@ enum LineSource: Int, Codable {
 struct Line: Codability {
     var id: Int
     var name: String
-    var color: String
+    var colorString: String
     var source: LineSource
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case name
+        case colorString = "color"
+        case source
+    }
+    
+    var color: UIColor {
+        return UIColor(hex: colorString)
+    }
 }

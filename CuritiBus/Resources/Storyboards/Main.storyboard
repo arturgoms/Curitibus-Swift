@@ -15,6 +15,9 @@
         <array key="Ubuntu-M.ttf">
             <string>Ubuntu-Medium</string>
         </array>
+        <array key="Ubuntu-R.ttf">
+            <string>Ubuntu</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Initial View Controller-->
@@ -255,33 +258,50 @@
                                             <outlet property="nameLabel" destination="oh4-aT-v7Z" id="Q0M-LS-fYG"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeResultLineCell" id="zFy-tG-LXG" customClass="HomeResultLineCell" customModule="CuritiBus" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="128" width="320" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeResultLineCell" rowHeight="54" id="zFy-tG-LXG" customClass="HomeResultLineCell" customModule="CuritiBus" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="128" width="320" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zFy-tG-LXG" id="xWS-vQ-JXB">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="54"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fES-sP-h8y">
-                                                    <rect key="frame" x="16" y="0.0" width="288" height="44"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Inw-4f-nAm">
+                                                    <rect key="frame" x="0.0" y="0.0" width="4" height="54"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="44" id="p2M-Eh-4fL"/>
+                                                        <constraint firstAttribute="width" constant="4" id="I02-3t-ava"/>
+                                                        <constraint firstAttribute="height" constant="54" id="c7x-LE-Bd7"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONVENCIONAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fES-sP-h8y">
+                                                    <rect key="frame" x="227.5" y="37" width="84.5" height="12.5"/>
+                                                    <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="11"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CC5-e9-C3v">
+                                                    <rect key="frame" x="12" y="17" width="300" height="19.5"/>
+                                                    <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="fES-sP-h8y" firstAttribute="leading" secondItem="xWS-vQ-JXB" secondAttribute="leading" constant="16" id="E98-Nq-VdL"/>
-                                                <constraint firstItem="fES-sP-h8y" firstAttribute="top" secondItem="xWS-vQ-JXB" secondAttribute="top" id="MhF-wj-99a"/>
-                                                <constraint firstAttribute="bottom" secondItem="fES-sP-h8y" secondAttribute="bottom" id="cMG-3H-syg"/>
-                                                <constraint firstAttribute="trailing" secondItem="fES-sP-h8y" secondAttribute="trailing" constant="16" id="iqx-yN-tjp"/>
+                                                <constraint firstAttribute="bottom" secondItem="fES-sP-h8y" secondAttribute="bottom" constant="4" id="Bw9-kt-Q7S"/>
+                                                <constraint firstItem="CC5-e9-C3v" firstAttribute="centerY" secondItem="xWS-vQ-JXB" secondAttribute="centerY" id="GWo-WK-VOq"/>
+                                                <constraint firstItem="CC5-e9-C3v" firstAttribute="leading" secondItem="Inw-4f-nAm" secondAttribute="trailing" constant="8" id="a5g-JD-UDN"/>
+                                                <constraint firstItem="Inw-4f-nAm" firstAttribute="leading" secondItem="xWS-vQ-JXB" secondAttribute="leading" id="dSc-U7-SLj"/>
+                                                <constraint firstAttribute="trailing" secondItem="fES-sP-h8y" secondAttribute="trailing" constant="8" id="iqx-yN-tjp"/>
+                                                <constraint firstItem="Inw-4f-nAm" firstAttribute="top" secondItem="xWS-vQ-JXB" secondAttribute="top" id="jcc-y9-ipX"/>
+                                                <constraint firstAttribute="trailing" secondItem="CC5-e9-C3v" secondAttribute="trailing" constant="8" id="jfM-ss-nVL"/>
+                                                <constraint firstAttribute="bottom" secondItem="Inw-4f-nAm" secondAttribute="bottom" id="oBF-ip-YQS"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
-                                            <outlet property="nameLabel" destination="fES-sP-h8y" id="HWA-Yf-uaK"/>
+                                            <outlet property="categoryLabel" destination="fES-sP-h8y" id="wdN-Bd-7OC"/>
+                                            <outlet property="leftColorView" destination="Inw-4f-nAm" id="SSQ-Rl-YRd"/>
+                                            <outlet property="nameLabel" destination="CC5-e9-C3v" id="rUF-JK-zy6"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

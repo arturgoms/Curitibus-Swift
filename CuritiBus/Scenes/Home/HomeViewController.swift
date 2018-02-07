@@ -28,13 +28,34 @@ class HomeViewController: UIViewController, IHomeView, UITableViewDataSource, UI
         presenter.listLines()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupObservers()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        removeObservers()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        segue.destination.view.translatesAutoresizingMaskIntoConstraints = false
+    }
+    
+    // MARK: - Setup
+    
     func setupUI() {
         tableView.contentInset.top = UIScreen.main.bounds.height * 0.8
         tableView.decelerationRate = UIScrollViewDecelerationRateFast
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        segue.destination.view.translatesAutoresizingMaskIntoConstraints = false
+    func setupObservers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: .UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: .UIKeyboardWillHide, object: nil)
+    }
+    
+    func removeObservers() {
+        NotificationCenter.default.removeObserver(self)
     }
     
     // MARK: - UIScrollViewDelegate
@@ -109,6 +130,18 @@ class HomeViewController: UIViewController, IHomeView, UITableViewDataSource, UI
     
     func refreshFilter(_ lines: [Line]) {
         tableView.reloadSections([1, 2], with: .fade)
+    }
+    
+    // MARK: - Observers
+    
+    @objc func keyboardWillShow(_ notification: NSNotification) {
+        if let keyboardFrame = notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? CGRect {
+            tableView.contentInset.bottom = keyboardFrame.height
+        }
+    }
+    
+    @objc func keyboardWillHide(_ notification: NSNotification) {
+        tableView.contentInset.bottom = 0
     }
 
 }

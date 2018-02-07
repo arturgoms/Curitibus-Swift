@@ -11,10 +11,13 @@ import UIKit
 class HomeResultLineCell: UITableViewCell {
     
     @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var categoryLabel: UILabel!
+    @IBOutlet private weak var leftColorView: UIView!
     
     var line: Line? {
         didSet {
             nameLabel.text = line?.name
+            leftColorView.backgroundColor = line?.color
         }
     }
     
