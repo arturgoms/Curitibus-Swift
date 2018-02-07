@@ -20,8 +20,8 @@ protocol IHomePresenter {
     func numberOfUserLines() -> Int
     func numberOfSearchLines() -> Int
     func search(_ query: String?)
-    func configure(_ cell: HomeUserLineCell, _ indexPath: IndexPath)
-    func configure(_ cell: HomeResultLineCell, _ indexPath: IndexPath)
+    func configureUserLine(_ cell: HomeLineCell, _ indexPath: IndexPath)
+    func configureSearchLine(_ cell: HomeLineCell, _ indexPath: IndexPath)
     func didSelect(_ indexPath: IndexPath)
 }
 
@@ -93,11 +93,11 @@ class HomePresenter: IHomePresenter {
         view.refreshFilter(filterLines)
     }
     
-    func configure(_ cell: HomeUserLineCell, _ indexPath: IndexPath) {
+    func configureUserLine(_ cell: HomeLineCell, _ indexPath: IndexPath) {
         cell.line = userLines[indexPath.row]
     }
     
-    func configure(_ cell: HomeResultLineCell, _ indexPath: IndexPath) {
+    func configureSearchLine(_ cell: HomeLineCell, _ indexPath: IndexPath) {
         cell.line = filterLines[indexPath.row]
     }
     

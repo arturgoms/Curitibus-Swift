@@ -33,7 +33,6 @@
 		3F5A34F520116ACD00FF272F /* ListLinesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A34D820116ACD00FF272F /* ListLinesUseCase.swift */; };
 		3F5A34F820116ACD00FF272F /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A34DC20116ACD00FF272F /* Result.swift */; };
 		3F5E704F202935A400637D26 /* HomeLineSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E704D202935A400637D26 /* HomeLineSearchCell.swift */; };
-		3F5E7050202935A400637D26 /* HomeUserLineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E704E202935A400637D26 /* HomeUserLineCell.swift */; };
 		3F5E7052202936BC00637D26 /* HollowTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E7051202936BC00637D26 /* HollowTableView.swift */; };
 		3F615253202A7016002F00E4 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F615252202A7016002F00E4 /* UIColor.swift */; };
 		3F9876DC2024719800B53E4C /* FlatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9876DB2024719800B53E4C /* FlatButton.swift */; };
@@ -62,7 +61,7 @@
 		3FCFF14D2023DDFD0005A476 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCFF14C2023DDFD0005A476 /* Errors.swift */; };
 		3FCFF14F2023DFCC0005A476 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FCFF14E2023DFCC0005A476 /* GoogleService-Info.plist */; };
 		3FCFF1582023ED9C0005A476 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCFF1572023ED9C0005A476 /* VideoViewController.swift */; };
-		3FF153F22029BEF7006B5011 /* HomeResultLineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF153F12029BEF7006B5011 /* HomeResultLineCell.swift */; };
+		3FF153F22029BEF7006B5011 /* HomeLineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF153F12029BEF7006B5011 /* HomeLineCell.swift */; };
 		3FF153F42029BF9C006B5011 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF153F32029BF9C006B5011 /* UITableView.swift */; };
 		3FF153FA2029C30C006B5011 /* LineConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF153F62029C30C006B5011 /* LineConfigurator.swift */; };
 		3FF153FB2029C30C006B5011 /* LineViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF153F72029C30C006B5011 /* LineViewRouter.swift */; };
@@ -123,7 +122,6 @@
 		3F5A34D820116ACD00FF272F /* ListLinesUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListLinesUseCase.swift; sourceTree = "<group>"; };
 		3F5A34DC20116ACD00FF272F /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		3F5E704D202935A400637D26 /* HomeLineSearchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeLineSearchCell.swift; sourceTree = "<group>"; };
-		3F5E704E202935A400637D26 /* HomeUserLineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeUserLineCell.swift; sourceTree = "<group>"; };
 		3F5E7051202936BC00637D26 /* HollowTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HollowTableView.swift; sourceTree = "<group>"; };
 		3F615252202A7016002F00E4 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		3F9876DB2024719800B53E4C /* FlatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatButton.swift; sourceTree = "<group>"; };
@@ -153,7 +151,7 @@
 		3FCFF14C2023DDFD0005A476 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		3FCFF14E2023DFCC0005A476 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3FCFF1572023ED9C0005A476 /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
-		3FF153F12029BEF7006B5011 /* HomeResultLineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeResultLineCell.swift; sourceTree = "<group>"; };
+		3FF153F12029BEF7006B5011 /* HomeLineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLineCell.swift; sourceTree = "<group>"; };
 		3FF153F32029BF9C006B5011 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		3FF153F62029C30C006B5011 /* LineConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineConfigurator.swift; sourceTree = "<group>"; };
 		3FF153F72029C30C006B5011 /* LineViewRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineViewRouter.swift; sourceTree = "<group>"; };
@@ -436,8 +434,7 @@
 			isa = PBXGroup;
 			children = (
 				3F5E704D202935A400637D26 /* HomeLineSearchCell.swift */,
-				3F5E704E202935A400637D26 /* HomeUserLineCell.swift */,
-				3FF153F12029BEF7006B5011 /* HomeResultLineCell.swift */,
+				3FF153F12029BEF7006B5011 /* HomeLineCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -715,6 +712,7 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/Simplicity/Simplicity.framework",
 				"${BUILT_PRODUCTS_DIR}/TinyConstraints/TinyConstraints.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -728,6 +726,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OHHTTPStubs.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Simplicity.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TinyConstraints.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -901,7 +900,6 @@
 				3F5A34F520116ACD00FF272F /* ListLinesUseCase.swift in Sources */,
 				3FB2736F2025DDC20036D788 /* HomePresenter.swift in Sources */,
 				3F9876EA20247BF300B53E4C /* LoginViewRouter.swift in Sources */,
-				3F5E7050202935A400637D26 /* HomeUserLineCell.swift in Sources */,
 				3F4022F8202535CC00B2465D /* UIViewController.swift in Sources */,
 				3F5A34E220116ACD00FF272F /* ListLinesEndpoint.swift in Sources */,
 				3FCFF1582023ED9C0005A476 /* VideoViewController.swift in Sources */,
@@ -939,7 +937,7 @@
 				3F9876E720247BF300B53E4C /* LoginConfigurator.swift in Sources */,
 				3FB2736C2025DDC20036D788 /* HomeConfigurator.swift in Sources */,
 				3F5A34F820116ACD00FF272F /* Result.swift in Sources */,
-				3FF153F22029BEF7006B5011 /* HomeResultLineCell.swift in Sources */,
+				3FF153F22029BEF7006B5011 /* HomeLineCell.swift in Sources */,
 				3F4022F62025326200B2465D /* SignInUseCase.swift in Sources */,
 				3F4622582027BC5900254653 /* FirebaseUserLinesGateway.swift in Sources */,
 				3FB2737E20268D580036D788 /* APILineGateway.swift in Sources */,

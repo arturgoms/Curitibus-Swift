@@ -229,37 +229,8 @@
                                             <outlet property="searchBar" destination="F6I-pb-5OC" id="NKe-hY-J0e"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeUserLineCell" id="JHU-jz-Kkl" customClass="HomeUserLineCell" customModule="CuritiBus" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="84" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JHU-jz-Kkl" id="US4-4T-P3Z">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oh4-aT-v7Z">
-                                                    <rect key="frame" x="16" y="0.0" width="288" height="44"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="44" id="Ugq-OW-kx8"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="oh4-aT-v7Z" firstAttribute="top" secondItem="US4-4T-P3Z" secondAttribute="top" id="EkG-8P-q8s"/>
-                                                <constraint firstAttribute="bottom" secondItem="oh4-aT-v7Z" secondAttribute="bottom" id="G74-By-JDr"/>
-                                                <constraint firstItem="oh4-aT-v7Z" firstAttribute="leading" secondItem="US4-4T-P3Z" secondAttribute="leading" constant="16" id="TvJ-6X-CR8"/>
-                                                <constraint firstAttribute="trailing" secondItem="oh4-aT-v7Z" secondAttribute="trailing" constant="16" id="Vfb-Ue-LIf"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <connections>
-                                            <outlet property="nameLabel" destination="oh4-aT-v7Z" id="Q0M-LS-fYG"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeResultLineCell" rowHeight="54" id="zFy-tG-LXG" customClass="HomeResultLineCell" customModule="CuritiBus" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="128" width="320" height="54"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeLineCell" rowHeight="54" id="zFy-tG-LXG" customClass="HomeLineCell" customModule="CuritiBus" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="84" width="320" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zFy-tG-LXG" id="xWS-vQ-JXB">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="54"/>

@@ -29,14 +29,14 @@ class HomeMapViewController: UIViewController {
     
     // MARK: - Actions
     
-    func scrollViewDidScroll(scrollView: UIScrollView) {
-        var offsetY = -scrollView.contentOffset.y
+    func scrollViewDidScroll(offset: CGFloat) {
+        let offsetY = offset
         
-        if #available(iOS 11.0, *) {
-            offsetY -= view.superview?.safeAreaInsets.top ?? 0
-        } else {
-            offsetY -= scrollView.contentInset.top
-        }
+//        if #available(iOS 11.0, *) {
+//            offsetY -= view.superview?.safeAreaInsets.top ?? 0
+//        } else {
+//            offsetY -= scrollView.contentInset.top
+//        }
         
         self.view.superview?.clipsToBounds = offsetY <= 0
         

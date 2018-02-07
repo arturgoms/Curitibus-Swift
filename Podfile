@@ -27,6 +27,7 @@ target 'CuritiBus' do
   
   # UI
   pod 'TinyConstraints'
+  pod 'SideMenu'
   
   # For mocking http requests (temporary)
   pod 'OHHTTPStubs/Swift'

@@ -61,7 +61,9 @@ class HomeViewController: UIViewController, IHomeView, UITableViewDataSource, UI
     // MARK: - UIScrollViewDelegate
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        bottomViewHeight.constant = scrollView.frame.size.height + scrollView.contentOffset.y
+        let offset = scrollView.frame.size.height + scrollView.contentOffset.y
+        bottomViewHeight.constant = offset
+        (childViewControllers.first as? HomeMapViewController)?.scrollViewDidScroll(offset: offset)
     }
     
     // MARK: - UITableViewDataSource
@@ -89,13 +91,13 @@ class HomeViewController: UIViewController, IHomeView, UITableViewDataSource, UI
             return cell
             
         case 1:
-            let cell: HomeUserLineCell = tableView.dequeueReusableCell(indexPath)
-            presenter.configure(cell, indexPath)
+            let cell: HomeLineCell = tableView.dequeueReusableCell(indexPath)
+            presenter.configureUserLine(cell, indexPath)
             return cell
             
         default:
-            let cell: HomeResultLineCell = tableView.dequeueReusableCell(indexPath)
-            presenter.configure(cell, indexPath)
+            let cell: HomeLineCell = tableView.dequeueReusableCell(indexPath)
+            presenter.configureSearchLine(cell, indexPath)
             return cell
         }
     }
