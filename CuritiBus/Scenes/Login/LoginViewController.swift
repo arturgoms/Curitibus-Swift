@@ -8,7 +8,7 @@
 
 import UIKit
 import FacebookLogin
-//import AuthenticationServices
+import AuthenticationServices
 
 class LoginViewController: UIViewController, ILoginView {
     
@@ -26,64 +26,55 @@ class LoginViewController: UIViewController, ILoginView {
         setupProviderLoginView()
     }
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        super.viewDidAppear(animated)
-//        performExistingAccountSetupFlows()
-//    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        presenter.checkAuth()
+    }
     
-    func setupProviderLoginView() {
-//        if #available(iOS 13.0, *) {
-//            let authorizationButton = ASAuthorizationAppleIDButton()
-//            authorizationButton.addTarget(self, action: #selector(loginWithApple), for: .touchUpInside)
-//            self.loginProviderStackView.addArrangedSubview(authorizationButton)
-//        }
+    // MARK: - ILoginView
+    
+    func loginFailure(error: Error) {
+        
+    }
+    
+    // MARK: - Actions
+    
+    private func setupProviderLoginView() {
+        if #available(iOS 13.0, *) {
+            let authorizationButton = ASAuthorizationAppleIDButton(type: .default, style: .black)
+            authorizationButton.addTarget(self, action: #selector(loginWithApple), for: .touchUpInside)
+            self.loginProviderStackView.addArrangedSubview(authorizationButton)
+        }
         
         let fbLoginButton = FBLoginButton(frame: .zero, permissions: [.email, .publicProfile])
-        fbLoginButton.delegate = presenter
+        fbLoginButton.delegate = presenter as? LoginButtonDelegate
         loginProviderStackView.addArrangedSubview(fbLoginButton)
         fbLoginButton.constraints.first(where: { $0.constant == 28 })?.constant = 40
     }
     
-//    func performExistingAccountSetupFlows() {
-//        if #available(iOS 13.0, *) {
-//            // Prepare requests for both Apple ID and password providers.
-//            let requests = [ASAuthorizationAppleIDProvider().createRequest(),
-//                            ASAuthorizationPasswordProvider().createRequest()]
-//
-//            // Create an authorization controller with the given requests.
-//            let authorizationController = ASAuthorizationController(authorizationRequests: requests)
-//            authorizationController.delegate = self
-//            authorizationController.presentationContextProvider = self
-//            authorizationController.performRequests()
-//        }
-//    }
-    
     // MARK: - Actions
     
-//    @IBAction private func loginWithApple() {
-//        if #available(iOS 13.0, *) {
-//            let appleIDProvider = ASAuthorizationAppleIDProvider()
-//            let request = appleIDProvider.createRequest()
-//            request.requestedScopes = [.fullName, .email]
-//
-//            let authorizationController = ASAuthorizationController(authorizationRequests: [request])
-//            authorizationController.delegate = presenter
-//            authorizationController.presentationContextProvider = self
-//            authorizationController.performRequests()
-//        }
-//    }
-    
-    @IBAction private func loginWithFacebook() {
-        presenter.signInWith(.facebook)
+    @objc
+    private func loginWithApple() {
+        if #available(iOS 13.0, *) {
+            let appleIDProvider = ASAuthorizationAppleIDProvider()
+            let request = appleIDProvider.createRequest()
+            request.requestedScopes = [.fullName, .email]
+
+            let authorizationController = ASAuthorizationController(authorizationRequests: [request])
+            authorizationController.delegate = presenter as? ASAuthorizationControllerDelegate
+            authorizationController.presentationContextProvider = self
+            authorizationController.performRequests()
+        }
     }
     
 }
 
-//@available(iOS 13.0, *)
-//extension LoginViewController: ASAuthorizationControllerPresentationContextProviding {
-//
-//    func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
-//        return self.view.window!
-//    }
-//
-//}
+@available(iOS 13.0, *)
+extension LoginViewController: ASAuthorizationControllerPresentationContextProviding {
+
+    func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
+        return self.view.window!
+    }
+
+}

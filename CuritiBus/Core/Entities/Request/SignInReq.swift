@@ -14,5 +14,7 @@ enum SignInProvider: String, Codable {
 
 struct SignInReq: Codable {
     let provider: SignInProvider
-    let uniqueId: String
+    let providerID: String
+    let name: String
+    let email: String
 }

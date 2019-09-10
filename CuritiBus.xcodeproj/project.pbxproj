@@ -15,9 +15,24 @@
 		3F32C1202325393400A08240 /* SignInReq.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F32C11F2325393400A08240 /* SignInReq.swift */; };
 		3F32C124232539CC00A08240 /* APIUserGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F32C123232539CC00A08240 /* APIUserGateway.swift */; };
 		3F32C126232539F400A08240 /* UserRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F32C125232539F400A08240 /* UserRequests.swift */; };
-		3F32C12923253AC600A08240 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 3F32C12823253AC600A08240 /* SwiftPackageProductDependency */; };
+		3F32C12923253AC600A08240 /* APIClient in Frameworks */ = {isa = PBXBuildFile; productRef = 3F32C12823253AC600A08240 /* APIClient */; };
 		3F32C12B23253B2100A08240 /* Urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F32C12A23253B2100A08240 /* Urls.swift */; };
 		3F32C12D23253C1C00A08240 /* Environments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F32C12C23253C1C00A08240 /* Environments.swift */; };
+		3F7B14632327012700026D66 /* GatewayFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B14622327012700026D66 /* GatewayFactory.swift */; };
+		3F7B1465232701CC00026D66 /* UseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B1464232701CC00026D66 /* UseCaseFactory.swift */; };
+		3F7B146A23270E2800026D66 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B146923270E2800026D66 /* AuthManager.swift */; };
+		3F7B146D23270ECA00026D66 /* FacebookAuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B146C23270ECA00026D66 /* FacebookAuthProvider.swift */; };
+		3F7B146F23271BA800026D66 /* AppleAuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B146E23271BA800026D66 /* AppleAuthProvider.swift */; };
+		3F7B147523272F9E00026D66 /* HomeViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B147123272F9E00026D66 /* HomeViewRouter.swift */; };
+		3F7B147623272F9E00026D66 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B147223272F9E00026D66 /* HomePresenter.swift */; };
+		3F7B147723272F9E00026D66 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B147323272F9E00026D66 /* HomeViewController.swift */; };
+		3F7B147823272F9E00026D66 /* HomeConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B147423272F9E00026D66 /* HomeConfigurator.swift */; };
+		3F7B147B2327304200026D66 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B147A2327304200026D66 /* Storyboard.swift */; };
+		3F7B147D2327309300026D66 /* RouterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B147C2327309300026D66 /* RouterFactory.swift */; };
+		3F7B148023273E7000026D66 /* LoginPresenter+Apple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B147F23273E7000026D66 /* LoginPresenter+Apple.swift */; };
+		3F7B148223273F1600026D66 /* LoginPresenter+Facebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B148123273F1600026D66 /* LoginPresenter+Facebook.swift */; };
+		3F7B14852327450D00026D66 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B14842327450D00026D66 /* VideoViewController.swift */; };
+		3F7B14892327460700026D66 /* bgvideo.mov in Resources */ = {isa = PBXBuildFile; fileRef = 3F7B14882327460700026D66 /* bgvideo.mov */; };
 		3F80E5E7232590C7004EFB8C /* LoginViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F80E5E3232590C7004EFB8C /* LoginViewRouter.swift */; };
 		3F80E5E8232590C7004EFB8C /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F80E5E4232590C7004EFB8C /* LoginPresenter.swift */; };
 		3F80E5E9232590C7004EFB8C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F80E5E5232590C7004EFB8C /* LoginViewController.swift */; };
@@ -58,6 +73,21 @@
 		3F32C125232539F400A08240 /* UserRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequests.swift; sourceTree = "<group>"; };
 		3F32C12A23253B2100A08240 /* Urls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Urls.swift; sourceTree = "<group>"; };
 		3F32C12C23253C1C00A08240 /* Environments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environments.swift; sourceTree = "<group>"; };
+		3F7B14622327012700026D66 /* GatewayFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatewayFactory.swift; sourceTree = "<group>"; };
+		3F7B1464232701CC00026D66 /* UseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseFactory.swift; sourceTree = "<group>"; };
+		3F7B146923270E2800026D66 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		3F7B146C23270ECA00026D66 /* FacebookAuthProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookAuthProvider.swift; sourceTree = "<group>"; };
+		3F7B146E23271BA800026D66 /* AppleAuthProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleAuthProvider.swift; sourceTree = "<group>"; };
+		3F7B147123272F9E00026D66 /* HomeViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewRouter.swift; sourceTree = "<group>"; };
+		3F7B147223272F9E00026D66 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		3F7B147323272F9E00026D66 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3F7B147423272F9E00026D66 /* HomeConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeConfigurator.swift; sourceTree = "<group>"; };
+		3F7B147A2327304200026D66 /* Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
+		3F7B147C2327309300026D66 /* RouterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterFactory.swift; sourceTree = "<group>"; };
+		3F7B147F23273E7000026D66 /* LoginPresenter+Apple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginPresenter+Apple.swift"; sourceTree = "<group>"; };
+		3F7B148123273F1600026D66 /* LoginPresenter+Facebook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginPresenter+Facebook.swift"; sourceTree = "<group>"; };
+		3F7B14842327450D00026D66 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		3F7B14882327460700026D66 /* bgvideo.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = bgvideo.mov; sourceTree = "<group>"; };
 		3F80E5E123256E12004EFB8C /* CuritiBus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CuritiBus.entitlements; sourceTree = "<group>"; };
 		3F80E5E3232590C7004EFB8C /* LoginViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewRouter.swift; sourceTree = "<group>"; };
 		3F80E5E4232590C7004EFB8C /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
@@ -83,7 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F32C12923253AC600A08240 /* BuildFile in Frameworks */,
+				3F32C12923253AC600A08240 /* APIClient in Frameworks */,
 				7E58256639356FA449996074 /* Pods_CuritiBus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,6 +166,7 @@
 		3F32C1112325304E00A08240 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3F7B14882327460700026D66 /* bgvideo.mov */,
 				3FA68E8923252E0B00AA77FD /* Assets.xcassets */,
 			);
 			path = Images;
@@ -144,6 +175,7 @@
 		3F32C1122325380900A08240 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				3F7B14612327011300026D66 /* Factories */,
 				3F32C1152325383700A08240 /* UseCases */,
 				3F32C1172325384F00A08240 /* Gateways */,
 				3F32C1162325384600A08240 /* Entities */,
@@ -162,7 +194,9 @@
 		3F32C1142325382700A08240 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				3F7B14832327450000026D66 /* Video */,
 				3F80E5E2232590BB004EFB8C /* Login */,
+				3F7B147023272F8C00026D66 /* Home */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -219,11 +253,85 @@
 			path = Requests;
 			sourceTree = "<group>";
 		};
+		3F7B14612327011300026D66 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				3F7B14622327012700026D66 /* GatewayFactory.swift */,
+				3F7B1464232701CC00026D66 /* UseCaseFactory.swift */,
+				3F7B147C2327309300026D66 /* RouterFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		3F7B146723270E0E00026D66 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				3F7B14792327301E00026D66 /* Storyboard */,
+				3F7B146823270E1900026D66 /* AuthManager */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		3F7B146823270E1900026D66 /* AuthManager */ = {
+			isa = PBXGroup;
+			children = (
+				3F7B146923270E2800026D66 /* AuthManager.swift */,
+				3F7B146B23270EB900026D66 /* Providers */,
+			);
+			path = AuthManager;
+			sourceTree = "<group>";
+		};
+		3F7B146B23270EB900026D66 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				3F7B146C23270ECA00026D66 /* FacebookAuthProvider.swift */,
+				3F7B146E23271BA800026D66 /* AppleAuthProvider.swift */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		3F7B147023272F8C00026D66 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3F7B147323272F9E00026D66 /* HomeViewController.swift */,
+				3F7B147223272F9E00026D66 /* HomePresenter.swift */,
+				3F7B147123272F9E00026D66 /* HomeViewRouter.swift */,
+				3F7B147423272F9E00026D66 /* HomeConfigurator.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		3F7B14792327301E00026D66 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				3F7B147A2327304200026D66 /* Storyboard.swift */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		3F7B147E23273E6100026D66 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				3F80E5E4232590C7004EFB8C /* LoginPresenter.swift */,
+				3F7B147F23273E7000026D66 /* LoginPresenter+Apple.swift */,
+				3F7B148123273F1600026D66 /* LoginPresenter+Facebook.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		3F7B14832327450000026D66 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				3F7B14842327450D00026D66 /* VideoViewController.swift */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
 		3F80E5E2232590BB004EFB8C /* Login */ = {
 			isa = PBXGroup;
 			children = (
 				3F80E5E5232590C7004EFB8C /* LoginViewController.swift */,
-				3F80E5E4232590C7004EFB8C /* LoginPresenter.swift */,
+				3F7B147E23273E6100026D66 /* Presenter */,
 				3F80E5E3232590C7004EFB8C /* LoginViewRouter.swift */,
 				3F80E5E6232590C7004EFB8C /* LoginConfigurator.swift */,
 			);
@@ -259,6 +367,7 @@
 				3F32C1122325380900A08240 /* Core */,
 				3F32C1132325381C00A08240 /* Gateways */,
 				3F32C1142325382700A08240 /* Scenes */,
+				3F7B146723270E0E00026D66 /* Managers */,
 				3F32C10B23252FA800A08240 /* Resources */,
 				3F32C10623252F0200A08240 /* Client */,
 			);
@@ -297,7 +406,6 @@
 				7D6F76099C2AD99CB98994C8 /* Pods-CuritiBus.debug.xcconfig */,
 				31F582EEDB82B80BEDB6DC30 /* Pods-CuritiBus.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -313,6 +421,7 @@
 				3FA68E7A23252E0900AA77FD /* Frameworks */,
 				3FA68E7B23252E0900AA77FD /* Resources */,
 				5215234E68CF732AFAB47943 /* [CP] Embed Pods Frameworks */,
+				3F7B1466232707DD00026D66 /* Disable ATS */,
 			);
 			buildRules = (
 			);
@@ -320,7 +429,7 @@
 			);
 			name = CuritiBus;
 			packageProductDependencies = (
-				3F32C12823253AC600A08240 /* SwiftPackageProductDependency */,
+				3F32C12823253AC600A08240 /* APIClient */,
 			);
 			productName = CuritiBus;
 			productReference = 3FA68E7D23252E0900AA77FD /* CuritiBus.app */;
@@ -395,7 +504,7 @@
 			);
 			mainGroup = 3FA68E7423252E0900AA77FD;
 			packageReferences = (
-				3F32C12723253AC600A08240 /* RemoteSwiftPackageReference */,
+				3F32C12723253AC600A08240 /* XCRemoteSwiftPackageReference "APIClient" */,
 			);
 			productRefGroup = 3FA68E7E23252E0900AA77FD /* Products */;
 			projectDirPath = "";
@@ -416,6 +525,7 @@
 				3F32C1102325301200A08240 /* Main.storyboard in Resources */,
 				3FA68E8A23252E0B00AA77FD /* Assets.xcassets in Resources */,
 				3F32C10F2325301200A08240 /* LaunchScreen.storyboard in Resources */,
+				3F7B14892327460700026D66 /* bgvideo.mov in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +568,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		3F7B1466232707DD00026D66 /* Disable ATS */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Disable ATS";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#Disables ATS in debug builds.\nINFOPLIST=\"${TARGET_BUILD_DIR}\"/\"${INFOPLIST_PATH}\"\ncase \"${CONFIGURATION}\" in\n\"Release\"|\"Adhoc\")\n/usr/libexec/PlistBuddy -c \"Set :NSAppTransportSecurity:NSAllowsArbitraryLoads NO\" \"${INFOPLIST}\"\n;;\n\"Debug\")\n/usr/libexec/PlistBuddy -c \"Set :NSAppTransportSecurity:NSAllowsArbitraryLoads YES\" \"${INFOPLIST}\"\n;; \nesac\n";
+		};
 		5215234E68CF732AFAB47943 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -482,19 +610,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F7B148023273E7000026D66 /* LoginPresenter+Apple.swift in Sources */,
 				3F80E5EA232590C7004EFB8C /* LoginConfigurator.swift in Sources */,
+				3F7B14852327450D00026D66 /* VideoViewController.swift in Sources */,
+				3F7B146D23270ECA00026D66 /* FacebookAuthProvider.swift in Sources */,
+				3F7B147B2327304200026D66 /* Storyboard.swift in Sources */,
 				3F80E5E8232590C7004EFB8C /* LoginPresenter.swift in Sources */,
+				3F7B147623272F9E00026D66 /* HomePresenter.swift in Sources */,
 				3F32C12B23253B2100A08240 /* Urls.swift in Sources */,
+				3F7B147723272F9E00026D66 /* HomeViewController.swift in Sources */,
 				3F32C11B2325388D00A08240 /* User.swift in Sources */,
+				3F7B147823272F9E00026D66 /* HomeConfigurator.swift in Sources */,
 				3F32C126232539F400A08240 /* UserRequests.swift in Sources */,
 				3F32C12D23253C1C00A08240 /* Environments.swift in Sources */,
+				3F7B148223273F1600026D66 /* LoginPresenter+Facebook.swift in Sources */,
+				3F7B146F23271BA800026D66 /* AppleAuthProvider.swift in Sources */,
 				3F80E5E7232590C7004EFB8C /* LoginViewRouter.swift in Sources */,
 				3F32C124232539CC00A08240 /* APIUserGateway.swift in Sources */,
 				3F32C1202325393400A08240 /* SignInReq.swift in Sources */,
+				3F7B146A23270E2800026D66 /* AuthManager.swift in Sources */,
+				3F7B14632327012700026D66 /* GatewayFactory.swift in Sources */,
+				3F7B147523272F9E00026D66 /* HomeViewRouter.swift in Sources */,
 				3FA68E8123252E0900AA77FD /* AppDelegate.swift in Sources */,
 				3F32C11D2325391100A08240 /* SignInUseCase.swift in Sources */,
 				3F80E5E9232590C7004EFB8C /* LoginViewController.swift in Sources */,
+				3F7B1465232701CC00026D66 /* UseCaseFactory.swift in Sources */,
 				3F32C1192325386200A08240 /* UserGateway.swift in Sources */,
+				3F7B147D2327309300026D66 /* RouterFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -654,10 +796,7 @@
 				CODE_SIGN_ENTITLEMENTS = CuritiBus/CuritiBus.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D97MJ3844Q;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/CuritiBus/Frameworks",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = CuritiBus/Client/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -679,10 +818,7 @@
 				CODE_SIGN_ENTITLEMENTS = CuritiBus/CuritiBus.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D97MJ3844Q;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/CuritiBus/Frameworks",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = CuritiBus/Client/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -822,7 +958,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		3F32C12723253AC600A08240 /* RemoteSwiftPackageReference */ = {
+		3F32C12723253AC600A08240 /* XCRemoteSwiftPackageReference "APIClient" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/diegotl/APIClient.git";
 			requirement = {
@@ -833,9 +969,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		3F32C12823253AC600A08240 /* SwiftPackageProductDependency */ = {
+		3F32C12823253AC600A08240 /* APIClient */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3F32C12723253AC600A08240 /* RemoteSwiftPackageReference */;
+			package = 3F32C12723253AC600A08240 /* XCRemoteSwiftPackageReference "APIClient" */;
 			productName = APIClient;
 		};
 /* End XCSwiftPackageProductDependency section */

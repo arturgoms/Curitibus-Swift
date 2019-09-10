@@ -14,7 +14,7 @@ enum Environment: APIEnvionment {
     
     var baseUrl: String {
         switch self {
-            case .production: return "http://localhost:8080"
+            case .production: return "https://curitibus-vapor-development.vapor.cloud"
             case .development: return "http://localhost:8080"
         }
     }

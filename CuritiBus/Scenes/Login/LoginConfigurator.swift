@@ -13,7 +13,10 @@ protocol ILoginConfigurator {
 struct LoginConfigurator: ILoginConfigurator {
     
     func configure(_ viewController: LoginViewController) {
-        viewController.presenter = LoginPresenter(view: viewController)
+        let useCaseFactory = UseCaseFactory()
+        let routerFactory = RouterFactory(navigationController: viewController.navigationController)
+        
+        viewController.presenter = LoginPresenter(view: viewController, useCaseFactory: useCaseFactory, routerFactory: routerFactory)
     }
     
 }
